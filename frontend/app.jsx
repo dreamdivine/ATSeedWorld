@@ -6,18 +6,20 @@ import {
   Switch,
   Link,
 } from "react-router-dom";
-import RightNavbarContainer from "./components/navbar/right_navbar_container";
+import Homepage from "./components/homepage";
+import LoginFormContainer from "./components/session_form/login_form_container";
+import SignupFormContainer from "./components/session_form/signup_form_container";
 
 const App = () => (
   <div>
     <header>
-      <RightNavbarContainer />
+      <Link to="/" className="header-link"></Link>
     </header>
-    {/* <Switch>
-        <Route path="/account/create" component={CreateAccount}/>
-        <Route path="/account/login" component={LogIn}/>
-        <Route exact path="/"/>
-      </Switch> */}
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route path="/account/create" component={SignupFormContainer} />
+      <Route path="/account/login" component={LoginFormContainer} />
+    </Switch>
   </div>
 );
 

@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
       <div>
         <div>CREATE NEW CUSTOMER ACCOUNT</div>
         <div>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div>
               <div>PERSONAL INFORMATION</div>
               <label>
@@ -84,6 +84,7 @@ class SessionForm extends React.Component {
                 />
               </label>
             </div>
+            <button type="submit">CREATE AN ACCOUNT</button>
           </form>
         </div>
       </div>
