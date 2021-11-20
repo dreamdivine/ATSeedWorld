@@ -5,6 +5,7 @@ import {openModal} from "../../actions/modal_actions";
 import RightNavbar from "./right_navbar";
 
 const mSTP = ({session, entities}) => {
+    console.log("my name", entities.users[session.id]);
     return{currentUser: entities.users[session.id]}
 }
 

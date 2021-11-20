@@ -1,12 +1,11 @@
 import React from "react";
-import RightNavBar from "../components/navbar/right_navbar_container"
+import NavBar from "./navbar/navbar";
 
 const Homepage = () => {
 
     return(
         <div className="homepage">
-            <RightNavBar />
-
+            <NavBar />
         </div>
     )
 

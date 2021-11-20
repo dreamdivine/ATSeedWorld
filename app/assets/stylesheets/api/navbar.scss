@@ -2,5 +2,16 @@
     color: black;
 }
 
+.main-nav-div{
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
 
 
+.search-placeholder{
+    background-color: white;
+    width: 100px;
+    height: 20px;
+}

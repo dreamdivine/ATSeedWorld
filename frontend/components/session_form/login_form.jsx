@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -74,6 +75,9 @@ class LoginForm extends React.Component {
                   />
                 </label>
                 <button type="submit">SIGN IN</button>
+                <div className="login-demo" onClick={this.demoLogin}>
+                  <p>Continue with Demo Login</p>
+                </div>
               </div>
               <div>
                 <div>New Customers</div>
