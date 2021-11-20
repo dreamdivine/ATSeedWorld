@@ -9,6 +9,7 @@
 
 require 'open-uri'
 
+Listing.delete_all
 User.delete_all
 
 
@@ -98,3 +99,70 @@ u12 = User.create!(
   last_name: 'u12'
 )
 
+l1 = Listing.create!(
+  title: "CHOCOLATE CHERRY SUNFLOWER",
+  price: 4,
+  category: "sunflower",
+  kind: "flower",
+  seed_count: 100,
+  description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across. This is a top choice for garden design or cut flower sales thanks to a long vase life and lower pollen count than other heirloom sunflowers.'
+)
+
+l2 = Listing.create!(
+  title: "RED SUN SUNFLOWER",
+  price: 3,
+  category: "sunflower",
+  kind: "flower",
+  seed_count: 35,
+  description: 'Stately branching plants reaching 5-6 feet tall are covered with dozens of ornamental blooms. Red to red-orange single flowers are highlighted with a hint of yellow around the centers. Blooms over a very long season, attracting bees and butterflies. Later, the tiny seeds attract birds.'
+)
+
+# l3 = Listing.new(
+#   title: "HENRY WILDE SUNFLOWER",
+#   price: 2.75,
+#   category: "sunflower",
+#   kind: "flower",
+#   seed_count: 35,
+#   description: "Annual. This classic heirloom sunflower with pure yellow petals and dark centers is perfect for cut flowers and perfect for planting along a fence or barn.")
+ 
+#   l4 = Listing.new(
+#   title: "AUTUMN BEAUTY SUNFLOWER",
+#   price: 3,
+#   category: "sunflower",
+#   kind: "flower",
+#   seed_count: 35,
+#   description: 'Annual. A beautiful sunflower! Many 6" flowers in brilliant red, gold, yellow, rust, and burgundy. Blooms over a long period and makes a wonderful display. Tall, 7’ plants are a favorite.')
+  
+#   l5 = Listing.new(
+#   title: "KEE'S ORANGE MARIGOLD",
+#   price: 3,
+#   category: "marigold",
+#   kind: "flower",
+#   seed_count: 50,
+#   description: "The brightest orange marigolds we have seen! This massive and magnificent marigold was selected by the late, Kees Sahin, a famous Dutch flower breeder. Sahin had set out to select the most vivid orange color to make a truly memorable marigold, the result is a high octane tangerine bloom that really pops! The robust and productive plants stand 1.5-2 feet tall and are smothered in full and fluffy electric orange blooms, each reaching an impressive 2.5 to 3 inches across.")
+
+#   l6 = Listing.new(
+#   title: "SPUN ORANGE MARIGOLD",
+#   price: 2.75,
+#   category: "marigold",
+#   kind: "flower",
+#   seed_count: 100,
+#   description: "Our Favorite! Extra large, attractive, super-double flowers with tubular petals. The color is a pleasing, clear orange rather than the harsh orange-brown so often seen in African marigolds. Plants are rather compact, seldom exceeding 20 inches. Very uniform size is ideal for cutting, yet earns its keep in the border.")
+  
+#   l7 = Listing.new(
+#   title: "COLOSSUS RED GOLD BICOLOR MARIGOLD",
+#   price: 3,
+#   category: "marigold",
+#   kind: "flower",
+#   seed_count: 50,
+#   description: "Annual. Invite this bold French marigold into your garden for masses of gilded blooms with natural pest-repelling qualities! Large bicolored blooms of red and gold are simply stunning. This is the ultimate useful flower! Not only are the petals edible, it can repel garden pests such as whiteflies and nematodes. Try interplanting this beauty among your vegetable crops!")
+  
+#   l8 = Listing.new(
+#   title: "CRACKERJACK MIX MARIGOLD",
+#   price: 2.75,
+#   category: "marigold",
+#   kind: "flower",
+#   seed_count: 200,
+#   description: 'Annual. This giant African type is popular with gardeners coast to coast. Big double blooms come in shades of lemon yellow to deep orange, and the 30" plants are profuse. Growing Tips: For transplanting, sow indoors 3-4 weeks before last frost. Direct sow after last spring frost in ordinary garden soil. Thrives in full sun and summer heat. Remove spent flowers to prolong blooming period.')
+
+  
