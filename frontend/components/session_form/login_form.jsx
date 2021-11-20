@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import NavBar from "../navbar/navbar";
 
 
 class LoginForm extends React.Component {
@@ -49,6 +50,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />
         <div>CUSTOMER LOGIN</div>
         <div>
           <form onSubmit={this.handleSubmit}>

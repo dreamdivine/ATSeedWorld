@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import NavBar from "../navbar/navbar";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />
         <div>CREATE NEW CUSTOMER ACCOUNT</div>
         <div>
           <form onSubmit={this.handleSubmit}>
