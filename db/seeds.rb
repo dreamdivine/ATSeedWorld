@@ -99,7 +99,7 @@ u12 = User.create!(
   last_name: 'u12'
 )
 
-l1 = Listing.create!(
+l1 = Listing.new(
   title: "CHOCOLATE CHERRY SUNFLOWER",
   price: 4,
   category: "sunflower",
@@ -108,7 +108,18 @@ l1 = Listing.create!(
   description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across. This is a top choice for garden design or cut flower sales thanks to a long vase life and lower pollen count than other heirloom sunflowers.'
 )
 
-l2 = Listing.create!(
+l1aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate1.jpeg")
+l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
+
+l1bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate2.jpeg")
+l1.photos.attach(io: l1bphoto, filename: "sunflower-chocolate2")
+
+l1cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate3.jpeg")
+l1.photos.attach(io: l1cphoto, filename: "sunflower-chocolate3")
+
+l1.save
+
+l2 = Listing.new(
   title: "RED SUN SUNFLOWER",
   price: 3,
   category: "sunflower",
@@ -116,6 +127,19 @@ l2 = Listing.create!(
   seed_count: 35,
   description: 'Stately branching plants reaching 5-6 feet tall are covered with dozens of ornamental blooms. Red to red-orange single flowers are highlighted with a hint of yellow around the centers. Blooms over a very long season, attracting bees and butterflies. Later, the tiny seeds attract birds.'
 )
+
+l2aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red.jpeg")
+l2.photos.attach(io: l2aphoto, filename: "sunflower-red")
+
+l2bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpeg")
+l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
+
+l2cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red3.jpeg")
+l2.photos.attach(io: l2cphoto, filename: "sunflower-red3")
+
+l2.save
+
+
 
 # l3 = Listing.new(
 #   title: "HENRY WILDE SUNFLOWER",

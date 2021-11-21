@@ -24,10 +24,10 @@ class Api::ListingsController < ApplicationController
       :price,
       :title,
       :kind,
-    #   :photo,
       :description,
       :category,
-      :seed_count
+      :seed_count,
+      photos: []
     )
   end
 

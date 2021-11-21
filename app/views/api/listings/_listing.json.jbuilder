@@ -1,8 +1,9 @@
 json.extract! listing, :id, :description, :title, :price, :category, :kind, :seed_count
 
-# if listing.photo.attachment == nil
-#    json.photoUrl = ""
-# else
-#    json.photoUrl url_for(listing.photo)
-# end
+x = listing.photos.map do |photo|
+        url_for(photo)
+    end
 
+json.photos do 
+    json.array! x
+end
