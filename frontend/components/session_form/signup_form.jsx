@@ -97,8 +97,11 @@ class SessionForm extends React.Component {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="create-btn">CREATE AN ACCOUNT</button>
+              <button type="submit" className="create-btn">
+                CREATE AN ACCOUNT
+              </button>
             </form>
+            <div className="session-errors">{this.renderErrors()}</div>
           </div>
         </div>
       </div>

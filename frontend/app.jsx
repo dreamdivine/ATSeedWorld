@@ -9,16 +9,19 @@ import {
 import Homepage from "./components/homepage";
 import LoginFormContainer from "./components/session_form/login_form_container";
 import SignupFormContainer from "./components/session_form/signup_form_container";
-import ListingIndexContainer from "./components/listing/listing_index_container";
-
+import ListingShowContainer from "./components/listing/listing_show_container";
 const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link"></Link>
-      {/* <ListingIndexContainer /> */}
     </header>
     <Switch>
       <Route exact path="/" component={Homepage} />
+      <Route
+        exact
+        path="/listings/:listingId"
+        component={ListingShowContainer}
+      />
       <Route path="/account/create" component={SignupFormContainer} />
       <Route path="/account/login" component={LoginFormContainer} />
     </Switch>

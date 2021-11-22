@@ -131,11 +131,11 @@ l2 = Listing.new(
 l2aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red.jpeg")
 l2.photos.attach(io: l2aphoto, filename: "sunflower-red")
 
-l2bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpeg")
+l2bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpg")
 l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
 
-l2cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red3.jpeg")
-l2.photos.attach(io: l2cphoto, filename: "sunflower-red3")
+l2cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red2.jpeg")
+l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
 
 l2.save
 

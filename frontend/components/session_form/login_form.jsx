@@ -62,7 +62,10 @@ class LoginForm extends React.Component {
                   <div className="registered">Registered Customers</div>
                   <div className="login-account">
                     <div className="account-sentence">
-                     <p className="account-paragraph"> If you have an account, sign in with your email address.</p>
+                      <p className="account-paragraph">
+                        {" "}
+                        If you have an account, sign in with your email address.
+                      </p>
                     </div>
                     <div className="email-text-login">Email</div>
                     <div>
@@ -83,7 +86,9 @@ class LoginForm extends React.Component {
                       />
                     </div>
                   </div>
-                  <button type="submit" className="login-btn">SIGN IN</button>
+                  <button type="submit" className="login-btn">
+                    SIGN IN
+                  </button>
                   <div className="login-demo" onClick={this.demoLogin}>
                     <p className="demo-btn">Sign-in with Demo Login</p>
                   </div>
@@ -100,6 +105,7 @@ class LoginForm extends React.Component {
                   </Link>
                 </div>
               </div>
+              <div className="session-errors-login">{this.renderErrors()}</div>
             </form>
           </div>
         </div>
