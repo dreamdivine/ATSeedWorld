@@ -9,6 +9,8 @@ class Listing < ApplicationRecord
   class_name: :Review
 
 
-
+  def average_rating
+     reviews.average(:rating)
+  end
    
 end

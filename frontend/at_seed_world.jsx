@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
-import * as ListingUtil from "../frontend/util/listing_api_util"
+import * as ListingUtil from "../frontend/util/listing_api_util";
+import * as ReviewUtil from "../frontend/util/review_api_util";
 
 
 
@@ -22,12 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
- 
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
   window.fetchListings = ListingUtil.fetchListings
   window.fetchListing = ListingUtil.fetchListing;
+  window.createReview = ReviewUtil.createReview;
+  window.deleteReview = ReviewUtil.deleteReview;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 
  
 
