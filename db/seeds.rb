@@ -140,6 +140,10 @@ l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
 l2.save
 
 
+ r1 = Review.create(user_id: u1.id, listing_id:  l1.id, body: "awesome seed, very good germination rate", rating: 5)
+ r2 = Review.create(user_id: u2.id, listing_id:  l2.id, body: "90% germination rate, really pretty flowers", rating: 4)
+ 
+
 
 # l3 = Listing.new(
 #   title: "HENRY WILDE SUNFLOWER",
