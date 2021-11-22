@@ -1,0 +1,136 @@
+.login-form{
+    border-top: 0.25em solid black;
+    height: 30em;
+    position: relative;
+    left: 10%;
+    width: 85%;
+    box-shadow: 0.5px 1px 0.5px 1px #888888;
+
+}
+
+.below-navbar-login{
+    position: relative;
+    top: 2em;
+    right: 2em;
+}
+
+.text-login{
+    font-size: 1.2em;
+    position: relative;
+    top: 25%;
+    font-weight: bold;
+}
+
+.title-customer-login{
+    position: relative;
+    left: 10%;
+    height: 3em;
+    display: flex;
+}
+
+.login-form{
+    display: flex;
+    padding: 2%;
+}
+
+.right-login{
+    position: relative;
+    width: 50%;
+    left: 3%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.left-login{
+ position: relative;
+ left: 3%;
+ width: 50%;
+ height: 75%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+}
+
+.email-box-login,
+.password-box-login {
+  border: 0.05em, solid #d3d3d3;
+  position: relative;
+  bottom: 40%;
+  width: 50%;
+  height: 2.5em;
+}
+
+.account-sentence{
+  position: relative;
+  bottom: 25%;
+}
+
+.password-text-login{
+    position: relative;
+    top: 5%;
+    font-size: 14px;
+}
+
+.password-box-login{
+    position: relative;
+    top: 1.3em;
+}
+
+.email-text-login{
+    position: relative;
+    bottom: 6%;
+    font-size: 14px;
+
+}
+
+.account-paragraph{
+    font-size: 13px;
+}
+
+.registered, .new-customers{
+    font-size: 18px;
+}
+
+.login-btn{
+    position: relative;
+    width: 17%;
+    height: 10%;
+    color: white;
+    font-size: 0.9em;
+    background-color: black;
+}
+
+.create-account-line{
+    font-size: 13px;
+}
+
+.create-account-link{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 30%;
+    height: 30%;
+}
+
+.create-btn-form{
+    position: relative;
+    top: 25%;
+    left: 5%
+}
+
+.login-demo{
+    background-color: black;
+    color: white;
+    width: 35%;
+    height: 15%;
+    font-size: 18px;
+}
+
+.demo-btn{
+    position: relative;
+    left: 4%;
+    top: 22%;
+}

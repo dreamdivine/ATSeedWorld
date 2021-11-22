@@ -6,7 +6,7 @@ const ListingIndexItem = ({ listing}) => {
   return (
     <div className="listing-index">
       <Link className="images-link" to={`/listings/${listing.id}`}>
-        <img src={listing.photos[2]} className="listing-images-index" />
+        <img src={listing.photos[0]} className="listing-images-index" />
       </Link>
     </div>
   );

@@ -6,18 +6,26 @@ const NavBar = () => {
     return (
       <div className="main-nav-div">
         <div>
-          <Link to="/">
-            <div>
-              <i className="fab fa-pagelines"></i>
-            </div>
-            <div>
-                <h1>AT SEED WORLD</h1>
-                <p>HEIRLOOM SEEDS</p>
-            </div>
-          </Link>
-          <div className="search-placeholder">Search Bar</div>
+          <div>
+            <Link to="/" className="link">
+              <div className="icon-app-name">
+                <div className="leaf-icon-background">
+                  <i className="fab fa-pagelines" id="leaf-icon"></i>
+                </div>
+                <div>
+                  <h1 className="app-name">AT SEED WORLD</h1>
+                  <p className="heirloom">HEIRLOOM SEEDS</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="search-placeholder">
+            <p>Search Bar</p>
+          </div>
         </div>
-        <RightNavBarContainer />
+        <div>
+          <RightNavBarContainer />
+        </div>
       </div>
     );
 }

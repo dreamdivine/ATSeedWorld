@@ -1,0 +1,83 @@
+.create-account-form {
+  border-top: 0.25em solid black;
+  height: 32.5em;
+  position: relative;
+  left: 10%;
+  width: 85%;
+  box-shadow: 0.5px 1px 0.5px 1px #888888;
+}
+
+.create-account-left,
+.create-account-right {
+  width: 45%;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title-customer-account {
+  position: relative;
+  left: 10%;
+  height: 3em;
+  display: flex;
+}
+
+.text-create {
+  font-size: 1.2em;
+  position: relative;
+  top: 25%;
+  font-weight: bold;
+}
+
+.sign-up-form {
+  display: flex;
+  padding: 2%;
+}
+
+.first-name-box,
+.last-name-box,
+.email-box,
+.password-box {
+  width: 95%;
+  height: 190%;
+  border: 0.05em, solid #d3d3d3;
+  position: relative;
+  bottom: 40%;
+}
+
+.last-name-text,
+.first-name-text,
+.email-text,
+.password-text {
+  position: relative;
+  top: 0.25em;
+}
+
+.below-navbar-signup {
+  position: relative;
+  top: 2em;
+  right: 2em;
+}
+
+.create-account-right {
+  position: relative;
+  left: 10%;
+}
+
+.create-account-left {
+  position: relative;
+  left: 2.5%;
+}
+
+.create-btn {
+  position: relative;
+  left: 4%;
+  top: 4em;
+  width: 13em;
+  height: 3em;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}

@@ -15,7 +15,7 @@ const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link"></Link>
-      <ListingIndexContainer />
+      {/* <ListingIndexContainer /> */}
     </header>
     <Switch>
       <Route exact path="/" component={Homepage} />
