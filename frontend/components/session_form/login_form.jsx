@@ -63,7 +63,6 @@ class LoginForm extends React.Component {
                   <div className="login-account">
                     <div className="account-sentence">
                       <p className="account-paragraph">
-                        {" "}
                         If you have an account, sign in with your email address.
                       </p>
                     </div>

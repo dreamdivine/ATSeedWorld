@@ -6,16 +6,23 @@ import {
   Switch,
   Link,
 } from "react-router-dom";
+import { AuthRoute, ProtectedRoute } from "../frontend/util/route_util";
 import Homepage from "./components/homepage";
 import LoginFormContainer from "./components/session_form/login_form_container";
 import SignupFormContainer from "./components/session_form/signup_form_container";
 import ListingShowContainer from "./components/listing/listing_show_container";
+import EditReviewFormContainer from "./components/review/review_edit_container"
+
 const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link"></Link>
     </header>
     <Switch>
+      <ProtectedRoute
+        path="/reviews/:reviewId/edit"
+        component={EditReviewFormContainer}
+      />
       <Route exact path="/" component={Homepage} />
       <Route
         exact

@@ -6,7 +6,6 @@ import * as ListingUtil from "../frontend/util/listing_api_util";
 import * as ReviewUtil from "../frontend/util/review_api_util";
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store;
@@ -23,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-
-  window.fetchListings = ListingUtil.fetchListings
-  window.fetchListing = ListingUtil.fetchListing;
+  window.fetchReviews = ReviewUtil.fetchReviews;
+  window.fetchReview = ReviewUtil.fetchReview;
   window.createReview = ReviewUtil.createReview;
+  window.updateReview = ReviewUtil.updateReview;
   window.deleteReview = ReviewUtil.deleteReview;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
