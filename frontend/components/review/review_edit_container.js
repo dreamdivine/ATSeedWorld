@@ -6,11 +6,6 @@ import { clearReviewErrors, updateReview, deleteReview } from '../../actions/rev
 class EditReviewForm extends React.Component {
   constructor(props){
     super(props);
-    for (let i = 0; i < this.props.reviews.length; i++) {
-      if (this.props.reviews[i].user_id === this.props.currentUser) {
-        this.state = this.props.reviews[i];
-      }
-    }
   }
 
 
@@ -23,12 +18,8 @@ class EditReviewForm extends React.Component {
 }
 
 const mSTP = (state, ownProps) => {
-  console.log(
-    "listingId",
-    Object.values(state.entities.listings[ownProps.listingId].reviews)
-  );
     return{
-        reviews: Object.values(state.entities.listings[ownProps.listingId].reviews),
+        // reviews: Object.values(state.entities.listings[ownProps.listingId].reviews),
         errors: state.errors.review,
         currentUser: state.session.id,
     }
