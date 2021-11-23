@@ -99,49 +99,49 @@ u12 = User.create!(
   last_name: 'u12'
 )
 
-l1 = Listing.new(
-  title: "CHOCOLATE CHERRY SUNFLOWER",
-  price: 4,
-  category: "sunflower",
-  kind: "flower",
-  seed_count: 100,
-  description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across. This is a top choice for garden design or cut flower sales thanks to a long vase life and lower pollen count than other heirloom sunflowers.'
-)
+# l1 = Listing.new(
+#   title: "CHOCOLATE CHERRY SUNFLOWER",
+#   price: 4,
+#   category: "sunflower",
+#   kind: "flower",
+#   seed_count: 100,
+#   description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across. This is a top choice for garden design or cut flower sales thanks to a long vase life and lower pollen count than other heirloom sunflowers.'
+# )
 
-l1aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate1.jpeg")
-l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
+# l1aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate1.jpeg")
+# l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
 
-l1bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate2.jpeg")
-l1.photos.attach(io: l1bphoto, filename: "sunflower-chocolate2")
+# l1bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate2.jpeg")
+# l1.photos.attach(io: l1bphoto, filename: "sunflower-chocolate2")
 
-l1cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate3.jpeg")
-l1.photos.attach(io: l1cphoto, filename: "sunflower-chocolate3")
+# l1cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-chocolate3.jpeg")
+# l1.photos.attach(io: l1cphoto, filename: "sunflower-chocolate3")
 
-l1.save
+# l1.save
 
-l2 = Listing.new(
-  title: "RED SUN SUNFLOWER",
-  price: 3,
-  category: "sunflower",
-  kind: "flower",
-  seed_count: 35,
-  description: 'Stately branching plants reaching 5-6 feet tall are covered with dozens of ornamental blooms. Red to red-orange single flowers are highlighted with a hint of yellow around the centers. Blooms over a very long season, attracting bees and butterflies. Later, the tiny seeds attract birds.'
-)
+# l2 = Listing.new(
+#   title: "RED SUN SUNFLOWER",
+#   price: 3,
+#   category: "sunflower",
+#   kind: "flower",
+#   seed_count: 35,
+#   description: 'Stately branching plants reaching 5-6 feet tall are covered with dozens of ornamental blooms. Red to red-orange single flowers are highlighted with a hint of yellow around the centers. Blooms over a very long season, attracting bees and butterflies. Later, the tiny seeds attract birds.'
+# )
 
-l2aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red.jpeg")
-l2.photos.attach(io: l2aphoto, filename: "sunflower-red")
+# l2aphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red.jpeg")
+# l2.photos.attach(io: l2aphoto, filename: "sunflower-red")
 
-l2bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpg")
-l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
+# l2bphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpg")
+# l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
 
-l2cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red2.jpeg")
-l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
+# l2cphoto = open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red2.jpeg")
+# l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
 
-l2.save
+# l2.save
 
 
- r1 = Review.create(user_id: u1.id, listing_id:  l1.id, body: "awesome seed, very good germination rate", rating: 5)
- r2 = Review.create(user_id: u2.id, listing_id:  l2.id, body: "90% germination rate, really pretty flowers", rating: 4)
+#  r1 = Review.create(user_id: u1.id, listing_id:  l1.id, body: "awesome seed, very good germination rate", rating: 5)
+#  r2 = Review.create(user_id: u2.id, listing_id:  l2.id, body: "90% germination rate, really pretty flowers", rating: 4)
  
 
 
