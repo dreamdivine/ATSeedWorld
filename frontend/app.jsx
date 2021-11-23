@@ -19,10 +19,10 @@ const App = () => (
       <Link to="/" className="header-link"></Link>
     </header>
     <Switch>
-      <ProtectedRoute
+      {/* <ProtectedRoute
         path="/reviews/:reviewId/edit"
         component={EditReviewFormContainer}
-      />
+      /> */}
       <Route exact path="/" component={Homepage} />
       <Route
         exact

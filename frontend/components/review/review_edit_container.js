@@ -4,30 +4,31 @@ import { clearReviewErrors, updateReview, deleteReview } from '../../actions/rev
 
 
 class EditReviewForm extends React.Component {
-
-  componentDidMount() {
-    this.props.fetchReview(this.props.match.params.reviewId);
+  constructor(props){
+    super(props);
+    for (let i = 0; i < this.props.reviews.length; i++) {
+      if (this.props.reviews[i].user_id === this.props.currentUser) {
+        this.state = this.props.reviews[i];
+      }
+    }
   }
+
+
   render() {
-      const {action, review, formType, errors, currentUser, deleteReview} = this.props
-    if(!review) return null;
+      
       return (
-      <ReviewForm
-        review={review}
-        formType={formType}
-        action={action}
-        deleteReview={deleteReview}
-        errors={errors}
-        currentUser={currentUser}
-      />
+        <div>hello</div>
     );
   }
 }
 
 const mSTP = (state, ownProps) => {
+  console.log(
+    "listingId",
+    Object.values(state.entities.listings[ownProps.listingId].reviews)
+  );
     return{
-        review: state.entities.reviews[ownProps.match.params.reviewId],
-        formType: "Update Review",
+        reviews: Object.values(state.entities.listings[ownProps.listingId].reviews),
         errors: state.errors.review,
         currentUser: state.session.id,
     }
@@ -37,7 +38,7 @@ const mDTP = (dispatch) => {
     return {
       fetchReview: (reviewId) => dispatch(fetchReview(reviewId)),
       clearReviewErrors: () => dispatch(clearReviewErrors()),
-      action: (review) => dispatch(updateReview(review)),
+      updateReview: (review) => dispatch(updateReview(review)),
       deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
     };
 }

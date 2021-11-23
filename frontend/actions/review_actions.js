@@ -48,8 +48,8 @@ export const createReview = (review) => (dispatch) =>
     (errors) => dispatch(receiveReviewErrors(errors.responseJSON))
   );
 
-export const updateReview = (reviewFormData, review) => (dispatch) =>
-  ReviewAPIUtil.updateReview(reviewFormData, review).then(
+export const updateReview = (review) => (dispatch) =>
+  ReviewAPIUtil.updateReview(review).then(
     (review) => dispatch(receiveReview(review)),
     (errors) => dispatch(receiveReviewErrors(errors.responseJSON))
   );

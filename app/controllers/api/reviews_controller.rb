@@ -15,16 +15,16 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render :show
     else
-      render json: @review, status: :unprocessable_entity
+      render json: @review.errors.full_messages, status: 401;
     end
   end
 
   def update
     @review = Review.find_by(id: params[:id])
-    if @review.update(review_params)
+    if @review && @review.update(review_params)
       render :show
     else
-      render json: @review.errors.full_message, status: 422
+      render json: @review.errors.full_message, status: 401;
     end
   end 
 

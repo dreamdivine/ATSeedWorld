@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
+import ReviewEditContainer from "../review/review_edit_container";
 
 
 
@@ -19,7 +20,8 @@ class ListingShow extends React.Component {
     return (
       <div>
         <NavBar />
-        <ReviewCreateContainer listingId={listing.id}/>
+        <ReviewCreateContainer listingId={listing.id} />
+        <ReviewEditContainer listingId={listing.id}/>
         <div className="listing-show-outer">
           <div className="left-show">
             <img src={listing.photos[0]} className="listing-images-1" />

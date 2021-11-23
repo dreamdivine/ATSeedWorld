@@ -6,6 +6,7 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = this.props.reviews;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -23,6 +24,16 @@ class ReviewForm extends React.Component {
     return (e) => this.setState({ [property]: e.currentTarget.value });
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error ${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -30,7 +41,6 @@ class ReviewForm extends React.Component {
           <label>Rating</label>
           <br />
           <input
-            required
             type="number"
             min="1"
             max="5"
@@ -40,12 +50,9 @@ class ReviewForm extends React.Component {
           <br />
           <label>Comment</label>
           <br />
-          <textarea
-            required
-            value={this.state.body}
-            onChange={this.update("body")}
-          />
+          <textarea value={this.state.body} onChange={this.update("body")} />
           <br />
+          <div className="review-errors">{this.renderErrors()}</div>
           <input type="submit" />
         </form>
       </div>

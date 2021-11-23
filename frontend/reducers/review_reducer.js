@@ -23,7 +23,7 @@ const reviewsReducer = (state = {}, action) => {
       delete nextState[action.reviewId];
       return nextState;
     default:
-      return state;
+      return state; 
   }
 };
 
