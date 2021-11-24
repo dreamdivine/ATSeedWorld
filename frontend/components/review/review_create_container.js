@@ -14,7 +14,6 @@ const mSTP = (state, ownProps) => {
       body: "",
       rating: 5,
     },
-    formType: "Create Review",
     errors: state.errors.review,
     currentUser: state.session.id,
     listing: state.entities.listings[ownProps.listingId]
@@ -22,7 +21,7 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = (dispatch) => ({
-  clearReviewErrors: () => disptach(clearReviewErrors()),
+  clearReviewErrors: () => dispatch(clearReviewErrors()),
   createReview: (review) => dispatch(createReview(review))
 });
 

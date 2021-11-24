@@ -16,8 +16,13 @@ class ReviewForm extends React.Component {
       listing_id: listingId,
     });
     if (this.props.currentUser) {
-      this.props.action(review);
+      this.props.createReview(review)
+      .then(() => this.props.history.push(`/`));
     }
+  }
+
+  componentWillUnmount() {
+    this.props.clearReviewErrors();
   }
 
   update(property) {
