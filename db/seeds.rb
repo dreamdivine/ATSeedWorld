@@ -120,28 +120,19 @@ l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
 l1.save
  
 l2 = Listing.new(
-  title: "RED SUN SUNFLOWER",
+  title: "BIG JIM HOT PEPPE",
   price: 3.00,
-  category: "sunflower",
-  kind: "flower",
-  seed_count: 35,
-  description: 'Stately branching plants reaching 5-6 feet tall are covered with dozens of ornamental blooms. Red to red-orange single flowers are highlighted with a hint of yellow around the centers. Blooms over a very long season, attracting bees and butterflies. Later, the tiny seeds attract birds.'
-)
-
-l2aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/sunflower-red1.jpg")
-l2.photos.attach(io: l2aphoto, filename: "sunflower-red1")
+  category: "pepper",
+  kind: "vegetable",
+  seed_count: 10,
+  description: '')
+l2aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/pepper-numex1.webp")
+l2.photos.attach(io: l2aphoto, filename: "pepper-numex1.webp")
 
 l2.save
 
-r2a = Review.create(user_id: u1.id, listing_id:  l2.id, body: "I didn't grow these in the best spot but they still thrived! Beautiful deep red to orange color. Will definitely grow again!", rating: 5)
-r2b = Review.create(user_id: u2.id, listing_id:  l2.id, body: "Was very much pleased with the results from this variety. The pollinators loved them and the color offered a nice contrast in the garden.", rating: 4)
-
-
-# l2bphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpg")
-# l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
-
-# l2cphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red2.jpeg")
-# l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
+r2a = Review.create(user_id: u1.id, listing_id:  l2.id, body: "Chile peppers love the heat, but will tolerate some afternoon shade. They don’t like to have wet roots, but they need to be moist constantly. Drip irrigation helps make some giant Big Jim’s. I love this pepper. They must be roasted as the skin is tough. I roast and put them in chile cheese bread, enchiladas etc.", rating: 4)
+r2b = Review.create(user_id: u2.id, listing_id:  l2.id, body: "They taste so good. A lot like a hatch chili but not quite. The heat is a solid medium. l'm roasting these big boys up and eating them like candy. I grew mine between some tomatoes so it didn't get as much sun as it needed but I'm getting a decent amount about 6-7 peppers at a time.", rating: 4)
 
 
 l3 = Listing.new(
@@ -157,7 +148,7 @@ l3.photos.attach(io: l3aphoto, filename: "bean-asian1")
 
 l3.save
 
-r3a = Review.create(user_id: u1.id, listing_id:  l3.id, body: "I will always grow these from now on. I planted them in late spring, they didn’t do a whole lot during the hottest part of our Arizona summer but Wednesday we’re established they have gone gangbusters. ", rating: 5)
+r3a = Review.create(user_id: u1.id, listing_id:  l3.id, body: "I will always grow these from now on. I planted them in late spring, they didn’t do a whole lot during the hottest part of our Arizona summer but Wednesday we’re established they have gone gangbusters.", rating: 5)
 r3b = Review.create(user_id: u2.id, listing_id:  l3.id, body: "One of the earliest & most vigorous long beans I've grow. The rampant vines climb aggressively, requiring little training. They bear very early; only one other pole variety I've grown (also black seeded) was faster. Very long, thin, light green pods are borne in incredible numbers.", rating: 4)
 
 
@@ -167,7 +158,7 @@ l4 = Listing.new(
   category: "bean",
   kind: "vegetable",
   seed_count: 40,
-  description: 'Bush. 50-55 days. French filet type pods of dark green color, slim straight shape, and superior flavor! Pods are held conveniently at the top of the stocky bushes. Pick them when no thicker than a pencil. Fine for fresh use, canning, and freezing.'
+  description: 'Bush. 50-55 days. French filet type pods of dark green color, slim straight shape, and superior flavor! Pods are held conveniently at the top of the stocky bushes. Pick them when no thicker than a pencil. Fine for fresh use, canning, and freezing.')
 
 l4aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/bean-calima1.webp")
 l4.photos.attach(io: l4aphoto, filename: "bean-calima1")
@@ -430,7 +421,7 @@ l19 = Listing.new(
   seed_count: 200,
   description: '65 Days. This is one of the most productive and adaptable cauliflower we have ever grown. Rober can produce large, 12-inch heads with tight curds, despite fluctuations in temperature that would ruin many other varieties. We harvested perfect heads in the punishing Missouri early summer. This is a reliable and tasty variety from Poland.')
 
-l19aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/cauliflower-rober1.web")
+l19aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/cauliflower-rober1.webp")
 l19.photos.attach(io: l19aphoto, filename: "cauliflower-rober1")
 
 l19.save
