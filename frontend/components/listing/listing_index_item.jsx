@@ -46,11 +46,10 @@ const ListingIndexItem = ({ listing}) => {
                   ""
                 )}
               </div>
+              <div className="review-length-index">{listing.review_ids.length} reviews</div>
             </div>
             <div className="listing-description-div">
-              <p className="description-text-index">
-                {listing.description}
-              </p>
+              <p className="description-text-index">{listing.description}</p>
             </div>
             <div className="basket-placeholder">Placeholder for basket</div>
           </div>
