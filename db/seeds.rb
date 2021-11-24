@@ -118,7 +118,7 @@ l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
 # l1.photos.attach(io: l1cphoto, filename: "sunflower-chocolate3")
 
 l1.save
-
+ 
 l2 = Listing.new(
   title: "RED SUN SUNFLOWER",
   price: 3.00,
@@ -131,13 +131,17 @@ l2 = Listing.new(
 l2aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/sunflower-red1.jpg")
 l2.photos.attach(io: l2aphoto, filename: "sunflower-red1")
 
+l2.save
+
+r2a = Review.create(user_id: u1.id, listing_id:  l2.id, body: "I didn't grow these in the best spot but they still thrived! Beautiful deep red to orange color. Will definitely grow again!", rating: 5)
+r2b = Review.create(user_id: u2.id, listing_id:  l2.id, body: "Was very much pleased with the results from this variety. The pollinators loved them and the color offered a nice contrast in the garden.", rating: 4)
+
+
 # l2bphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red1.jpg")
 # l2.photos.attach(io: l2bphoto, filename: "sunflower-red1")
 
 # l2cphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/sunflower-red2.jpeg")
 # l2.photos.attach(io: l2cphoto, filename: "sunflower-red2")
-
-l2.save
 
 
 l3 = Listing.new(
@@ -153,6 +157,10 @@ l3.photos.attach(io: l3aphoto, filename: "bean-asian1")
 
 l3.save
 
+r3a = Review.create(user_id: u1.id, listing_id:  l3.id, body: "I will always grow these from now on. I planted them in late spring, they didn’t do a whole lot during the hottest part of our Arizona summer but Wednesday we’re established they have gone gangbusters. ", rating: 5)
+r3b = Review.create(user_id: u2.id, listing_id:  l3.id, body: "One of the earliest & most vigorous long beans I've grow. The rampant vines climb aggressively, requiring little training. They bear very early; only one other pole variety I've grown (also black seeded) was faster. Very long, thin, light green pods are borne in incredible numbers.", rating: 4)
+
+
 l4 = Listing.new(
   title: "CALIMA BEAN",
   price: 3.00,
@@ -165,6 +173,10 @@ l4aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseed
 l4.photos.attach(io: l4aphoto, filename: "bean-calima1")
 
 l4.save
+
+
+r4a = Review.create(user_id: u1.id, listing_id:  l4.id, body: "Wow! I thought the Rattlesnake green beans were tasty, but these outshine them with ease. Lots of delicate, slender pods that have a touch of sweetness to them grow quickly and easily. While the Rattlesnake poles are very susceptible to disease early on, the Calima seems to be a much more hearty bean in contrast", rating: 5)
+r4b = Review.create(user_id: u2.id, listing_id:  l4.id, body: "I am growing in a block of sixteen, great for a family of four to eat. Love a slender bean, great taste raw or cooked. They freeze well and so far the best bush bean for me.", rating: 5)
 
 l5 = Listing.new(
   title: "DRAGON TONGUE BUSH BEAN",
@@ -179,6 +191,10 @@ l5.photos.attach(io: l5aphoto, filename: "bean-dragon1")
 
 l5.save
 
+
+r5a = Review.create(user_id: u1.id, listing_id:  l5.id, body: "My favorite, together with Beurre de Roquencourt variety. Produces later than BdR but keeps going longer. Tastes great raw!", rating: 3)
+r5b = Review.create(user_id: u2.id, listing_id:  l5.id, body: "I’m a lazy gardener, but I planted just three seeds - directly, in unfinished compost - and they all came up in 2-3 days. Thrilled. Still just babies, but I’m confident they’ll do fine.", rating: 5)
+
 l6 = Listing.new(
   title: "SLIPPERY SILKS BEAN",
   price: 3.00,
@@ -192,6 +208,10 @@ l6.photos.attach(io: l6aphoto, filename: "bean-slippery1")
 
 l6.save
 
+
+r6a = Review.create(user_id: u1.id, listing_id:  l6.id, body: "Just now got around to doing a test run of these Honduran beans, and they are real winners. Smoky flavor reminiscent of black beans but more subtle. Plants are slow to mature, but produce over a fairly long period. T", rating: 3)
+r6b = Review.create(user_id: u2.id, listing_id:  l6.id, body: "I am surprised there is no info on if this is a pole or bush bean. I kinda need to know before I order....I guess I will try call and find out....I am guessing they won't know either.", rating: 2)
+
 l7 = Listing.new(
   title: "SUCCOTASH BEAN",
   price: 3.50,
@@ -204,6 +224,10 @@ l7aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseed
 l7.photos.attach(io: l7aphoto, filename: "bean-succotash1")
 
 l7.save
+
+
+r7a = Review.create(user_id: u1.id, listing_id:  l7.id, body: "This is a beautiful fun plant. It got the best shot it could here in zone 4 with a historically warm summer, even warm nights. The best I could do is about 2 dozen fully matured pods from 2 plants. Only 2 germinated.", rating: 3)
+r7b = Review.create(user_id: u2.id, listing_id:  l7.id, body: "I grew these for the first time in 2021. They do grow very high. Easily would go to 8’. They produced well despite the odd weather and fall storms.", rating: 4)
 
 
 l8 = Listing.new(
@@ -220,6 +244,10 @@ l8.photos.attach(io: l8aphoto, filename: "bitter-bigtop1")
 l8.save
 
 
+r8a = Review.create(user_id: u1.id, listing_id:  l8.id, body: "This was a fun growing experience. I transplanted one of my successful seeds into a 15 gallon pot that I had put a semi-circle fence trellis in as well and the plant completely engulfed it! The flowers are super delicate, but I did get enough fruit to experiment with, in the kitchen.", rating: 5)
+r8b = Review.create(user_id: u2.id, listing_id:  l8.id, body: "I grew the Big Top bitter melon last year and every seed grew and thrived. However, I ended up losing every plant to hail. 2018 was a nasty year for hail, but these little plants gave me hope that I really can succeed with bitter melon and I will try again in 2019. I feel like if we hadn't of gotten so much hail, these would have been great.", rating: 4)
+
+
 l9 = Listing.new(
   title: "OKINAWAN PURE WHITE BITTER MELON",
   price: 6.00,
@@ -232,6 +260,10 @@ l9aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseed
 l9.photos.attach(io: l9aphoto, filename: "bitter-okinawan1")
 
 l9.save
+
+
+r9a = Review.create(user_id: u1.id, listing_id:  l9.id, body: "This is so easy to grow. I sowed it directly on the ground and it sprouted within 10 days. I’ve harvested a few fruits with few more on the way. The fruit is a little smaller than the regular green bitter melon, but with less bitter taste. Overall great plant! Easy to care for.", rating: 5)
+r9b = Review.create(user_id: u2.id, listing_id:  l9.id, body: "Very pretty white fruit that's both juicy and scantly bitter. It's easy to grow, pest free and the leaves are very fragrant. I used the leaves to make tea.", rating: 4)
 
 
 l10 = Listing.new(
@@ -248,6 +280,10 @@ l10.photos.attach(io: l10aphoto, filename: "bitter-satsuma1")
 
 l10.save
 
+
+r10a = Review.create(user_id: u1.id, listing_id:  l10.id, body: "Hails from the scenic, southwestern bay area tip of Kyushu Island, Japan where some of the finest bitter melons are produced. This is an ideal bitter melon for making into tea or cooking. This exceptionally long and slender fruit is delicious sliced and stir fried. A potent superfood often paired with mellow flavors like cooked garlic and beans.", rating: 5)
+r10b = Review.create(user_id: u2.id, listing_id:  l10.id, body: "I’m in zone 7. it did take a little while to flower and fruit. When the heat started, they took off unstoppable. Lots of beautiful flowers and fruits. I’ll definitely grow this variety again next year.", rating: 5)
+
 l11 = Listing.new(
   title: "CALABRESE GREEN SPROUTING BROCCOLI",
   price: 3.00,
@@ -260,6 +296,10 @@ l11aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l11.photos.attach(io: l11aphoto, filename: "broccoli-calabrese1")
 
 l11.save
+
+
+r11a = Review.create(user_id: u1.id, listing_id:  l11.id, body: "This did well for us as a winter crop, started indoors in August and set out in late September. (An earlier planting was set out a month earlier and was hurt by 113 degree Santa Ana winds - it survived, but was never as nice.)", rating: 3)
+r12b = Review.create(user_id: u2.id, listing_id:  l11.id, body: "I hereby echo one of the reviewers from Minnesota. I had very similar experience . the plants grew well, and I was hoping for the plant to make a decent size head, but the plants was grew to become a long stem and large leaves, the heads we harvested from all the plants were small. I ended up feeding the leaves to my canaries and chicken.", rating: 2)
 
 
 l12 = Listing.new(
@@ -275,6 +315,10 @@ l12.photos.attach(io: l12aphoto, filename: "broccoli-waltham1")
 
 l12.save
 
+
+r12a = Review.create(user_id: u1.id, listing_id:  l12.id, body: "I planted by direct sow with 99% germination in mid September (oops, getting a late start this year!). We left them exposed until just before the first frost, and covered them with what pretty much amounted to a cold frame, leaving them covered except the odd occasion.", rating: 5)
+r12b = Review.create(user_id: u2.id, listing_id:  l12.id, body: "Very tasty, if you can get them to head. If you don't have a month or so of stable 60ish degree temperatures, that might prove very difficult. Started these in a high tunnel as transplants first week of March, thinking surely they'd be heading by mid May. Nope. Seedlings and plants were not especially vigorous. They will bolt if you look at them the wrong way, and what heads did form were pretty small.", rating: 2)
+
 l13 = Listing.new(
   title: "BRUNSWICK CABBAGE",
   price: 2.75,
@@ -288,6 +332,10 @@ l13.photos.attach(io: l13aphoto, filename: "cabbage-brunswick1")
 
 l13.save
 
+
+r13a = Review.create(user_id: u1.id, listing_id:  l13.id, body: "I direct sowed in late fall, they were tiny seedlings but overwintered with a lightweight row cover) through some negative deg temps in St. Louis(zone 6a). In the spring they took off and grew huge. I should have thinned them out earlier and spaced them apart more. I didn't realize how large they would get and that they take ~ 100days to mature.", rating: 3)
+r13b = Review.create(user_id: u2.id, listing_id:  l13.id, body: "Planted in the Fall these cabbages took cold fronts, warm fronts, and heavy storms with no issues. They get nice and big and taste good. It's almost April and some are ready.", rating: 4)
+
 l14 = Listing.new(
   title: "VIOLACEO DI VERONA CABBAGE",
   price: 3.00,
@@ -300,6 +348,10 @@ l14aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l14.photos.attach(io: l14aphoto, filename: "cabbage-violaceo1")
 
 l14.save
+
+
+r14a = Review.create(user_id: u1.id, listing_id:  l14.id, body: "I've been growing this for a few years here, and it's always the sharpest looking plant. Works great as an accent in flower pots", rating: 5)
+r14b = Review.create(user_id: u2.id, listing_id:  l14.id, body: "Excellent cabbage that handles the capricious Texas spring weather with little issue. No problems with cabbage loopers or aphids, makes nice heads even in warmer weather than most cabbage likes. I'm going to try it again in the fall to see if that will allow the purple tones to come out a bit more vibrantly.", rating: 5)
 
 l15 = Listing.new(
   title: "EARLY JERSEY WAKEFIELD CABBAGE",
@@ -315,6 +367,10 @@ l15.photos.attach(io: l15aphoto, filename: "Cabbage-Wakefield1")
 l15.save
 
 
+r15a = Review.create(user_id: u1.id, listing_id:  l15.id, body: "This cabbage was easy and fast growing as a winter crop in central FL. No trouble with disease, and only minor damage from loopers.", rating: 5)
+r15b = Review.create(user_id: u2.id, listing_id:  l15.id, body: "I grew this variety for the first time this spring and I am truly impressed. the taste and firmness outshines the regular cannonball cabbage grown in the fall. I would like to grow this type all year long.", rating: 5)
+
+
 l16 = Listing.new(
   title: "AMARILLO CARROT",
   price: 3.00,
@@ -326,6 +382,10 @@ l16aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l16.photos.attach(io: l16aphoto, filename: "carrot-amarillo1")
 
 l16.save
+
+
+r16a = Review.create(user_id: u5.id, listing_id:  l16.id, body: "Easy to grow and resilient to crazy spring weather. The color fluctuates from light yellow to almost orange. Good flavor and size. I’ll definitely grow again, thanks for the free seeds!", rating: 4)
+r16b = Review.create(user_id: u6.id, listing_id:  l16.id, body: "I mixed these with cosmic purple and nantes for variety. I planted the mix in September in Florida. Of all the carrots, they underperformed....HOWEVER when I planted the mix again in the spring, Amarillo WAY outperformed the other types and in fact some of the others didnt even sprout, leading to a bed of mostly Amarillo", rating: 4)
 
 
 l17 = Listing.new(
@@ -341,6 +401,10 @@ l17.photos.attach(io: l17aphoto, filename: "carrot-parisienne1")
 
 l17.save
 
+
+r17a = Review.create(user_id: u3.id, listing_id:  l17.id, body: "I'm often struggling with growing carrots, but these always come up perfectly. The taste is wonderful. Until I learn to grow other species better, this is definitely my favorite carrot to grow.", rating: 5)
+r17b = Review.create(user_id: u4.id, listing_id:  l17.id, body: "I'm dismal when it comes to growing carrots, as in maybe one or two would sprout. Maybe I planted too early or too late for our grow season? I don't know. So I planted these as a lark in the early spring in part of the beet bed and, frankly, kind of forgot about them.", rating: 5)
+
 l18 = Listing.new(
   title: "DE JESI CAULIFLOWER",
   price: 3.50,
@@ -353,6 +417,9 @@ l18aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l18.photos.attach(io: l18aphoto, filename: "cauliflower-jesi1")
 
 l18.save
+
+
+r18a = Review.create(user_id: u1.id, listing_id:  l18.id, body: "One of the coolest cauliflower I've grown, as well as best tasting. Only down side is it had very low germ. but it was labeled as such so no complaints. A farmers market favorite.", rating: 5)
 
 
 l19 = Listing.new(
@@ -369,6 +436,9 @@ l19.photos.attach(io: l19aphoto, filename: "cauliflower-rober1")
 l19.save
 
 
+r19a = Review.create(user_id: u5.id, listing_id:  l19.id, body: "I loved growing this cauliflower! Super heat tolerant and easy to grow! Grew huge heads probably 12” across! Highly recommend. I forgot to tie the leaves around them so they are tinted yellow but still tastes great!", rating: 5)
+r19b = Review.create(user_id: u6.id, listing_id:  l19.id, body: "I direct sowed my seeds right in my garden beds here in Northern California zone 9b back in late October and just started harvesting this week (mid March). This was my first time growing cauliflower so I don’t have much to compare it to but they came out just as large and beautiful as grocery store cauliflower! Absolutely delicious too.", rating: 5)
+
 l20 = Listing.new(
   title: "PURPLE OF SICILY CAULIFLOWER",
   price: 3.00,
@@ -380,6 +450,10 @@ l20aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l20.photos.attach(io: l20aphoto, filename: "cauliflower-sicily1")
 
 l20.save
+
+
+r20a = Review.create(user_id: u9.id, listing_id:  l20.id, body: "Excelente Producto, muy buena germinación... lo recomiendo totalmente. Requiere de bastante espacio y buen suelo para crecer muy grande. Además, es muy hermosa la planta. Excellent Product, very good germination ... I totally recommend it. It requires a lot of space and good soil to grow very large. In addition, the plant is very beautiful.", rating: 5)
+r20b = Review.create(user_id: u8.id, listing_id:  l20.id, body: "", rating: 4)
 
 
 l21 = Listing.new(
@@ -396,8 +470,9 @@ l21.photos.attach(io: l21aphoto, filename: "celosia-1")
 
 l21.save
 
+
 l22 = Listing.new(
-  title: "PURPLE OF SICILY CAULIFLOWER",
+  title: "JAPANESE WHITE EGG EGGPLANT",
   price: 3.00,
   category: "eggplant",
   kind: "vegetable",
@@ -409,18 +484,26 @@ l22.photos.attach(io: l22aphoto, filename: "eggplant-egg1")
 l22.save
 
 
-l23 = Listing.new(
-  title: "JAPANESE WHITE EGG EGGPLANT",
-  price: 2.75,
-  category: "eggplant",
-  kind: "vegetable",
-  seed_count: 25,
-  description: '65 Days. These gorgeous, smooth white fruits mature at 2-3". With a full, rich flavor, they are perfect for stir-frying. Plants yield heavily all season. Start indoors in bright light 8-12 weeks before last frost date. Heat mat helps to warm soil and speed germination. Setting out larger transplants helps to fight pest pressure.')
+r22a = Review.create(user_id: u7.id, listing_id:  l22.id, body: "The first of my four eggplant varieties to produce, and seems like it'll be the last to quit. Incredibly creamy and mild - not the choice for people who want very strong eggplant flavor, but perfect for cooking whole or halved with little to no seasoning. Small fruit, but they're very dense!", rating: 5)
+r22b = Review.create(user_id: u8.id, listing_id:  l22.id, body: "I normally use 'Casper' as my white eggplant, but this year I decided to try something new. I'm glad I did. It took the seeds ~one month to germinate @ 80F and started out so slow, I only lost one seedling, but the germination was 95%. Once it was warm enought to plant out, they just took off running and I'm harvesting a few pounds a week out of 8 plants.", rating: 4)
 
-l23aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/eggplant-egg1.webp")
-l23.photos.attach(io: l23aphoto, filename: "eggplant-egg1")
+
+l23 = Listing.new(
+  title: "FRENCH BREAKFAST RADISH",
+  price: 2.75,
+  category: "radish",
+  kind: "vegetable",
+  seed_count: 200,
+  description: '28 days. A pre-1885 French heirloom; mild, spicy flavor with a red top and a white bottom. An attractive gourmet variety. Early maturity. Sprouts in 3-6 Days. Ideal Temperature: 50-75 Degrees F.')
+
+l23aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/radish-french1.webp")
+l23.photos.attach(io: l23aphoto, filename: "radish-french1")
 
 l23.save
+
+
+r23a = Review.create(user_id: u1.id, listing_id:  l23.id, body: "This radish grows great and early. Nearly perfect germination success rates. Delicious, I even used the greens for some homemade pesto.", rating: 5)
+r23b = Review.create(user_id: u2.id, listing_id:  l23.id, body: "Can't say enough good things about this radish. Germination is pretty much 100%. Works well planting seeds or as transplants. Doesn't seem to get woody like other varieties. Many grow above ground and others grow partially or fully underground. Grow well as clumps of 3-4. Very mild flavor, even when grown in hotter part of season. Nice size, larger than most.", rating: 5)
 
 l24 = Listing.new(
   title: "SATSUMA LONG EGGPLANT",
@@ -435,6 +518,9 @@ l24.photos.attach(io: l24aphoto, filename: "eggplant-satsuma1")
 l24.save
 
 
+r24a = Review.create(user_id: u1.id, listing_id:  l24.id, body: "I started 10 seeds expecting at least half not to germinate, well; They all germinated, now what?!? I kept 5 and gifted the rest. The plants are prolific. They put out white beautiful flowers. I grew them all spring, summer, fall and they’re still producing now during winter. Zone 10A highly recommend.", rating: 5)
+
+
 l25 = Listing.new(
   title: "STRAWBERRY FIELDS GOMPHRENA",
   price: 3.50,
@@ -447,6 +533,10 @@ l25aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l25.photos.attach(io: l25aphoto, filename: "gomphrema-haagena1")
 
 l25.save
+
+
+r25a = Review.create(user_id: u3.id, listing_id:  l25.id, body: "These couldn’t be any easier to grow. I planted a bunch of seeds in a milk jug and transplanted them into a raised bed. The plants are well-over a foot tall now with loads of red flowers. They are extremely heat tolerant.", rating: 5)
+r25b = Review.create(user_id: u6.id, listing_id:  l25.id, body: "First time growing in 2020. Love love love. Will grow these forever. Lasts a long time in a bouquet. Lovely dried. My cat even thinks they are fun to steal out of vases. Cant wait to add more colors to my collection.", rating: 5)
 
 l26 = Listing.new(
   title: "SALMON PASTEL GOMPHRENA",
@@ -473,6 +563,10 @@ l27aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l27.photos.attach(io: l27aphoto, filename: "marigold-colossus1")
 
 l27.save
+
+r27a = Review.create(user_id: u8.id, listing_id:  l27.id, body: "Started seeds indoors before last frost. These marigolds were the first to bloom, and are so striking to see, I have to stop and admire them whenever I pass by!", rating: 5)
+r27b = Review.create(user_id: u9.id, listing_id:  l27.id, body: "I started the seeds indoors and transplanted when they were approximately 6-8” tall. They were ridiculous! I don’t want to sound like I am exaggerating, so I will just say 18”, most grew to as high as 18-24”. Planted throughout the garden. Did not have much of a pest problem this year.", rating: 5)
+
 
 l28 = Listing.new(
   title: "KEE'S ORANGE MARIGOLD",
@@ -501,6 +595,9 @@ l29.photos.attach(io: l29aphoto, filename: "marigold-linnaeus1")
 
 l29.save
 
+r29a = Review.create(user_id: u7.id, listing_id: l29.id, body: "(T. linneaus) A smoldering and memorable marigold with gracefully wavy stems, and smoky orange and red blooms that resemble embers in a crackling fire. This old variety has long been tended at the Linneas Botantical Gardens in Uppsala, Sweden.", rating: 5)
+r29b = Review.create(user_id: u6.id, listing_id: l29.id, body: "I love these marigolds. Tall green leaves plants with many small red, orange, yellow mixed blooms. They’ve been nice for a cut bouquet and long lasting after cutting.", rating: 5)
+
 l30 = Listing.new(
   title: "QUEEN SOPHIA MARIGOLD",
   price: 2.75,
@@ -513,6 +610,9 @@ l30aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l30.photos.attach(io: l30aphoto, filename: "marigold-sophia1")
 
 l30.save
+
+r30a = Review.create(user_id: u4.id, listing_id:  l25.id, body: "First time with marigolds. Tried growing these last year (failed), and decided to keep them indoors under the grow light a little longer this year. Success! I guess I thought these topped out at 2 feet tall; my biggest one is topping at about 26 inches in early Sept.", rating: 3)
+r30b = Review.create(user_id: u8.id, listing_id:  l25.id, body: "I garden in Zone 6b at the foot of the Appalachian Mountains. We had a hard late freeze, extended summer drought and extended days in the 90's this growing season, which is all unusual. I planted seeds directly in the ground in mid-May in both full sun and partial sun. The plants were gorgeous, full, leafy, and sturdy, be empty of flowers all summer. By early October, I'd given up on them but hadn't pulled them. All of a sudden, they began blooming like crazy.", rating: 5)
 
 l31 = Listing.new(
   title: "SPUN ORANGE MARIGOLD",
@@ -527,6 +627,9 @@ l31.photos.attach(io: l31aphoto, filename: "marigold-spun1")
 
 l31.save
 
+r31a = Review.create(user_id: u8.id, listing_id:  l25.id, body: "We planted a variety of Rare Seeds marigolds in our greenhouse to offset the...well...greenness of all of our other plants. These provided a stunning foreground to the peppers, eggplants, tomatoes, and basil. I don't know why others had difficulties with these, as I am not a pro by any means. They grew beautifully, and are still providing happy smiles every time I enter our greenhouse.", rating: 5)
+r31b = Review.create(user_id: u8.id, listing_id:  l25.id, body: "These are as easy to grow as any other marigold but they do not have the beauty like the flower that is displayed on this site. I was disappointed in its display. I won’t grow it again.", rating: 2)
+
 l32 = Listing.new(
   title: "JAPANESE GIANT RED MUSTARD",
   price: 3.00,
@@ -539,6 +642,9 @@ l32aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atsee
 l32.photos.attach(io: l32aphoto, filename: "mustard-japanese1")
 
 l32.save
+
+r32a = Review.create(user_id: u3.id, listing_id:  l32.id, body: "Great germination. The April planted bunch bolted into summer and I let it go as pollinators were enjoying. By September the bolted plants had reseeded for fall. Lots of happy mustards now (October 20) as the weather cools. I live on the edge of a wooded area and have issues with slugs. They have left the mustard alone as the flavor seems to be too strong.", rating: 5)
+r32b = Review.create(user_id: u3.id, listing_id:  l32.id, body: "The seeds were sent free with my order. I planned on only trying out a few, but my granddaughter accidently scattered them everywhere. We watered, but didn't pay much attention to it. It grew wonderfully with no known bug issues. I would grow this again.", rating: 5)
 
 l33 = Listing.new(
   title: "GREEN WAVE MUSTARD",
@@ -553,11 +659,8 @@ l33.photos.attach(io: l33aphoto, filename: "mustard-wave1")
 
 l33.save
 
-
-
- r1 = Review.create(user_id: u1.id, listing_id:  l1.id, body: "awesome seed, very good germination rate", rating: 5)
- r2 = Review.create(user_id: u2.id, listing_id:  l2.id, body: "90% germination rate, really pretty flowers", rating: 4)
- 
+r33 = Review.create(user_id: u5.id, listing_id:  l25.id, body: "I grew this around mid-February and had no problems at all. It grew fast and the flavor was amazing of mild wasabi and crispy texture. Also the aphids left it alone and went for the Swiss Chard right next to them.", rating: 5)
+r33 = Review.create(user_id: u5.id, listing_id:  l25.id, body: "I planted 3 mustards simultaneously during the coolest time of year here in the highland tropics. This being the tropics pretty much all greens are at a disadvantage. I planted this one and the Japanese Giant Red from Baker Creek, plus Dragon's Tongue from another seller. Of the three, this one was the poorest performer. ", rating: 3)
 
 
  
