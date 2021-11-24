@@ -1,22 +1,21 @@
 
 .listing-index{
-    width: 90vw;
+    width: 86vw;
     height: 600vh;
     position: relative;
-    left: 5%;
-    top: 4em;
-    border: 1px solid red;
+    left: 10%;
+    top: 6em;
     display: flex;
     flex-wrap: wrap;
 }
 
 .star{
+    width: 30%;
     color: red;
-    width: 25%;
 }
 
-.startO{
-    width: 3%
+.start{
+    width: 3%;
 }
 
 .listing-index-item{
@@ -24,11 +23,57 @@
     width: 27%;
     height: 72vh;
     display: flex;
-    // flex-direction: column;
+    margin: 1%
 }
 
 .listing-images-index{
     width: 100%;
     height: 100%;
+}
+
+.images-link{
+    text-decoration: none;
+}
+
+.listing-title-index {
+    font-family: Nats, sans-serif;
+    font-size: 15px;
+    color: #010101;
+    position: relative;
+    left: 5px;
+
+} 
+
+.bottom-listing-index{
+    padding: 3%;
+}
+
+.rating-star-length{
+    display: flex;
+    
+}
+
+.listing-description-index{
+    font-size: 13px;
+    color: black;
+    position: relative;
+    bottom: 27px;
+}
+
+.listing-price-index{
+    color: red;
+    font-family: Nats, sans-serif;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.star-div{
+    position: relative;
+    left: 5px;
+    bottom: 13px;
+
 }
 

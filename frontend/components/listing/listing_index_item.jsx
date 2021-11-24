@@ -11,11 +11,10 @@ const ListingIndexItem = ({ listing}) => {
             <img src={listing.photos[0]} className="listing-images-index" />
           </div>
           <div className="bottom-listing-index">
-            <div>{listing.title}</div>
-            <div>${listing.price}</div>
-            <div>
-              <div>{listing.average_rating}</div>
-              <div>
+            <div className="listing-title-index">{listing.title}</div>
+            <div className="listing-price-index">${listing.price}</div>
+            <div className="rating-star-length">
+              <div className="star-div">
                 {listing.average_rating <= 1 && listing.average_rating > 0 ? (
                   <img src="/images/1.png" className="star"></img>
                 ) : (
@@ -48,8 +47,12 @@ const ListingIndexItem = ({ listing}) => {
                 )}
               </div>
             </div>
-            <div>{listing.description}</div>
-            <div>Placeholder for basket</div>
+            <div className="listing-description-index">
+              <p>
+                {listing.description}
+              </p>
+            </div>
+            {/* <div>Placeholder for basket</div> */}
           </div>
         </div>
       </Link>
