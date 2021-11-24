@@ -47,12 +47,12 @@ const ListingIndexItem = ({ listing}) => {
                 )}
               </div>
             </div>
-            <div className="listing-description-index">
-              <p>
+            <div className="listing-description-div">
+              <p className="description-text-index">
                 {listing.description}
               </p>
             </div>
-            {/* <div>Placeholder for basket</div> */}
+            <div className="basket-placeholder">Placeholder for basket</div>
           </div>
         </div>
       </Link>

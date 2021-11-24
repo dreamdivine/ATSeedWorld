@@ -23,7 +23,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => ({
   clearReviewErrors: () => disptach(clearReviewErrors()),
-  action: (review) => dispatch(createReview(review))
+  createReview: (review) => dispatch(createReview(review))
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);
