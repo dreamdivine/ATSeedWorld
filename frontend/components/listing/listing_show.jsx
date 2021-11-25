@@ -30,9 +30,6 @@ class ListingShow extends React.Component {
             <div>{listing.title}</div>
             <div>Review</div>
             <div>{listing.description}</div>
-            <div></div>
-            <div></div>
-            <div></div>
             <div>
               <div>${listing.price}</div>
               <div>
