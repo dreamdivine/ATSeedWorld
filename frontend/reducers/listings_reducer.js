@@ -21,7 +21,7 @@ const listingsReducer = (oldState = {}, action) => {
     case RECEIVE_REVIEW:
       const { review, average_rating } = action;
       const nextState = Object.assign({}, oldState);
-      nextState[review.listing_id].reviewIds.push(review.id);
+      nextState[review.listing_id].review_ids.push(review.id);
       nextState[review.listing_id].average_rating = average_rating;
       return nextState;
 

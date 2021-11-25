@@ -3,14 +3,18 @@ import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
 import ReviewEditContainer from "../review/review_edit_container";
 
-
-
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
   }
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
+  }
+
+  compononetDidUpdate() {
+    if (this.props.listingId) {
+      this.props.fetchListing(this.props.match.params.listingId);
+    }
   }
 
   render() {
@@ -21,7 +25,7 @@ class ListingShow extends React.Component {
       <div>
         <NavBar />
         <ReviewCreateContainer listingId={listing.id} />
-        <ReviewEditContainer listingId={listing.id}/>
+        <ReviewEditContainer listingId={listing.id} />
         <div className="listing-show-outer">
           <div className="left-show">
             <img src={listing.photos[0]} className="listing-images-1" />
