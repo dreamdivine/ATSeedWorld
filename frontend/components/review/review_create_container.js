@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
       user_id: state.session.id,
       listing_id: ownProps.listingId,
       body: "",
-      rating: 5,
+      rating: 0,
     },
     errors: state.errors.review,
     currentUser: state.session.id,
