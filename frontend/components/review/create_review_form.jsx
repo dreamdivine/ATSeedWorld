@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 
-class ReviewForm extends React.Component {
+class CreateReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.reviews;
@@ -11,13 +11,15 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const listingId = parseInt(this.props.match.params.listingId);
+    const listingId = this.props.listing.id
     const review = Object.assign({}, this.state, {
-      listing_id: listingId,
+      listingId,
     });
     if (this.props.currentUser) {
       this.props.createReview(review)
       .then(() => this.props.history.push(`/`));
+    }else{
+      <div>Please log in</div>
     }
   }
 
@@ -65,5 +67,5 @@ class ReviewForm extends React.Component {
   }
 }
 
-export default withRouter(ReviewForm); 
+export default withRouter(CreateReviewForm); 
 

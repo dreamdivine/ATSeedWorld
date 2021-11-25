@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   createReview, clearReviewErrors
 } from "../../actions/review_actions";
-import ReviewForm from "./review_form";
+import CreateReviewForm from "./create_review_form";
 
 
 const mSTP = (state, ownProps) => {
@@ -25,4 +25,4 @@ const mDTP = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review))
 });
 
-export default connect(mSTP, mDTP)(ReviewForm);
+export default connect(mSTP, mDTP)(CreateReviewForm);

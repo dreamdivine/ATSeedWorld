@@ -1,27 +1,16 @@
 import React from 'react';
 import {connect} from "react-redux";
 import { clearReviewErrors, updateReview, deleteReview } from '../../actions/review_actions';
-
-
-class EditReviewForm extends React.Component {
-  constructor(props){
-    super(props);
-  }
-
-
-  render() {
-      
-      return (
-        <div>hello</div>
-    );
-  }
-}
+import EditReviewForm from './edit_review_form';
 
 const mSTP = (state, ownProps) => {
+  console.log("listings", state.entities.listings[ownProps.listingId].review_ids);
+  console.log("reviews", Object.values(state.entities.reviews));
     return{
-        // reviews: Object.values(state.entities.listings[ownProps.listingId].reviews),
-        errors: state.errors.review,
+        // reviews: Object.values(state.entities.listings[ownProps.listingId]),
+        errors: state.errors,
         currentUser: state.session.id,
+        reviews: Object.values(state.entities.reviews)
     }
 }
 
