@@ -4,13 +4,13 @@ import { clearReviewErrors, updateReview, deleteReview } from '../../actions/rev
 import EditReviewForm from './edit_review_form';
 
 const mSTP = (state, ownProps) => {
-   console.log("i am here", state.entities.listings[ownProps.listingId]);
-    return{
-        // reviews: Object.values(state.entities.listings[ownProps.listingId])
-        errors: state.errors,
-        currentUser: state.session.id,
-        reviews: Object.values(state.entities.reviews),
-    }
+    return {
+      // reviews: Object.values(state.entities.listings[ownProps.listingId])
+      errors: state.errors,
+      currentUser: state.session.id,
+      reviews: state.entities.reviews,
+      reviewsId: state.entities.listings[ownProps.listingId].review_ids
+    };
 }
 
 const mDTP = (dispatch) => {
