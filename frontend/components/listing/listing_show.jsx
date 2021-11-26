@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
 import ReviewEditContainer from "../review/review_edit_container";
+import {Link, animateScroll as scroll} from "react-scroll";
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -64,7 +65,9 @@ class ListingShow extends React.Component {
                 )}
               </div>
               <div>{listing.review_ids.length} reviews</div>
-              <div></div>
+              <div>
+                <a href="#writeReview">Go to Review</a>
+              </div>
             </div>
             <div>Review</div>
             <div>{listing.description}</div>
@@ -78,8 +81,10 @@ class ListingShow extends React.Component {
             </div>
           </div>
         </div>
-        <ReviewCreateContainer listingId={listing.id} />
-        <ReviewEditContainer listingId={listing.id} />
+        <div id="writeReview">
+          <ReviewCreateContainer listingId={listing.id} />
+        </div>
+        {/* <ReviewEditContainer listingId={listing.id} /> */}
       </div>
     );
   }
