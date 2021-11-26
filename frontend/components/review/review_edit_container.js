@@ -6,10 +6,9 @@ import EditReviewForm from './edit_review_form';
 const mSTP = (state, ownProps) => {
     return {
       // reviews: Object.values(state.entities.listings[ownProps.listingId])
-      errors: state.errors,
+      errors: state.errors.review,
       currentUser: state.session.id,
-      reviews: state.entities.reviews,
-      reviewsId: state.entities.listings[ownProps.listingId].review_ids
+      reviews: Object.values(state.entities.reviews)
     };
 }
 

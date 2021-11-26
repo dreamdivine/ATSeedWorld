@@ -22,16 +22,50 @@ class ListingShow extends React.Component {
     const { listing, currentUser, listingId } = this.props;
 
     return (
-      <div>
+      <div className="top-of-show">
         <NavBar />
-        <ReviewCreateContainer listingId={listing.id} />
-        <ReviewEditContainer listingId={listing.id} />
         <div className="listing-show-outer">
           <div className="left-show">
             <img src={listing.photos[0]} className="listing-images-1" />
           </div>
           <div className="right-show">
-            <div>{listing.title}</div>
+            <div className="show-title">{listing.title}</div>
+            <div>
+              <div className="star-show">
+                {listing.average_rating <= 1 && listing.average_rating > 0 ? (
+                  <img src="/images/1.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+                {listing.average_rating <= 2 && listing.average_rating > 1 ? (
+                  <img src="/images/2.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+                {listing.average_rating <= 3 && listing.average_rating > 2 ? (
+                  <img src="/images/3.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+                {listing.average_rating <= 4 && listing.average_rating > 3 ? (
+                  <img src="/images/4.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+                {listing.average_rating <= 5 && listing.average_rating > 4 ? (
+                  <img src="/images/5.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+                {listing.average_rating === null ? (
+                  <img src="/images/0.png" className="star"></img>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div>{listing.review_ids.length} reviews</div>
+              <div></div>
+            </div>
             <div>Review</div>
             <div>{listing.description}</div>
             <div>
@@ -44,6 +78,8 @@ class ListingShow extends React.Component {
             </div>
           </div>
         </div>
+        <ReviewCreateContainer listingId={listing.id} />
+        <ReviewEditContainer listingId={listing.id} />
       </div>
     );
   }

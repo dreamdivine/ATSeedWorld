@@ -39,7 +39,7 @@ const ListingIndexItem = ({ listing}) => {
                   ""
                 )}
                 {listing.average_rating <= 5 && listing.average_rating > 4 ? (
-                  <img src="/images/4.png" className="star"></img>
+                  <img src="/images/5.png" className="star"></img>
                 ) : (
                   ""
                 )}
