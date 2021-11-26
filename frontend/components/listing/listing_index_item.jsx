@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const ListingIndexItem = ({ listing}) => {
+  const starPercentage = `${Math.round(
+    (((listing.average_rating / 5) * 100) / 10) * 10
+  )}%`
   return (
     <div className="listing-index-item">
       <Link className="images-link" to={`/listings/${listing.id}`}>
@@ -46,10 +49,14 @@ const ListingIndexItem = ({ listing}) => {
                   ""
                 )}
               </div>
-              <div className="review-length-index">{listing.review_ids.length} reviews</div>
+              <div className="review-length-index">
+                {listing.review_ids.length} reviews
+              </div>
             </div>
             <div className="listing-description-div">
-              <p className="description-text-index">{listing.description.slice(0, 70)}...</p>
+              <p className="description-text-index">
+                {listing.description.slice(0, 70)}...
+              </p>
             </div>
             <div className="basket-placeholder">Placeholder for basket</div>
           </div>
@@ -60,4 +67,4 @@ const ListingIndexItem = ({ listing}) => {
 };
 
 export default withRouter(ListingIndexItem);
-5
+
