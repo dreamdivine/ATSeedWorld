@@ -25,7 +25,7 @@ class ListingShow extends React.Component {
     return (
       <div className="top-of-show">
         <NavBar />
-        <div>
+        <div className="outer-div-show">
           <div className="listing-show-outer">
             <div className="left-show">
               <img src={listing.photos[0]} className="listing-images-1" />
@@ -94,7 +94,9 @@ class ListingShow extends React.Component {
             </div>
           </div>
           <div className="customer-reviews-show">
-            <div className="reviews-length-bottom">REVIEWS ({listing.review_ids.length})</div>
+            <div className="reviews-length-bottom">REVIEWS
+             {listing.review_ids.length > 0 ? <p className="length-review"> ({listing.review_ids.length})</p> : "" } 
+            </div>
             <div className="link-to-review-create">
               <Link to="writeReview">WRITE A REVIEW</Link>
             </div>
