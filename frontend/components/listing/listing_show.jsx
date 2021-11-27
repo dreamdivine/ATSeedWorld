@@ -22,6 +22,9 @@ class ListingShow extends React.Component {
     if (!this.props.listing) return null;
     const { listing, currentUser, listingId } = this.props;
 
+     const starPercentage = `${Math.round(
+       (((listing.average_rating / 5) * 100) / 10) * 10
+     )}%`;
     return (
       <div className="top-of-show">
         <NavBar />
@@ -94,14 +97,83 @@ class ListingShow extends React.Component {
             </div>
           </div>
           <div className="customer-reviews-show">
-            <div className="reviews-length-bottom">REVIEWS
-             {listing.review_ids.length > 0 ? <p className="length-review"> ({listing.review_ids.length})</p> : "" } 
+            <div className="reviews-length-bottom">
+              REVIEWS
+              {listing.review_ids.length > 0 ? (
+                <p className="length-review"> ({listing.review_ids.length})</p>
+              ) : (
+                ""
+              )}
             </div>
-            <div className="link-to-review-create">
-              <Link to="writeReview">WRITE A REVIEW</Link>
+            <div className="underline-show"></div>
+            <div className="customer-review">
+              <p>Customer Reviews</p>
+            </div>
+            <div className="above-reviews">
+              <div className="left-below-show">
+                <div className="average-rating-bottom">
+                  <div className="average-show-bottom">
+                    {Number(listing.average_rating).toFixed(1)}
+                  </div>
+                  <div className="star-percentage">
+                    {starPercentage} of customers recommend this product
+                  </div>
+                </div>
+                <div className="star-show-bottom">
+                  {listing.average_rating <= 1 && listing.average_rating > 0 ? (
+                    <img src="/images/1.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 2 && listing.average_rating > 1 ? (
+                    <img src="/images/2.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 3 && listing.average_rating > 2 ? (
+                    <img src="/images/3.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 4 && listing.average_rating > 3 ? (
+                    <img src="/images/4.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 5 && listing.average_rating > 4 ? (
+                    <img src="/images/5.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating === null ? (
+                    <img src="/images/0.png" className="star-bottom"></img>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="below-start-reviews">
+                  {listing.review_ids.length} reviews
+                </div>
+              </div>
+              <div className="left-divider-right"></div>
+              <div className="link-to-review-create">
+                <Link to="writeReview">
+                  <div className="write-review-bottom">WRITE A REVIEW</div>
+                </Link>
+                <div class="share-thoughts">
+                  <p class="share-thoughts-p">
+                    Share your thoughts with other customers
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+          <div className="top-customer-divider">
+            <div className="top-customer">Top customer reviews</div>
+            <div className="line-customer"></div>
+          </div>
         </div>
+
         <h1 id="writeReview">
           <ReviewCreateContainer listingId={listing.id} />
         </h1>
