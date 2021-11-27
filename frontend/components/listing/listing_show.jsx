@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
 import ReviewEditContainer from "../review/review_edit_container";
-import {Link, animateScroll as scroll} from "react-scroll";
+import {Link} from "react-scroll";
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -25,65 +25,84 @@ class ListingShow extends React.Component {
     return (
       <div className="top-of-show">
         <NavBar />
-        <div className="listing-show-outer">
-          <div className="left-show">
-            <img src={listing.photos[0]} className="listing-images-1" />
-          </div>
-          <div className="right-show">
-            <div className="show-title">{listing.title}</div>
-            <div>
-              <div className="star-show">
-                {listing.average_rating <= 1 && listing.average_rating > 0 ? (
-                  <img src="/images/1.png" className="star"></img>
-                ) : (
-                  ""
-                )}
-                {listing.average_rating <= 2 && listing.average_rating > 1 ? (
-                  <img src="/images/2.png" className="star"></img>
-                ) : (
-                  ""
-                )}
-                {listing.average_rating <= 3 && listing.average_rating > 2 ? (
-                  <img src="/images/3.png" className="star"></img>
-                ) : (
-                  ""
-                )}
-                {listing.average_rating <= 4 && listing.average_rating > 3 ? (
-                  <img src="/images/4.png" className="star"></img>
-                ) : (
-                  ""
-                )}
-                {listing.average_rating <= 5 && listing.average_rating > 4 ? (
-                  <img src="/images/5.png" className="star"></img>
-                ) : (
-                  ""
-                )}
-                {listing.average_rating === null ? (
-                  <img src="/images/0.png" className="star"></img>
-                ) : (
-                  ""
-                )}
+        <div>
+          <div className="listing-show-outer">
+            <div className="left-show">
+              <img src={listing.photos[0]} className="listing-images-1" />
+            </div>
+            <div className="right-show">
+              <div className="show-title">{listing.title}</div>
+              <div className="rating-star-link">
+                <div className="star-show">
+                  {listing.average_rating <= 1 && listing.average_rating > 0 ? (
+                    <img src="/images/1.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 2 && listing.average_rating > 1 ? (
+                    <img src="/images/2.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 3 && listing.average_rating > 2 ? (
+                    <img src="/images/3.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 4 && listing.average_rating > 3 ? (
+                    <img src="/images/4.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 5 && listing.average_rating > 4 ? (
+                    <img src="/images/5.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating === null ? (
+                    <img src="/images/0.png" className="star"></img>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="review-show">
+                  <p className="p-review-show">
+                    {listing.review_ids.length} reviews
+                  </p>
+                </div>
+                <div className="add-review">
+                  <Link to="writeReview" className="linkReview">
+                    Add your review
+                  </Link>
+                </div>
               </div>
-              <div>{listing.review_ids.length} reviews</div>
-              <div>
-                <a href="#writeReview">Go to Review</a>
+              <div className="description-show">
+                <p className="p-description-show">{listing.description}</p>
+              </div>
+              <div className="listing-price-show">
+                <div className="price-show">
+                  ${Number(listing.price).toFixed(2)}
+                </div>
+                <div className="availability-minimum-seed">
+                  <p className="in-stock">Availability: In stock</p>
+                  <p>Minimum Seed Count:{listing.seed_count}</p>
+                </div>
+              </div>
+              <div className="basket-show">
+                <p className="p-basket-show">PlaceHolder for basket</p>
               </div>
             </div>
-            <div>Review</div>
-            <div>{listing.description}</div>
-            <div>
-              <div>${listing.price}</div>
-              <div>
-                <p>Availability: In stock</p>
-                <p>Minimum Seed Count:{listing.seed_count}</p>
-                <p></p>
-              </div>
+          </div>
+          <div className="customer-reviews-show">
+            <div className="reviews-length-bottom">REVIEWS ({listing.review_ids.length})</div>
+            <div className="link-to-review-create">
+              <Link to="writeReview">WRITE A REVIEW</Link>
             </div>
           </div>
         </div>
-        <div id="writeReview">
+        <h1 id="writeReview">
           <ReviewCreateContainer listingId={listing.id} />
-        </div>
+        </h1>
         {/* <ReviewEditContainer listingId={listing.id} /> */}
       </div>
     );

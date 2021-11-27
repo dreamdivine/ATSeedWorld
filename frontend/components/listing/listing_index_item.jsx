@@ -14,8 +14,8 @@ const ListingIndexItem = ({ listing}) => {
             <img src={listing.photos[0]} className="listing-images-index" />
           </div>
           <div className="bottom-listing-index">
-            <div className="listing-title-index">{listing.title}</div>
-            <div className="listing-price-index">${listing.price}</div>
+            <div className="listing-title-index">{listing.title}</div>  
+            <div className="listing-price-index">${Number(listing.price).toFixed(2)}</div>
             <div className="rating-star-length">
               <div className="star-div">
                 {listing.average_rating <= 1 && listing.average_rating > 0 ? (

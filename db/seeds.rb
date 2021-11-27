@@ -105,7 +105,7 @@ l1 = Listing.new(
   category: "sunflower",
   kind: "flower",
   seed_count: 35,
-  description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across. This is a top choice for garden design or cut flower sales thanks to a long vase life and lower pollen count than other heirloom sunflowers.'
+  description: 'Enter an alternate galaxy when you step into the Chocolate Cherry sunflower patch. The petals range from deep obsidian to rich chocolate and black cherry and burst forth from deep onyx centers like a supernova. Some blooms have a vibrant yellow ring, or corona, around the pollen disk, just to add extra depth! This multi-branching variety stands 6-7 feet in height and the heads average 5-8 inches across.'
 )
 
 l1aphoto = URI.open("https://atseedworld-seeds.s3.us-west-1.amazonaws.com/atseedworld/firstImage/sunflower-chocolate1.webp")
