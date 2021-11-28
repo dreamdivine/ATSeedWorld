@@ -12,8 +12,9 @@ input[type="radio"]{
 
 .review-items{
     display: flex;
-    border: 1px solid purple;
     height: 200px;
+    border-bottom: 1px solid gray;
+    padding: 4%;
 
 }
 
@@ -23,12 +24,10 @@ input[type="radio"]{
 }
 
 .left-review-item{
-    border: 1px solid greenyellow;
     width: 25%;
 }
 
 .right-review-item{
-    border: 1px solid pink;
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -63,3 +62,4 @@ input[type="radio"]{
 .p-verified-buyer{
     color: grey;
 }
+

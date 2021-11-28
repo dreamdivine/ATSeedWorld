@@ -274,7 +274,12 @@
 
 .show-reviews {
   position: relative;
-  top: 3%;
+  top: 2%;
   left: 15.5%;
   width: 76%;
+}
+
+.review-create-view{
+  display: flex;
+  flex-direction: column;
 }

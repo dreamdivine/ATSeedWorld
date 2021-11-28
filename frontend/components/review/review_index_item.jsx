@@ -64,6 +64,7 @@ class ReactIndexItem extends React.Component{
                 <p>{review.body}</p>
               </div>
             </div>
+            <div className="line-below-review"></div>
           </div>
         );
     }

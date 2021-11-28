@@ -178,12 +178,14 @@ class ListingShow extends React.Component {
             <div className="line-customer"></div>
           </div>
         </div>
-        <div className="show-reviews">
-          <ReviewIndexContainer listing={listing} />
+        <div className="review-create-view">
+          <div className="show-reviews">
+            <ReviewIndexContainer listing={listing} />
+          </div>
+          <div id="writeReview">
+            <ReviewCreateContainer listingId={listing.id} />
+          </div>
         </div>
-        <h1 id="writeReview">
-          <ReviewCreateContainer listingId={listing.id} />
-        </h1>
       </div>
     );
   }

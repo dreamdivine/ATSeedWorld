@@ -12,13 +12,7 @@ class CreateReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const listingId = this.props.listing.id;
-    const review = Object.assign({}, this.state, {
-      listingId,
-    });
-    if (this.props.currentUser) {
-      this.props.createReview(review);
-    } 
+      this.props.createReview(this.state)
   }
 
   componentWillUnmount() {
@@ -66,6 +60,7 @@ class CreateReviewForm extends React.Component {
   render() {
     return (
       <div>
+        <div>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>
@@ -146,6 +141,7 @@ class CreateReviewForm extends React.Component {
             <input type="submit" />
           </label>
         </form>
+         </div>
       </div>
     );
   }
