@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-class CreateReviewForm extends React.Component {
+class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.review;
@@ -13,7 +13,7 @@ class CreateReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-      this.props.createReview(this.state)
+      this.props.action(this.state)
   }
 
   componentWillUnmount() {
@@ -180,5 +180,5 @@ class CreateReviewForm extends React.Component {
   }
 }
 
-export default withRouter(CreateReviewForm); 
+export default withRouter(ReviewForm); 
 

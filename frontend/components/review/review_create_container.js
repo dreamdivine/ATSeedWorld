@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   createReview, clearReviewErrors
 } from "../../actions/review_actions";
-import CreateReviewForm from "./create_review_form";
+import ReviewForm from "./review_form";
 
 
 const mSTP = (state, ownProps) => {
@@ -17,13 +17,14 @@ const mSTP = (state, ownProps) => {
     },
     errors: state.errors.review,
     currentUser: state.session.id,
-    listing: state.entities.listings[ownProps.listingId]
+    listing: state.entities.listings[ownProps.listingId],
+    formType: "Create Review"
   };
 };
 
 const mDTP = (dispatch) => ({
   clearReviewErrors: () => dispatch(clearReviewErrors()),
-  createReview: (review) => dispatch(createReview(review))
+  action: (review) => dispatch(createReview(review))
 });
 
-export default connect(mSTP, mDTP)(CreateReviewForm);
+export default connect(mSTP, mDTP)(ReviewForm);

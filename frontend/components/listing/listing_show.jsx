@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
-import ReviewEditContainer from "../review/review_edit_container";
+import ReviewForm from "../review/review_form";
 import {Link} from "react-scroll";
 import ReviewIndexContainer from "../review/review_index_container";
 
@@ -183,7 +183,7 @@ class ListingShow extends React.Component {
             <ReviewIndexContainer listing={listing} />
           </div>
           <div id="writeReview" className="writeReview-class">
-            <ReviewCreateContainer listingId={listing.id} />
+            <ReviewCreateContainer listingId={listing.id}/>
           </div>
         </div>
       </div>
