@@ -4,7 +4,7 @@ class EditReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleBody = this.handleBody.bind(this);
+    
 
     for (let i = 0; i < this.props.reviews.length; i++) {
       if (this.props.reviews[i].user_id === this.props.currentUser) {
@@ -13,8 +13,8 @@ class EditReviewForm extends React.Component {
     }
   }
 
-  handleBody(e) {
-    this.setState({ body: e.target.value });
+  update(property) {
+    return (e) => this.setState({ [property]: e.currentTarget.value });
   }
 
   renderErrors() {
@@ -61,8 +61,12 @@ class EditReviewForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
+            Nickname:
+            <input value={this.state.nickname} onChange={this.update("nickname")} />
+          </label>
+          <label>
             Body:
-            <textarea value={this.state.body} onChange={this.handleBody} />
+            <textarea value={this.state.body} onChange={this.update("body")} />
           </label>
           <label>
             {this.state.rating < 1 ? (

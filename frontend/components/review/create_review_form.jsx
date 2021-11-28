@@ -69,6 +69,16 @@ class CreateReviewForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>
+              Nickname:
+              <input
+                type="string"
+                value={this.state.nickname}
+                onChange={this.update("nickname")}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
               {this.state.rating < 1 ? (
                 <i className="far fa-star" id="star-plain"></i>
               ) : (
@@ -129,10 +139,12 @@ class CreateReviewForm extends React.Component {
               />
             </label>
           </div>
-          <label>Comment</label>
-          <textarea value={this.state.body} onChange={this.update("body")} />
-          <div className="review-errors">{this.renderErrors()}</div>
-          <input type="submit" />
+          <label>
+            Comment
+            <textarea value={this.state.body} onChange={this.update("body")} />
+            <div className="review-errors">{this.renderErrors()}</div>
+            <input type="submit" />
+          </label>
         </form>
       </div>
     );

@@ -2,6 +2,7 @@ class Review < ApplicationRecord
   validates :rating, inclusion: { in: (1..5) }
   validates :body, presence: true
   validates :rating, presence: true
+  validates :nickname, presence: true
 
   belongs_to :listing,
   foreign_key: :listing_id,

@@ -3,6 +3,7 @@ import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
 import ReviewEditContainer from "../review/review_edit_container";
 import {Link} from "react-scroll";
+import ReviewIndexContainer from "../review/review_index_container";
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -113,10 +114,14 @@ class ListingShow extends React.Component {
               <div className="left-below-show">
                 <div className="average-rating-bottom">
                   <div className="average-show-bottom">
-                    {Number(listing.average_rating).toFixed(1)}
+                    {listing.review_ids.length === 0.0
+                      ? 0
+                      : Number(listing.average_rating).toFixed(1)}
                   </div>
                   <div className="star-percentage">
-                    {starPercentage} of customers recommend this product
+                    {listing.review_ids.length === 0
+                      ? ""
+                      : starPercentage + "of customers recommend this product"}
                   </div>
                 </div>
                 <div className="star-show-bottom">
@@ -160,8 +165,8 @@ class ListingShow extends React.Component {
                 <Link to="writeReview">
                   <div className="write-review-bottom">WRITE A REVIEW</div>
                 </Link>
-                <div class="share-thoughts">
-                  <p class="share-thoughts-p">
+                <div className="share-thoughts">
+                  <p className="share-thoughts-p">
                     Share your thoughts with other customers
                   </p>
                 </div>
@@ -173,11 +178,12 @@ class ListingShow extends React.Component {
             <div className="line-customer"></div>
           </div>
         </div>
-
+        <div className="show-reviews">
+          <ReviewIndexContainer listing={listing} className="review-in-listing" />
+        </div>
         <h1 id="writeReview">
           <ReviewCreateContainer listingId={listing.id} />
         </h1>
-        {/* <ReviewEditContainer listingId={listing.id} /> */}
       </div>
     );
   }
