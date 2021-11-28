@@ -165,7 +165,7 @@ class ReviewForm extends React.Component {
                     className="textarea-review"
                   />
                   <div className="review-errors">{this.renderErrors()}</div>
-                  <div class="submit-review-outer">
+                  <div className="submit-review-outer">
                     <button type="submit" className="submit-review">
                       SUBMIT REVIEW
                     </button>

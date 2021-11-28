@@ -39,7 +39,7 @@ class ListingShow extends React.Component {
               <div className="rating-star-link">
                 <div className="star-show">
                   {listing.average_rating <= 1 && listing.average_rating > 0 ? (
-                    <img src="/images/1.png" className="star"></img>
+                    <img src="/images/1a.png" className="star"></img>
                   ) : (
                     ""
                   )}
@@ -126,7 +126,7 @@ class ListingShow extends React.Component {
                 </div>
                 <div className="star-show-bottom">
                   {listing.average_rating <= 1 && listing.average_rating > 0 ? (
-                    <img src="/images/1.png" className="star-bottom"></img>
+                    <img src="/images/1a.png" className="star-bottom"></img>
                   ) : (
                     ""
                   )}

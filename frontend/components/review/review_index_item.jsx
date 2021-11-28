@@ -62,7 +62,7 @@ class ReactIndexItem extends React.Component{
                         ""
                       )}
                       {review.rating === 1 ? (
-                        <img src="/images/1.png" className="star-review"></img>
+                        <img src="/images/1a.png" className="star-review"></img>
                       ) : (
                         ""
                       )}

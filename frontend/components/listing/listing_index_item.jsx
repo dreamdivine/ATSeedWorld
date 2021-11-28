@@ -19,7 +19,7 @@ const ListingIndexItem = ({ listing}) => {
             <div className="rating-star-length">
               <div className="star-div">
                 {listing.average_rating <= 1 && listing.average_rating > 0 ? (
-                  <img src="/images/1.png" className="star"></img>
+                  <img src="/images/1a.png" className="star"></img>
                 ) : (
                   ""
                 )}
