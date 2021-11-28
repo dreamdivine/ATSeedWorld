@@ -8,7 +8,7 @@ import CreateReviewForm from "./create_review_form";
 
 const mSTP = (state, ownProps) => {
   return {
-    reviews: {
+    review: {
       user_id: state.session.id,
       listing_id: ownProps.listingId,
       body: "",

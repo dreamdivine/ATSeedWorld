@@ -12,11 +12,54 @@ input[type="radio"]{
 
 .review-items{
     display: flex;
-    border: 1px solid black;
+    border: 1px solid purple;
+    height: 200px;
 
 }
 
 .review-nickname-p{
     font-size: 22px;
     color: #010101;
+}
+
+.left-review-item{
+    border: 1px solid greenyellow;
+    width: 25%;
+}
+
+.right-review-item{
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.star-review{
+    width: 10%;
+    position: relative;
+    bottom: 20%;
+
+}
+
+.verified-icon{
+    display: flex;
+    position: relative;
+    top: 4%;
+}
+
+.recommend-broken-heart, .recommend-heart{
+    display: flex;
+}
+
+.icon-recommendation{
+    position: relative;
+    top: 8%;
+}
+
+#verified-icon-symbol{
+  color: lightgreen;
+}
+
+.p-verified-buyer{
+    color: grey;
 }

@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 class CreateReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.reviews;
+    this.state = this.props.review;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.handleClick = this.handleClick.bind(this);

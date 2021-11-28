@@ -13,18 +13,18 @@ class ReactIndexItem extends React.Component{
               <div className="review-item-nickname">
                 <p className="review-nickname-p">{review.nickname}</p>
               </div>
-              <div>
-                <p>Verified Buyer</p>
-                <i className="fas fa-check-circle"></i>
+              <div className="verified-icon">
+                <p className="p-verified-buyer">Verified Buyer</p>
+                <i className="fas fa-check-circle" id="verified-icon-symbol"></i>
               </div>
-              <div>
+              <div className="icon-recommendation">
                 {review.rating <= 3 ? (
-                  <div>
+                  <div className="recommend-broken-heart">
                     <i className="fas fa-heart-broken"></i>
                     <p>I do not recommend this product</p>
                   </div>
                 ) : (
-                  <div>
+                  <div className="recommend-heart">
                     <i className="far fa-heart"></i>
                     <p>I recommend this product</p>
                   </div>
