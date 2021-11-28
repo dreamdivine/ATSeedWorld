@@ -8,9 +8,15 @@ class ReactIndexItem extends React.Component{
     render(){
         const {review, listing} = this.props
         return (
-            <div className="review-items">
+          <div className="review-items">
             <div className="left-review-item">
-              <div className="review-item-nickname">{review.nickname}</div>
+              <div className="review-item-nickname">
+                <p className="review-nickname-p">{review.nickname}</p>
+              </div>
+              <div>
+                <p>Verified Buyer</p>
+                <i className="fas fa-check-circle"></i>
+              </div>
               <div>
                 {review.rating <= 3 ? (
                   <div>
@@ -54,7 +60,9 @@ class ReactIndexItem extends React.Component{
                   ""
                 )}
               </div>
-              <div><p>{review.body}</p></div>
+              <div>
+                <p>{review.body}</p>
+              </div>
             </div>
           </div>
         );

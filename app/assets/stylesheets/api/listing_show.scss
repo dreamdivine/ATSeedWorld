@@ -1,3 +1,8 @@
+.top-of-show{
+  height: 400vh;
+}
+
+
 .listing-images-1 {
   width: 110%;
   height: 225%;
@@ -250,7 +255,7 @@
 .top-customer-divider {
   position: relative;
   top: 35%;
-  left: 13%;
+  left: 15%;
 }
 
 .top-customer {
@@ -263,11 +268,13 @@
   height: 0px;
   border: 1px solid lightgray;
   width: 60%;
-  left: 17%;
+  left: 16%;
   bottom: 36%;
 }
 
-.review-in-listing {
+.show-reviews {
   position: relative;
-  // bottom: 800%;
+  top: 3%;
+  left: 15.5%;
+  width: 76%;
 }

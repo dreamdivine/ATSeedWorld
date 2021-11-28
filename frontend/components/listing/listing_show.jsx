@@ -179,7 +179,7 @@ class ListingShow extends React.Component {
           </div>
         </div>
         <div className="show-reviews">
-          <ReviewIndexContainer listing={listing} className="review-in-listing" />
+          <ReviewIndexContainer listing={listing} />
         </div>
         <h1 id="writeReview">
           <ReviewCreateContainer listingId={listing.id} />
