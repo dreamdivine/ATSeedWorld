@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class CreateReviewForm extends React.Component {
   constructor(props) {
@@ -60,88 +61,113 @@ class CreateReviewForm extends React.Component {
   render() {
     return (
       <div>
-        <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>
-              Nickname:
-              <input
-                type="string"
-                value={this.state.nickname}
-                onChange={this.update("nickname")}
-              />
-            </label>
+        {this.props.currentUser === null ? (
+          <div className="sign-warning">
+            <i className="fas fa-exclamation-triangle"></i>
+            <p>{" Only registered users can write reviews."}</p>
+            <Link to="/account/login" className="login-show">
+              Sign in
+            </Link>
+            <p className="or-create-sign">or</p>
+            <Link to="/account/create" className="create-account-show">
+              Create an account
+            </Link>
           </div>
+        ) : (
           <div>
-            <label>
-              {this.state.rating < 1 ? (
-                <i className="far fa-star" id="star-plain"></i>
-              ) : (
-                <i className="fas fa-star" id="star-color"></i>
-              )}
-              <input
-                type="radio"
-                value="one-star"
-                onClick={this.handleClick("1star")}
-              />
-            </label>
-            <label>
-              {this.state.rating < 2 ? (
-                <i className="far fa-star" id="star-plain"></i>
-              ) : (
-                <i className="fas fa-star" id="star-color"></i>
-              )}
-              <input
-                type="radio"
-                value="two-star"
-                onClick={this.handleClick("2star")}
-              />
-            </label>
-            <label>
-              {this.state.rating < 3 ? (
-                <i className="far fa-star" id="star-plain"></i>
-              ) : (
-                <i className="fas fa-star" id="star-color"></i>
-              )}
-              <input
-                type="radio"
-                value="three-star"
-                onClick={this.handleClick("3star")}
-              />
-            </label>
-            <label>
-              {this.state.rating < 4 ? (
-                <i className="far fa-star" id="star-plain"></i>
-              ) : (
-                <i className="fas fa-star" id="star-color"></i>
-              )}
-              <input
-                type="radio"
-                value="four-star"
-                onClick={this.handleClick("4star")}
-              />
-            </label>
-            <label>
-              {this.state.rating < 5 ? (
-                <i className="far fa-star" id="star-plain"></i>
-              ) : (
-                <i className="fas fa-star" id="star-color"></i>
-              )}
-              <input
-                type="radio"
-                value="five-star"
-                onClick={this.handleClick("5star")}
-              />
-            </label>
+            <form onSubmit={this.handleSubmit}>
+              <div>
+                <div className="reviewing-title">YOU'RE REVIEWING: {this.props.listing.title}</div>
+                <div className="overall-rating">
+                  <div className="">Overall</div>
+                  <div className="star-create">
+                  <label>
+                    {this.state.rating < 1 ? (
+                      <i className="far fa-star" id="star-plain"></i>
+                    ) : (
+                      <i className="fas fa-star" id="star-color"></i>
+                    )}
+                    <input
+                      type="radio"
+                      value="one-star"
+                      onClick={this.handleClick("1star")}
+                    />
+                  </label>
+                  <label>
+                    {this.state.rating < 2 ? (
+                      <i className="far fa-star" id="star-plain"></i>
+                    ) : (
+                      <i className="fas fa-star" id="star-color"></i>
+                    )}
+                    <input
+                      type="radio"
+                      value="two-star"
+                      onClick={this.handleClick("2star")}
+                    />
+                  </label>
+                  <label>
+                    {this.state.rating < 3 ? (
+                      <i className="far fa-star" id="star-plain"></i>
+                    ) : (
+                      <i className="fas fa-star" id="star-color"></i>
+                    )}
+                    <input
+                      type="radio"
+                      value="three-star"
+                      onClick={this.handleClick("3star")}
+                    />
+                  </label>
+                  <label>
+                    {this.state.rating < 4 ? (
+                      <i className="far fa-star" id="star-plain"></i>
+                    ) : (
+                      <i className="fas fa-star" id="star-color"></i>
+                    )}
+                    <input
+                      type="radio"
+                      value="four-star"
+                      onClick={this.handleClick("4star")}
+                    />
+                  </label>
+                  <label>
+                    {this.state.rating < 5 ? (
+                      <i className="far fa-star" id="star-plain"></i>
+                    ) : (
+                      <i className="fas fa-star" id="star-color"></i>
+                    )}
+                    <input
+                      type="radio"
+                      value="five-star"
+                      onClick={this.handleClick("5star")}
+                    />
+                  </label>
+                </div>
+                </div>
+                <div className="nickname-review">
+                  <div>Nickname</div>
+                <label className="below-nickname">
+                  <input
+                    type="string"
+                    value={this.state.nickname}
+                    onChange={this.update("nickname")}
+                  />
+                </label>
+                </div>
+              </div>
+              <div className="review-create-review">
+              <div>Review</div>
+              <label>
+                <textarea
+                  value={this.state.body}
+                  onChange={this.update("body")}
+                />
+                <div className="review-errors">{this.renderErrors()}</div>
+                <button type="submit" className="submit-review">SUBMIT REVIEW</button>
+              </label>
+              </div>
+            </form>
           </div>
-          <label>
-            Comment
-            <textarea value={this.state.body} onChange={this.update("body")} />
-            <div className="review-errors">{this.renderErrors()}</div>
-            <input type="submit" />
-          </label>
-        </form>
-         </div>
+        )}
       </div>
     );
   }

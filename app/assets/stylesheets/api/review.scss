@@ -63,3 +63,57 @@ input[type="radio"]{
     color: grey;
 }
 
+.no-review{
+    position: relative;
+    left: 40%;
+    top: 60px;
+}
+
+.overall-rating{
+    display: flex;
+    position: relative;
+    top: 20px;
+}
+
+.writeReview-class{
+    position: relative;
+    flex-direction: column;
+    top: 130px;
+    border: 1px solid black;
+    width: 76%;
+    left:  16%;
+    height: 400px;
+}
+
+.star-create{
+    position: relative;
+    left: 8px;
+}
+
+.reviewing-title{
+    color: #111111;
+    font-size: 18px;
+    border: 1px solid yellow;
+}
+
+.submit-review{
+    position: relative;
+    top: 180px;
+}
+
+.nickname-review{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 60px;
+}
+
+.review-create-review{
+    position: relative;
+    top: 90px;
+}
+
+.below-nickname{
+
+}
+

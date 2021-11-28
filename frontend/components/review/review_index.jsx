@@ -6,7 +6,7 @@ class ReviewIndex extends React.Component{
         const {reviews, listing} = this.props
         return(
             <div>
-                {listing.review_ids.length === 0 ? <div><p>No Review</p></div> : 
+                {listing.review_ids.length === 0 ? <div className="no-review"><p>No Review</p></div> : 
              <ul>
                  {
                     reviews.map((review) => (
