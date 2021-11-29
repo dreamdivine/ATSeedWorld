@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :listings, only: [:index, :show, :create] 
     resources :reviews, only: [:index, :create, :destroy, :update, :show]
+    resources :basket_items, only: [:index, :create, :update, :destroy, :show]
+
    end
 end
 
