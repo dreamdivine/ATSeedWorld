@@ -13,12 +13,14 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-      this.props.action(this.state)
-  }
+    this.props.action(this.state).then(
+    this.setState({
+      body: "",
+      rating: 0,
+      nickname: ""
+    })).then(this.props.clearReviewErrors())
+}
 
-  componentWillUnmount() {
-    this.props.clearReviewErrors();
-  }
 
   update(property) {
     return (e) => this.setState({ [property]: e.currentTarget.value });
