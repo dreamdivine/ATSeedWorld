@@ -10,6 +10,7 @@ class BasketIndex extends React.Component{
     render(){
          const { basketItems, updateBasketItem, deleteBasketItem, userId} =
            this.props;
+           const uniqueBasketItem = []
         return (
           <div>
             <div>

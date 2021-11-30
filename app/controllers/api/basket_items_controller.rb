@@ -10,15 +10,33 @@ class Api::BasketItemsController < ApplicationController
         render :show
     end
 
-    def create
-        @basket_item = BasketItem.new(basket_item_params)
-        @basket_item.user_id = current_user.id
+    # def create
+    #     @basket_item = BasketItem.new(basket_item_params)
+    #     @basket_item.user_id = current_user.id
 
-        if @basket_item.save
-            render:show
-        else
-            render json: @basket_item.errors.full_messages, status: 422
+    #     if @basket_item.save
+    #         render:show
+    #     else
+    #         render json: @basket_item.errors.full_messages, status: 422
+    #     end
+    # end
+
+    def create
+        current_user.basket_items.each do |basket_item|
+            if basket_item.listing_id == (params[:basket_item][:listing_id]).to_i
+                basket_item.quantity += (params[:basket_item][:quantity]).to_i
+                basket_item.save!
+                @basket_item = basket_item
+                render :show
+                return
+            end
         end
+            @basket_item = BasketItem.create(basket_item_params)
+            if @basket_item.save!
+                render :show
+            else
+                render :json ['Invalid Product'], status: 422
+            end
     end
 
     def destroy
