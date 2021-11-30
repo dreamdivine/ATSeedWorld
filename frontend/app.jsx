@@ -11,7 +11,7 @@ import Homepage from "./components/homepage";
 import LoginFormContainer from "./components/session_form/login_form_container";
 import SignupFormContainer from "./components/session_form/signup_form_container";
 import ListingShowContainer from "./components/listing/listing_show_container";
-
+import BasketIndexContainer from "./components/basket/basket_index_container";
 
 const App = () => (
   <div>
@@ -27,8 +27,9 @@ const App = () => (
       />
       <Route path="/account/create" component={SignupFormContainer} />
       <Route path="/account/login" component={LoginFormContainer} />
+      <Route path="/cart" component={BasketIndexContainer} />
     </Switch>
   </div>
 );
 
-export default App; 
+export default App;

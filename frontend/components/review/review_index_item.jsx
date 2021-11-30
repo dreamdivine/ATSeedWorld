@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ReactIndexItem extends React.Component{
+class ReviewIndexItem extends React.Component{
     constructor(props){
         super(props)
     }
@@ -92,4 +92,4 @@ class ReactIndexItem extends React.Component{
 
 }
 
-export default ReactIndexItem;
+export default ReviewIndexItem;

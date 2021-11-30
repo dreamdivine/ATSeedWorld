@@ -43,13 +43,13 @@ export const fetchBasketItem = (basketItemId) => (dispatch) =>
 export const createBasketItem = (basketItem) => (dispatch) =>
   BasketItemAPIUtil.createBasketItem(basketItem).then(
     (basketItem) => dispatch(receiveBasketItem(basketItem)),
-    (errors) => dispatch(receiveBasketItemError(errors.responseJSON))
+    (errors) => dispatch(receiveBasketItemErrors(errors.responseJSON))
   );
 
 export const updateBasketItem = (basketItem) => (dispatch) =>
   BasketItemAPIUtil.updateBasketItem(basketItem).then(
     (basketItem) => dispatch(receiveBasketItem(basketItem)),
-    (errors) => dispatch(receiveBasketItemError(errors.responseJSON))
+    (errors) => dispatch(receiveBasketItemErrors(errors.responseJSON))
   ); 
 
 export const deleteBasketItem = (basketItemId) => (dispatch) =>

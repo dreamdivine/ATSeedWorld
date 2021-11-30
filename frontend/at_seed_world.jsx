@@ -4,7 +4,6 @@ import Root from "./components/root";
 import configureStore from "./store/store";
 import * as BasketUtil from "../frontend/util/basket_item_api_util";
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store;
@@ -23,13 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.fetchBasketItems = BasketUtil.fetchBasketItems;
   window.fetchBasketItem = BasketUtil.fetchBasketItem;
-  window.createBasketItem = BasketUtil.createBasketItem;
+  window.Item = BasketUtil.createBasketItem;
   window.updateBasketItem = BasketUtil.updateBasketItem;
   window.deleteBasketItem = BasketUtil.deleteBasketItem;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
- 
-
-  ReactDOM.render(<Root store={store}/>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });

@@ -4,7 +4,8 @@ import ReviewCreateContainer from "../review/review_create_container";
 import ReviewForm from "../review/review_form";
 import {Link} from "react-scroll";
 import ReviewIndexContainer from "../review/review_index_container";
-import CreateBasketItemForm from "../basket/create_basket_item_form";
+// import CreateBasketItemForm from "../basket/create_basket_item_form";
+import CreateBasketItemContainer from "../basket/create_basket_item_container";
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -95,7 +96,8 @@ class ListingShow extends React.Component {
               </div>
               <div className="basket-show">
                 {/* <p className="p-basket-show">PlaceHolder for basket</p> */}
-                <CreateBasketItemForm listingId={listing.id} />
+                {/* <CreateBasketItemForm listingId={listing.id} /> */}
+                <CreateBasketItemContainer listingId={listing.id}/>
               </div>
             </div>
           </div>

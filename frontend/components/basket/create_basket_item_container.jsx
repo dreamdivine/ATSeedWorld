@@ -6,16 +6,18 @@ import {
 } from "../../actions/basket_item_action";
 
 const mSTP = (state, ownProps) => {
-    console.log("listingId", ownProps.listingId);
     return {
-      BasketItemFormType: "Create BasketItem",
-      currentUserId: state.session.id,
+      basketItem:{
+          user_id: state.session.id,
+          listing_id: ownProps.listingId,
+          quantity: 1
+      },
       errors: state.errors.basketItem,
     };
 }
 
 const mDTP = dispatch => ({
-    action: (benchItem) => dispatch(createBasketItem(benchItem)),
+    action: (basketItem) => dispatch(createBasketItem(basketItem)),
     clearBasketItemErrors: () => dispatch(clearBasketItemErrors())
 })
 

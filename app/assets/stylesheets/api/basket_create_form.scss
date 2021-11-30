@@ -1,0 +1,31 @@
+.basket-button-div{
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 150%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+button {
+padding: 0;
+border: none;
+background: none;
+}
+
+.basketItemCreate input{
+    width: 70%;
+    height: 35px;
+    font-size: 20px;
+}
+
+.outer-bucket-create{
+    display: flex;
+}
+
+.add-text{
+    position: relative;
+    left: 7px;
+}

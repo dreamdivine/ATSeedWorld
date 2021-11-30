@@ -16,7 +16,7 @@ const RightNavBar = ({currentUser, logout}) => {
           </Link>
         </div>
         <div>
-          <i className="fas fa-shopping-bag" id="shopping-bag"></i>
+          <Link to="/cart"><i className="fas fa-shopping-bag" id="shopping-bag"></i></Link>
         </div>
       </div>
     );
@@ -29,7 +29,7 @@ const RightNavBar = ({currentUser, logout}) => {
           SIGN OUT
         </div>
         <div>
-          <i className="fas fa-shopping-bag" id="shopping-bag"></i>
+          <Link to="/cart"><i className="fas fa-shopping-bag" id="shopping-bag"></i></Link>
         </div>
       </div>
     );
