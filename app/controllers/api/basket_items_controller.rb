@@ -12,7 +12,7 @@ class Api::BasketItemsController < ApplicationController
 
     def create
         @basket_item = BasketItem.new(basket_item_params)
-        # @basket_item.user_id = current_user.id
+        @basket_item.user_id = current_user.id
 
         if @basket_item.save
             render:show

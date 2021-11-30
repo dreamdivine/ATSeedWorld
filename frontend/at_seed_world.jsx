@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
-import * as ListingUtil from "../frontend/util/listing_api_util";
-import * as ReviewUtil from "../frontend/util/review_api_util";
+import * as BasketUtil from "../frontend/util/basket_item_api_util";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  window.fetchReviews = ReviewUtil.fetchReviews;
-  window.fetchReview = ReviewUtil.fetchReview;
-  window.createReview = ReviewUtil.createReview;
-  window.updateReview = ReviewUtil.updateReview;
-  window.deleteReview = ReviewUtil.deleteReview;
+  window.fetchBasketItems = BasketUtil.fetchBasketItems;
+  window.fetchBasketItem = BasketUtil.fetchBasketItem;
+  window.createBasketItem = BasketUtil.createBasketItem;
+  window.updateBasketItem = BasketUtil.updateBasketItem;
+  window.deleteBasketItem = BasketUtil.deleteBasketItem;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 

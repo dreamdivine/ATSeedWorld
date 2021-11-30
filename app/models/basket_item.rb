@@ -1,5 +1,6 @@
 class BasketItem < ApplicationRecord
-    validates :user_id, :listing_id, :quantity, presence: true
+    validates :user_id, :listing_id, presence: true
+    validates :quantity, inclusion: {in: 1..100, message: 'only from 1 to 100 is allowed'}, presence: true
 
     belongs_to :user,
     foreign_key: :user_id,
