@@ -22,7 +22,8 @@ class CreateBasketItemForm extends React.Component {
           quantity: 1,
         })
       )
-      .then(this.props.clearBasketItemErrors());
+      .then(this.props.clearBasketItemErrors())
+      .then(() => this.props.history.push("/cart"));
   }
 
   renderErrors() {

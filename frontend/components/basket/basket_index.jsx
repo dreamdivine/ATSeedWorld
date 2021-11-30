@@ -12,19 +12,30 @@ class BasketIndex extends React.Component{
            this.props;
         return (
           <div>
-            {userId === null ? <div>Must be signed in</div> : 
-            <ul>
-              {basketItems.map((basketItem) => (
-                <BasketIndexItem
-                key={basketItem.id}
-                  basketItem={basketItem}
-                  updateBasketItem={updateBasketItem}
-                  deleteBasketItem={deleteBasketItem}
-                  userId={userId}
-                />
-              ))}
-            </ul>
-             }
+            <div>
+              <p>SHOPPING CART</p>
+            </div>
+            {userId === null ? (
+              <div>Must be signed in</div>
+            ) : (
+              <ul>
+                <div>
+                  <p>Item</p>
+                  <p>Price</p>
+                  <p>Qty</p>
+                  <p>Subtotal</p>
+                </div>
+                {basketItems.map((basketItem) => (
+                  <BasketIndexItem
+                    key={basketItem.id}
+                    basketItem={basketItem}
+                    updateBasketItem={updateBasketItem}
+                    deleteBasketItem={deleteBasketItem}
+                    userId={userId}
+                  />
+                ))}
+              </ul>
+            )}
           </div>
         );
     }
