@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
+import CreateBasketItemContainer from "../basket/create_basket_item_container";
 
 const ListingIndexItem = ({ listing}) => {
   const starPercentage = `${Math.round(
@@ -14,8 +15,10 @@ const ListingIndexItem = ({ listing}) => {
             <img src={listing.photos[0]} className="listing-images-index" />
           </div>
           <div className="bottom-listing-index">
-            <div className="listing-title-index">{listing.title}</div>  
-            <div className="listing-price-index">${Number(listing.price).toFixed(2)}</div>
+            <div className="listing-title-index">{listing.title}</div>
+            <div className="listing-price-index">
+              ${Number(listing.price).toFixed(2)}
+            </div>
             <div className="rating-star-length">
               <div className="star-div">
                 {listing.average_rating <= 1 && listing.average_rating > 0 ? (
@@ -58,10 +61,12 @@ const ListingIndexItem = ({ listing}) => {
                 {listing.description.slice(0, 70)}...
               </p>
             </div>
-            <div className="basket-placeholder">Placeholder for basket</div>
           </div>
         </div>
       </Link>
+      <div className="basket-placeholder">
+        <CreateBasketItemContainer listingId={listing.id} />
+      </div>
     </div>
   );
 };

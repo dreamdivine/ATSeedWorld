@@ -12,6 +12,7 @@ import LoginFormContainer from "./components/session_form/login_form_container";
 import SignupFormContainer from "./components/session_form/signup_form_container";
 import ListingShowContainer from "./components/listing/listing_show_container";
 import BasketIndexContainer from "./components/basket/basket_index_container";
+import SignInMessage from "./components/sign_in_message";
 
 const App = () => (
   <div>
@@ -28,6 +29,7 @@ const App = () => (
       <Route path="/account/create" component={SignupFormContainer} />
       <Route path="/account/login" component={LoginFormContainer} />
       <Route path="/cart" component={BasketIndexContainer} />
+      <Route path="/signin/message" component={SignInMessage} />
     </Switch>
   </div>
 );

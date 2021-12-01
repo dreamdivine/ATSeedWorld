@@ -1,0 +1,63 @@
+.outer-edit-basket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quality-price-amount{
+    display: flex;
+}
+
+.price-edit{
+    position: relative;
+    right: 10%
+}
+
+.quantity-edit{
+    position: relative;
+    right: 70%;
+    top: 20px;
+}
+
+.quantity-edit input{
+    width: 20%;
+}
+
+.subtotal-delete{
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: space-between;
+    left: 25%;
+    bottom: 20px;
+}
+
+.link-edit{
+    text-decoration: none;
+    color: black;
+}
+
+.submit-update{
+    position: relative;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    width: 50%;
+    left: 25%;
+    bottom: 15px;
+    height: 20px;
+}
+
+.button-update{
+    color: white;
+    position: relative;
+    font-size: 14px;
+}
+
+.basket-index-item{
+    border-bottom: 1px solid black;
+    position: relative;
+    top: 10%;
+
+}
+

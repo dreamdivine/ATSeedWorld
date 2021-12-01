@@ -1,7 +1,6 @@
-.top-of-show{
+.top-of-show {
   height: 400vh;
 }
-
 
 .listing-images-1 {
   width: 110%;
@@ -59,7 +58,7 @@
   right: 3%;
 }
 
-.linkReview {
+.Review {
   width: 30%;
   position: relative;
   right: 23%;
@@ -277,12 +276,12 @@
   width: 76%;
 }
 
-.review-create-view{
+.review-create-view {
   display: flex;
   flex-direction: column;
 }
 
-.sign-warning{
+.sign-warning {
   display: flex;
   border: 1px solid black;
   position: relative;
@@ -294,24 +293,23 @@
   background-color: grey;
 }
 
-.login-show, .create-account-show, .or-create-sign{
+.login-show,
+.create-account-show,
+.or-create-sign {
   color: black;
 }
 
-.login-show{
+.login-show {
   position: relative;
   left: 3px;
-
 }
 
-.create-account-show{
+.create-account-show {
   position: relative;
   left: 12px;
 }
 
-.or-create-sign{
+.or-create-sign {
   position: relative;
   left: 9px;
-
 }
-

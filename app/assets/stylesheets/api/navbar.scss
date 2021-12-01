@@ -1,5 +1,6 @@
 #shopping-bag {
   color: white;
+  font-size: 18px;
 }
 
 .main-nav-div {
@@ -90,3 +91,14 @@
   cursor: pointer;
 }
 
+.bag-quanity{
+  color: white;
+}
+
+.items-num-bag{
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: Nats, sans-serif;
+}

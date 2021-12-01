@@ -136,7 +136,7 @@ r2b = Review.create(user_id: u2.id, nickname: "Gita", listing_id:  l2.id, body: 
 
 
 l3 = Listing.new(
-  title: "TAIWAN YARD-LONG BEAN",
+  title: "TAIWAN YARD BEAN",
   price: 4.00,
   category: "bean",
   kind: "vegetable",
@@ -170,7 +170,7 @@ r4a = Review.create(user_id: u1.id, nickname: "Sam", listing_id:  l4.id, body: "
 r4b = Review.create(user_id: u2.id, nickname: "Rajan", listing_id:  l4.id, body: "I am growing in a block of sixteen, great for a family of four to eat. Love a slender bean, great taste raw or cooked. They freeze well and so far the best bush bean for me.", rating: 5)
 
 l5 = Listing.new(
-  title: "DRAGON TONGUE BUSH BEAN",
+  title: "DRAGON TONGUE BEAN",
   price: 3.00,
   category: "bean",
   kind: "vegetable",
@@ -222,7 +222,7 @@ r7b = Review.create(user_id: u2.id, nickname: "Aaysha", listing_id:  l7.id, body
 
 
 l8 = Listing.new(
-  title: "BIG TOP BITTER MELON",
+  title: "TOP BITTER MELON",
   price: 4.00,
   category: "bitter melon",
   kind: "vegetable",
@@ -294,7 +294,7 @@ r12b = Review.create(user_id: u2.id, nickname: "Sam", listing_id:  l11.id, body:
 
 
 l12 = Listing.new(
-  title: "WALTHAM 29 BROCCOLI",
+  title: "WALTHAM BROCCOLI",
   price: 3.00,
   category: "broccoli",
   kind: "vegetable",
@@ -345,7 +345,7 @@ r14a = Review.create(user_id: u1.id, nickname: "Geeta", listing_id:  l14.id, bod
 r14b = Review.create(user_id: u2.id, nickname: "Aliyah", listing_id:  l14.id, body: "Excellent cabbage that handles the capricious Texas spring weather with little issue. No problems with cabbage loopers or aphids, makes nice heads even in warmer weather than most cabbage likes. I'm going to try it again in the fall to see if that will allow the purple tones to come out a bit more vibrantly.", rating: 5)
 
 l15 = Listing.new(
-  title: "JERSEY WAKEFIELD CABBAGE",
+  title: "WAKEFIELD CABBAGE",
   price: 2.75,
   category: "cabbage",
   kind: "vegetable",

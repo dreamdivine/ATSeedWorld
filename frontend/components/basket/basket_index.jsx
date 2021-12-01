@@ -48,18 +48,26 @@ class BasketIndex extends React.Component{
                   <div className="inside-right-div">
                     <div className="summary-text">Summay</div>
                     <div className="estimate-shipping-price">
-                      <div>ESTIMATE SHIPPING AND TAX</div>
+                      <p className="estimate-text">ESTIMATE SHIPPING AND TAX</p>
                     </div>
-                    <div className="subtotal-price">
-                      <div>Subtotal</div>
-                      <div>${Number(sumPrice).toFixed(2)}</div>
-                    </div>
-                    <div className="shipping-free">
-                      <div>Shipping (Free Shipping - Free)</div>
-                      <div>$0.00</div>
+                    <div className="subtotal-shipping">
+                      <div className="subtotal-price">
+                        <div className="subtotal-text">
+                          <p className="p-subtotal">Subtotal</p>
+                        </div>
+                        <div className="number-price">
+                          ${Number(sumPrice).toFixed(2)}
+                        </div>
+                      </div>
+                      <div className="shipping-free">
+                        <div className="shipping-text">
+                          Shipping (Free Shipping - Free)
+                        </div>
+                        <div className="number-shipping">$0.00</div>
+                      </div>
                     </div>
                     <div className="total-price">
-                      <div>Total</div>
+                      <div>Order Total</div>
                       <div>${Number(sumPrice).toFixed(2)}</div>
                     </div>
                   </div>

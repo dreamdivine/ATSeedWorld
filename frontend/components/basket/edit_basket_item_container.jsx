@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   fetchBasketItem,
   updateBasketItem,
@@ -29,30 +30,51 @@ class EditBasketItemForm extends React.Component{
     render(){
         const {
           currentUserId,
-          updateBasketItem,
           deleteBasketItem,
           basketItemTitle,
           basketItemPrice
         } = this.props;
         return (
-          <div>
-            <div>{this.props.basketItemTitle}</div>
-            <div>${Number(this.props.basketItemPrice).toFixed(2)}</div>
-            <form onSubmit={this.handleSubmit}>
-              <div>
-                <label>
-                  <input
-                    type="number"
-                    value={this.state.quantity}
-                    onChange={this.update("quantity")}
-                  />
-                </label>
-              </div>
-              <button type="submit">Update cart</button>
-            </form>
-            <button onClick={() => deleteBasketItem(this.state.id)}>
-              Delete
-            </button>
+          <div className="outer-edit-basket">
+            <div>
+              <Link to={`/listings/${this.state.listing_id}`} className="link-edit">{basketItemTitle}</Link>
+            </div>
+            <div className="price-edit">
+              ${Number(this.props.basketItemPrice).toFixed(2)}
+            </div>
+            <div>
+              <form onSubmit={this.handleSubmit}>
+                <div>
+                  <div className="quantity-price-amount">
+                    <div className="quantity-edit">
+                      <label>
+                        <input
+                          type="number"
+                          value={this.state.quantity}
+                          onChange={this.update("quantity")}
+                        />
+                      </label>
+                    </div>
+                    <div className="subtotal-delete">
+                      <div className="subtotal-quanity-price">
+                        $
+                        {Number(basketItemPrice * this.state.quantity).toFixed(
+                          2
+                        )}
+                      </div>
+                      <button onClick={() => deleteBasketItem(this.state.id)}>
+                        X
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="submit-update">
+                      <button type="submit" className="button-update">Update cart</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         );
     }

@@ -19,6 +19,7 @@ background: none;
     width: 70%;
     height: 35px;
     font-size: 20px;
+    position: relative;
 }
 
 .outer-bucket-create{
@@ -29,3 +30,9 @@ background: none;
     position: relative;
     left: 7px;
 }
+
+.button-basket{
+    position: relative;
+    left: 10%
+}
+
