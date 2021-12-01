@@ -6,7 +6,6 @@ const mSTP = state => {
     return {
       basketItems: Object.values(state.entities.basketItems),
       userId: state.session.id,
-      basketItemIds: state.entities.users[state.session.id].basket_item_ids,
     };
 }
 

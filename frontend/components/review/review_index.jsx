@@ -8,7 +8,6 @@ class ReviewIndex extends React.Component{
           listing,
           deleteReview,
           userId,
-          basketItemIds,
         } = this.props;
         return (
           <div>
@@ -25,7 +24,6 @@ class ReviewIndex extends React.Component{
                     deleteReview={deleteReview}
                     userId={userId}
                     listing={listing}
-                    basketItemIds={basketItemIds}
                   />
                 ))}
               </ul>

@@ -30,6 +30,7 @@ const App = () => (
       <Route path="/account/login" component={LoginFormContainer} />
       <Route path="/cart" component={BasketIndexContainer} />
       <Route path="/signin/message" component={SignInMessage} />
+      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
     </Switch>
   </div>
 );
