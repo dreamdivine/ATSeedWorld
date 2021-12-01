@@ -15,14 +15,6 @@ class CreateBasketItemForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props
-    //   .action(this.state)
-    //   .then(
-    //     this.setState({
-    //       quantity: 1,
-    //     })
-    //   )
-    //   .then(() => this.props.history.push("/cart"));
     if(this.props.currentUserId){
       this.props
         .action(this.state)
@@ -31,7 +23,6 @@ class CreateBasketItemForm extends React.Component {
             quantity: 1,
           })
         )
-        .then(() => this.props.history.push("/cart"));
     }else{
       this.props.history.push("/signin/message")
     }
