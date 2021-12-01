@@ -13,6 +13,7 @@ const mSTP = (state, ownProps) => {
           quantity: 1
       },
       errors: state.errors.basketItem,
+      currentUserId: state.session.id
     };
 }
 
