@@ -3,7 +3,6 @@ import BasketIndex from "./basket_index";
 import { deleteBasketItem, updateBasketItem, fetchBasketItems } from "../../actions/basket_item_action";
 
 const mSTP = state => {
-   console.log("hi there", state.entities.users[state.session.id].basket_item_ids,)
     return {
       basketItems: Object.values(state.entities.basketItems),
       userId: state.session.id,
@@ -20,3 +19,4 @@ const mDTP = dispatch => {
 }
 
 export default connect(mSTP, mDTP)(BasketIndex)
+

@@ -100,7 +100,7 @@ u12 = User.create!(
 )
 
 l1 = Listing.new(
-  title: "CHOCOLATE CHERRY SUNFLOWER",
+  title: "CHOCOLATE SUNFLOWER",
   price: 4.00,
   category: "sunflower",
   kind: "flower",
@@ -120,7 +120,7 @@ l1.photos.attach(io: l1aphoto, filename: "sunflower-chocolate1")
 l1.save
  
 l2 = Listing.new(
-  title: "BIG JIM HOT PEPPE",
+  title: "BIG JIM HOT PEPPER",
   price: 3.00,
   category: "pepper",
   kind: "vegetable",
@@ -240,7 +240,7 @@ r8b = Review.create(user_id: u2.id, nickname: "Cotton", listing_id:  l8.id, body
 
 
 l9 = Listing.new(
-  title: "OKINAWAN PURE WHITE BITTER MELON",
+  title: "OKINAWAN BITTER MELON",
   price: 6.00,
   category: "bitter melon",
   kind: "vegetable",
@@ -258,7 +258,7 @@ r9b = Review.create(user_id: u2.id, nickname: "Mimi", listing_id:  l9.id, body: 
 
 
 l10 = Listing.new(
-  title: "SATSUMA OHNAGA BITTER MELON",
+  title: "SATSUMA BITTER MELON",
   price: 4.00,
   category: "bitter melon",
   kind: "vegetable",
@@ -276,7 +276,7 @@ r10a = Review.create(user_id: u1.id, nickname: "Gita", listing_id:  l10.id, body
 r10b = Review.create(user_id: u2.id, nickname: "Lui", listing_id:  l10.id, body: "I’m in zone 7. it did take a little while to flower and fruit. When the heat started, they took off unstoppable. Lots of beautiful flowers and fruits. I’ll definitely grow this variety again next year.", rating: 5)
 
 l11 = Listing.new(
-  title: "CALABRESE GREEN SPROUTING BROCCOLI",
+  title: "CALABRESE BROCCOLI",
   price: 3.00,
   category: "broccoli",
   kind: "vegetable",
@@ -328,7 +328,7 @@ r13a = Review.create(user_id: u1.id, nickname: "Charis", listing_id:  l13.id, bo
 r13b = Review.create(user_id: u2.id, nickname: "Rushme", listing_id:  l13.id, body: "Planted in the Fall these cabbages took cold fronts, warm fronts, and heavy storms with no issues. They get nice and big and taste good. It's almost April and some are ready.", rating: 4)
 
 l14 = Listing.new(
-  title: "VIOLACEO DI VERONA CABBAGE",
+  title: "VIOLACEO CABBAGE",
   price: 3.00,
   category: "cabbage",
   kind: "vegetable",
@@ -345,7 +345,7 @@ r14a = Review.create(user_id: u1.id, nickname: "Geeta", listing_id:  l14.id, bod
 r14b = Review.create(user_id: u2.id, nickname: "Aliyah", listing_id:  l14.id, body: "Excellent cabbage that handles the capricious Texas spring weather with little issue. No problems with cabbage loopers or aphids, makes nice heads even in warmer weather than most cabbage likes. I'm going to try it again in the fall to see if that will allow the purple tones to come out a bit more vibrantly.", rating: 5)
 
 l15 = Listing.new(
-  title: "EARLY JERSEY WAKEFIELD CABBAGE",
+  title: "JERSEY WAKEFIELD CABBAGE",
   price: 2.75,
   category: "cabbage",
   kind: "vegetable",
@@ -431,7 +431,7 @@ r19a = Review.create(user_id: u5.id, nickname: "Gita", listing_id:  l19.id, body
 r19b = Review.create(user_id: u6.id, nickname: "Rajan", listing_id:  l19.id, body: "I direct sowed my seeds right in my garden beds here in Northern California zone 9b back in late October and just started harvesting this week (mid March). This was my first time growing cauliflower so I don’t have much to compare it to but they came out just as large and beautiful as grocery store cauliflower! Absolutely delicious too.", rating: 5)
 
 l20 = Listing.new(
-  title: "PURPLE OF SICILY CAULIFLOWER",
+  title: "SICILY CAULIFLOWER",
   price: 3.00,
   category: "cauliflower",
   kind: "vegetable",
@@ -448,7 +448,7 @@ r20b = Review.create(user_id: u8.id, nickname: "Tashi", listing_id:  l20.id, bod
 
 
 l21 = Listing.new(
-  title: "FLAMINGO FEATHER CELOSIA",
+  title: "FLAMINGO CELOSIA",
   price: 3.00,
   category: "celosia",
   kind: "flower",
@@ -463,7 +463,7 @@ l21.save
 
 
 l22 = Listing.new(
-  title: "JAPANESE WHITE EGG EGGPLANT",
+  title: "JAPANESE WHITE EGGPLANT",
   price: 3.00,
   category: "eggplant",
   kind: "vegetable",
@@ -497,7 +497,7 @@ r23a = Review.create(user_id: u1.id, nickname: "Jason", listing_id:  l23.id, bod
 r23b = Review.create(user_id: u2.id, nickname: "Jaden", listing_id:  l23.id, body: "Can't say enough good things about this radish. Germination is pretty much 100%. Works well planting seeds or as transplants. Doesn't seem to get woody like other varieties. Many grow above ground and others grow partially or fully underground. Grow well as clumps of 3-4. Very mild flavor, even when grown in hotter part of season. Nice size, larger than most.", rating: 5)
 
 l24 = Listing.new(
-  title: "SATSUMA LONG EGGPLANT",
+  title: "SATSUMA EGGPLANT",
   price: 3.50,
   category: "eggplant",
   kind: "vegetable",
@@ -513,7 +513,7 @@ r24a = Review.create(user_id: u1.id, nickname: "Cadrel", listing_id:  l24.id, bo
 
 
 l25 = Listing.new(
-  title: "STRAWBERRY FIELDS GOMPHRENA",
+  title: "STRAWBERRY GOMPHRENA",
   price: 3.50,
   category: "gomphrena",
   kind: "flower",
@@ -530,7 +530,7 @@ r25a = Review.create(user_id: u3.id, nickname: "Cottie", listing_id:  l25.id, bo
 r25b = Review.create(user_id: u6.id, nickname: "Honey", listing_id:  l25.id, body: "First time growing in 2020. Love love love. Will grow these forever. Lasts a long time in a bouquet. Lovely dried. My cat even thinks they are fun to steal out of vases. Cant wait to add more colors to my collection.", rating: 5)
 
 l26 = Listing.new(
-  title: "SALMON PASTEL GOMPHRENA",
+  title: "SALMON GOMPHRENA",
   price: 3.00,
   category: "gomphrena",
   kind: "flower",
@@ -543,7 +543,7 @@ l26.photos.attach(io: l26aphoto, filename: "gomphrena-salmon1")
 l26.save
 
 l27 = Listing.new(
-  title: "COLOSSUS RED GOLD BICOLOR MARIGOLD",
+  title: "COLOSSUS MARIGOLD",
   price: 3.00,
   category: "marigold",
   kind: "flower",
@@ -560,7 +560,7 @@ r27b = Review.create(user_id: u9.id, nickname: "Katherine", listing_id:  l27.id,
 
 
 l28 = Listing.new(
-  title: "KEE'S ORANGE MARIGOLD",
+  title: "KEE'S MARIGOLD",
   price: 3.00,
   category: "marigold",
   kind: "flower",
@@ -574,7 +574,7 @@ l28.save
 
 
 l29 = Listing.new(
-  title: "LINNAEUS BURNING EMBERS MARIGOLD",
+  title: "LINNAEUS MARIGOLD",
   price: 3.00,
   category: "marigold",
   kind: "flower",
@@ -590,7 +590,7 @@ r29a = Review.create(user_id: u7.id, nickname: "Tolken", listing_id: l29.id, bod
 r29b = Review.create(user_id: u6.id, nickname: "Barbara", listing_id: l29.id, body: "I love these marigolds. Tall green leaves plants with many small red, orange, yellow mixed blooms. They’ve been nice for a cut bouquet and long lasting after cutting.", rating: 5)
 
 l30 = Listing.new(
-  title: "QUEEN SOPHIA MARIGOLD",
+  title: "SOPHIA MARIGOLD",
   price: 2.75,
   category: "marigold",
   kind: "flower",
@@ -606,7 +606,7 @@ r30a = Review.create(user_id: u4.id, nickname: "Jay", listing_id:  l25.id, body:
 r30b = Review.create(user_id: u8.id, nickname: "Gloria", listing_id:  l25.id, body: "I garden in Zone 6b at the foot of the Appalachian Mountains. We had a hard late freeze, extended summer drought and extended days in the 90's this growing season, which is all unusual. I planted seeds directly in the ground in mid-May in both full sun and partial sun. The plants were gorgeous, full, leafy, and sturdy, be empty of flowers all summer. By early October, I'd given up on them but hadn't pulled them. All of a sudden, they began blooming like crazy.", rating: 5)
 
 l31 = Listing.new(
-  title: "SPUN ORANGE MARIGOLD",
+  title: "SPUN MARIGOLD",
   price: 2.75,
   category: "marigold",
   kind: "flower",
@@ -622,7 +622,7 @@ r31a = Review.create(user_id: u8.id, nickname: "Hope", listing_id:  l25.id, body
 r31b = Review.create(user_id: u8.id, nickname: "Angel", listing_id:  l25.id, body: "These are as easy to grow as any other marigold but they do not have the beauty like the flower that is displayed on this site. I was disappointed in its display. I won’t grow it again.", rating: 2)
 
 l32 = Listing.new(
-  title: "JAPANESE GIANT RED MUSTARD",
+  title: "JAPANESE MUSTARD",
   price: 3.00,
   category: "mustard",
   kind: "vegetable",
@@ -638,7 +638,7 @@ r32a = Review.create(user_id: u3.id, nickname: "Kat", listing_id:  l32.id, body:
 r32b = Review.create(user_id: u3.id, nickname: "Annie", listing_id:  l32.id, body: "The seeds were sent free with my order. I planned on only trying out a few, but my granddaughter accidently scattered them everywhere. We watered, but didn't pay much attention to it. It grew wonderfully with no known bug issues. I would grow this again.", rating: 5)
 
 l33 = Listing.new(
-  title: "GREEN WAVE MUSTARD",
+  title: "WAVE MUSTARD",
   price: 2.50,
   category: "mustard",
   kind: "vegetable",

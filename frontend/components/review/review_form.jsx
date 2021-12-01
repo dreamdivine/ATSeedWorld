@@ -21,7 +21,6 @@ class ReviewForm extends React.Component {
     })).then(this.props.clearReviewErrors())
 }
 
-
   update(property) {
     return (e) => this.setState({ [property]: e.currentTarget.value });
   }

@@ -1,5 +1,6 @@
 import React from "react";
-import BasketIndexItem from "./basket_index_item"
+import BasketIndexItem from "./basket_index_item";
+import NavBar from "../navbar/navbar";
 
 class BasketIndex extends React.Component{
 
@@ -8,35 +9,63 @@ class BasketIndex extends React.Component{
   }
 
     render(){
-         const { basketItems, updateBasketItem, deleteBasketItem, userId} =
-           this.props;
-           const uniqueBasketItem = []
+      let sumPrice = 0
+        this.props.basketItems.forEach((basketItem) => sumPrice += (basketItem.price * basketItem.quantity ))
+         const {
+           basketItems,
+         } = this.props;
         return (
           <div>
-            <div>
-              <p>SHOPPING CART</p>
-            </div>
-            {userId === null ? (
-              <div>Must be signed in</div>
-            ) : (
-              <ul>
-                <div>
-                  <p>Item</p>
-                  <p>Price</p>
-                  <p>Qty</p>
-                  <p>Subtotal</p>
+            <NavBar />
+            <div className="outer-div-basket">
+              <div className="shopping-cart-text">
+                <p>SHOPPING CART</p>
+              </div>
+              <div className="below-shopping-cart">
+                <div className="left-div-basket">
+                  <ul>
+                    <div className="basket-detail">
+                      <div className="item-text">
+                        <p>Item</p>
+                      </div>
+                      <p>Price</p>
+                      <div className="qty-text">
+                        <p>Qty</p>
+                      </div>
+                      <div className="subtotal-text">
+                        <p>Subtotal</p>
+                      </div>
+                    </div>
+                    {basketItems.map((basketItem) => (
+                      <BasketIndexItem
+                        key={basketItem.id}
+                        basketItem={basketItem}
+                      />
+                    ))}
+                  </ul>
                 </div>
-                {basketItems.map((basketItem) => (
-                  <BasketIndexItem
-                    key={basketItem.id}
-                    basketItem={basketItem}
-                    updateBasketItem={updateBasketItem}
-                    deleteBasketItem={deleteBasketItem}
-                    userId={userId}
-                  />
-                ))}
-              </ul>
-            )}
+                <div className="right-div-basket">
+                  <div className="inside-right-div">
+                    <div className="summary-text">Summay</div>
+                    <div className="estimate-shipping-price">
+                      <div>ESTIMATE SHIPPING AND TAX</div>
+                    </div>
+                    <div className="subtotal-price">
+                      <div>Subtotal</div>
+                      <div>${Number(sumPrice).toFixed(2)}</div>
+                    </div>
+                    <div className="shipping-free">
+                      <div>Shipping (Free Shipping - Free)</div>
+                      <div>$0.00</div>
+                    </div>
+                    <div className="total-price">
+                      <div>Total</div>
+                      <div>${Number(sumPrice).toFixed(2)}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         );
     }

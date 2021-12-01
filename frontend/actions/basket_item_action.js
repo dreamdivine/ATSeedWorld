@@ -53,7 +53,7 @@ export const updateBasketItem = (basketItem) => (dispatch) =>
   ); 
 
 export const deleteBasketItem = (basketItemId) => (dispatch) =>
-  ReviewAPIUtil.deleteBasketItem(basketItemId).then(() =>
+  BasketItemAPIUtil.deleteBasketItem(basketItemId).then(() =>
     dispatch(removeBasketItem(basketItemId))
   );
 
