@@ -40,7 +40,7 @@ class EditBasketItemForm extends React.Component{
               <Link to={`/listings/${this.state.listing_id}`} className="link-edit">{basketItemTitle}</Link>
             </div>
             <div className="price-edit">
-              ${Number(this.props.basketItemPrice).toFixed(2)}
+             <div className="inner-price"> ${Number(this.props.basketItemPrice).toFixed(2)}</div>
             </div>
             <div>
               <form onSubmit={this.handleSubmit}>

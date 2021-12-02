@@ -9,8 +9,8 @@
 }
 
 .price-edit{
-    position: relative;
-    right: 10%
+   position: absolute;
+   left: 250px;
 }
 
 .quantity-edit{
@@ -55,7 +55,6 @@
 }
 
 .basket-index-item{
-    border-bottom: 1px solid black;
     position: relative;
     top: 10%;
 
