@@ -46,7 +46,7 @@ class BasketIndex extends React.Component{
                 </div>
                 <div className="right-div-basket">
                   <div className="inside-right-div">
-                    <div className="summary-text">Summay</div>
+                    <div className="summary-text">Summary</div>
                     <div className="estimate-shipping-price">
                       <p className="estimate-text">ESTIMATE SHIPPING AND TAX</p>
                     </div>
