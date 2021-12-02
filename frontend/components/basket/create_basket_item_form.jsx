@@ -22,7 +22,7 @@ class CreateBasketItemForm extends React.Component {
           this.setState({
             quantity: 1,
           })
-        )
+        ).then(this.props.history.push("/cart"))
     }else{
       this.props.history.push("/signin/message")
     }
