@@ -1,6 +1,7 @@
 import React from "react";
 import RightNavBarContainer from "./right_navbar_container";
 import { Link } from "react-router-dom";
+import SearchContainer from "../search/search_container";
 
 const NavBar = () => {
     return (
@@ -19,8 +20,10 @@ const NavBar = () => {
               </div>
             </Link>
           </div>
-          <div className="search-placeholder">
-            <p>Search Bar</p>
+          <div>
+           <div>
+             <SearchContainer />
+           </div>
           </div>
         </div>
         <div>

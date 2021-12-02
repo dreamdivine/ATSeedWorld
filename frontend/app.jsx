@@ -26,9 +26,9 @@ const App = () => (
         path="/listings/:listingId"
         component={ListingShowContainer}
       />
-      <Route path="/account/create" component={SignupFormContainer} />
-      <Route path="/account/login" component={LoginFormContainer} />
-      <Route path="/cart" component={BasketIndexContainer} />
+      <AuthRoute path="/account/create" component={SignupFormContainer} />
+      <AuthRoute path="/account/login" component={LoginFormContainer} />
+      <ProtectedRoute path="/cart" component={BasketIndexContainer} />
       <Route path="/signin/message" component={SignInMessage} />
       <Route render={() => <Redirect to={{ pathname: "/" }} />} />
     </Switch>
