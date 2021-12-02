@@ -35,7 +35,7 @@ function Search(props) {
         />
         <div className="icons">
                  {filteredListing.length === 0 ? (
-                    <i className="fas fa-search"></i>
+                    <i className="fas fa-search" id="search-icon"></i>
                   ) : (
                     <i
                       className="fas fa-times"
@@ -46,11 +46,10 @@ function Search(props) {
         </div>
       </div>
       {filteredListing.length !== 0 && (
-        <div className="dataResult">
+        <div className="listingResult">
           {filteredListing.slice(0, 5).map((listing) => {
             return (
               <Link
-                target="_blank"
                 className="dataItem"
                 to={`/listings/${listing.id}`}
                 key={listing.id}
