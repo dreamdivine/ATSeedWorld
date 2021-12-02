@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
+import { withRouter } from "react-router";
 
 function Search(props) {
 
  useEffect(() => {props.fetchListings()}, [])
  const [filteredListing, setFilteredListing] = useState([]);
+ const [inputWord, setInputWord] =  useState("");
 
  const handleChange = (event) => {
      const wordEntered = event.target.value;
+     setInputWord(wordEntered)
      const filteredArray = listings.filter((listing) => {
          return listing.title.toLowerCase().includes(wordEntered.toLowerCase());
      });
@@ -20,9 +22,13 @@ function Search(props) {
 
     const clearField = () => {
         setFilteredListing([]);
-        setWordEntered("");
+        setInputWord("");
     }
-       
+
+    const clearListingShow = (listingId) => {
+      props.history.push(`/listings/${listingId}`)
+      clearField()
+    }
 
   const { listings } = props;
   return (
@@ -32,30 +38,27 @@ function Search(props) {
           type="text"
           placeholder="SEARCH ENTIRE STORE HERE"
           onChange={handleChange}
+          value={inputWord}
         />
         <div className="icons">
-                 {filteredListing.length === 0 ? (
-                    <i className="fas fa-search" id="search-icon"></i>
-                  ) : (
-                    <i
-                      className="fas fa-times"
-                      id="clearBtn"
-                      onClick={clearField}
-                    ></i>
-                  )}
+          {filteredListing.length === 0 ? (
+            <i className="fas fa-search" id="search-icon"></i>
+          ) : (
+            <i className="fas fa-times" id="clearBtn" onClick={clearField}></i>
+          )}
         </div>
       </div>
       {filteredListing.length !== 0 && (
         <div className="listingResult">
           {filteredListing.slice(0, 5).map((listing) => {
             return (
-              <Link
+              <div
                 className="dataItem"
-                to={`/listings/${listing.id}`}
+                onClick={() => clearListingShow(listing.id)}
                 key={listing.id}
               >
                 <p>{listing.title}</p>
-              </Link>
+              </div>
             );
           })}
         </div>
@@ -64,4 +67,4 @@ function Search(props) {
   );
 }
 
-export default Search;
+export default withRouter(Search);
