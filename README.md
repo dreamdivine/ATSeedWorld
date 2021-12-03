@@ -27,10 +27,9 @@
 ![Review](app/assets/images/review.gif)
 
 
-
 * ### Add items to the bucket
 
-![Review](app/assets/images/bucket.gif)
+![Bucket](app/assets/images/bucket.gif)
 
 
 * ### Search for items via search bar
