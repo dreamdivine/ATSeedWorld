@@ -29,7 +29,7 @@
 
 * ### Add items to the bucket
 
-![bucket](app/assets/images/bucket.gif)
+![Basket](app/assets/images/basket.gif)
 
 
 * ### Search for items via search bar
