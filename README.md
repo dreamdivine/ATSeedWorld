@@ -15,7 +15,7 @@
 
 🥬 HTML/CSS
 
-🥬 AWS / AMAZON S4
+🥬 AWS / AMAZON S3-Image Storage
 
 ## Features
 
