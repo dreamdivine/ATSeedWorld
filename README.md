@@ -19,7 +19,7 @@
 
 * ### User account create and login
 
-![login](app/assets/images/login.gif)
+![Login](app/assets/images/login.gif)
 
 
 * ### Review and Rate the products
