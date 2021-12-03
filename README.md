@@ -19,24 +19,24 @@
 
 * ### User account create and login
 
-https://user-images.githubusercontent.com/86028417/144649458-510e8b65-3ea0-454a-b5ff-74d3c870cd1c.mov
+![Login](app/assets/images/login.gif)
+
 
 * ### Review and Rate the products
 
-https://user-images.githubusercontent.com/86028417/144650132-e6bba10c-28bb-400f-bec1-1cca36c2e124.mov
+
 
 * ### Add items to the bucket
 
-https://user-images.githubusercontent.com/86028417/144650470-20add8d8-8f9b-4c5e-8167-b0bd077aa31f.mov
+
 
 * ### Search for items via search bar
 
 
 
-https://user-images.githubusercontent.com/86028417/144650642-2be7de17-d66b-4844-87a0-42af3595d6ae.mov
 
 
 
-![login](https://user-images.githubusercontent.com/86028417/144654535-d2b3fcef-3281-467c-847a-f2d23d492941.gif)
+
 
 
