@@ -24,6 +24,8 @@
 
 * ### Review and Rate the products
 
+![Review](app/assets/images/review.gif)
+
 
 
 * ### Add items to the bucket
