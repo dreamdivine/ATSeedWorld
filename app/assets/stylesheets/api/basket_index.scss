@@ -1,149 +1,165 @@
+.outer-div-basket {
+  display: flex;
+  width: 90%;
+  position: relative;
+  left: 10%;
+  top: 50px;
+  flex-direction: column;
+  height: 100vh;
+}
 
-.outer-div-basket{
-    display: flex;
-    width: 80%;
+.outer-basket-edit{
+    width: 100%;
+}
+
+.basket-detail {
+  border-bottom: 2px solid #333;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.below-shopping-cart {
+  display: flex;
+  position: relative;
+  top: 30px;
+  justify-content: space-between;
+}
+
+.right-div-basket {
+  width: 30%;
+  height: 35%;
+  position: relative;
+  right: 8%;
+}
+
+.left-div-basket {
+  width: 60%;
+  position: relative;
+  height: 100vh;
+  right: 3%;
+}
+
+.shopping-cart-text {
+  position: relative;
+  left: 20px;
+  top: 2%;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 2px;
+}
+
+.subtotal-price {
+  display: flex;
+}
+
+.inside-right-div {
+  position: relative;
+  border: 1px solid lightgray;
+  background-color: #fbfbfb;
+  height: 60%;
+  padding: 10px;
+  top: 5px;
+}
+
+.total-price,
+.subtotal-price,
+.shipping-free {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-text {
+  font-size: 24px;
+  font-weight: 220;
+  padding: 6px;
+}
+
+.basket-individual-item {
+  display: flex;
+  border: 1px solid black;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-basket-item {
+  font-size: 14px;
+  font-family: Nats, sans-serif;
+}
+
+.subtotal-text {
+  position: relative;
+  left: 70px;
+}
+
+.qty-text {
+  position: relative;
+  left: 40px;
+}
+
+.item-text {
+  position: relative;
+  right: 70px;
+}
+
+.estimate-shipping-price,
+.summary-text,
+.subtotal-shipping {
+  border-bottom: 1px solid gray;
+}
+
+.subtotal-shipping {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.estimate-shipping-price {
+  height: 15%;
+  display: flex;
+}
+
+.estimate-text {
+  position: relative;
+  top: 30%;
+  color: #21293c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.shipping-text,
+.subtotal-text,
+.number-price,
+.number-shipping {
+  font-size: 13px;
+  color: #000000;
+}
+
+.p-subtotal {
+  position: relative;
+  right: 70px;
+}
+
+.shipping-free {
+  position: relative;
+  top: 10px;
+}
+
+.total-price {
+  position: relative;
+  top: 30px;
+}
+
+
+.show-price-div{
     position: relative;
     left: 10%;
-    top: 50px;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.basket-detail{
-    border-bottom: 2px solid #333;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-    font-size: 14px;
-    color: #000000;
-    font-weight: 500;
-}
-
-.below-shopping-cart{
-    display: flex;
-    position: relative;
-    top: 30px;
-    justify-content: space-between;
-}
-
-.right-div-basket{
-    width: 35%;
-    height: 350px;
-    background-color: #FBFBFB;
-}
-
-.left-div-basket{
-    width: 60%;
-    border-collapse: collapse ;
-}
-
-.shopping-cart-text{
-    position: relative;
-    left: 20px;
-    top: 2%;
-    font-size: 16px;
-    font-weight: 800;
-    color: #111111;
-    letter-spacing: 2px;
-}
-
-.subtotal-price{
-    display: flex;
-}
-
-.inside-right-div{
-    position: relative;
-    border: 1px solid lightgray;
-    background-color: #FBFBFB;
-    height: 60%;
-    padding: 10px;
-    top: 5px;
-}
-
-.total-price, .subtotal-price, .shipping-free{
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.summary-text{
-    font-size: 24px;
-    font-weight: 220;
-    padding: 6px;
-}
-
-.basket-individual-item{
-    display: flex;
-    border: 1px solid black;
-    height: 60px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.title-basket-item{
-    font-size: 14px;
-    font-family: Nats, sans-serif;
-}
-
-.subtotal-text{
-    position: relative;
-    left: 70px;
-}
-
-.qty-text{
-    position: relative;
-    left: 40px;
-}
-
-.item-text{
-    position: relative;
-    right: 70px;
-}
-
-.estimate-shipping-price, .summary-text, .subtotal-shipping{
-    border-bottom: 1px solid gray ;
-
-}
-
-.subtotal-shipping{
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.estimate-shipping-price{
-    height: 15%;
-    display: flex;
-}
-
-.estimate-text{
-    position: relative;
-    top: 30%;
-    color: #21293C;
-    font-size: 14px;
-    font-weight: 600;
-
-}
-
-.shipping-text, .subtotal-text, .number-price, .number-shipping{
-    font-size: 13px;
-    color: #000000;
-}
-
-.p-subtotal{
-    position: relative;
-    right: 70px;
-}
-
-.shipping-free{
-    position: relative;
-    top: 10px;
-}
-
-.total-price{
-    position: relative;
-    top: 30px;
 }

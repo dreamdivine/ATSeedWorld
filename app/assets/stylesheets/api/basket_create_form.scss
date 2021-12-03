@@ -1,43 +1,45 @@
-.basket-button-div{
-    background-color: black;
-    color: white;
-    display: flex;
-    width: 120%;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    
+.basket-button-div {
+  background-color: black;
+  color: white;
+  display: flex;
+  width: 118%;
+  height: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+  right: 13%;
 }
 
 button {
-padding: 0;
-border: none;
-background: none;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
-.basketItemCreate input{
-    width: 70%;
-    height: 35px;
-    font-size: 20px;
-    position: relative;
+.basketItemCreate input {
+  width: 55%;
+  height: 85%;
+  font-size: 20px;
+  position: relative;
+  left: 12%;
 }
 
-.outer-bucket-create{
-    display: flex;
-    border: 1px solid purple;
-    width: 145%;
-    height: 10%;
-    padding: 3%;
+.outer-bucket-create {
+  display: flex;
+  width: 125%;
+  height: 10%;
+  padding: 3%;
+//   background-color: lightgray;
 }
 
-.add-text{
-    position: relative;
-    left: 7px;
+.add-text {
+  position: relative;
+  left: 7px;
 }
 
-.button-basket{
-    position: relative;
-    left: 10%
+.button-basket {
+  position: relative;
+  left: 10%;
 }
 

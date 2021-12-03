@@ -29,7 +29,7 @@ class ListingShow extends React.Component {
      )}%`;
     return (
       <div className="top-of-show">
-        <NavBar />
+          <NavBar />
         <div className="outer-div-show">
           <div className="listing-show-outer">
             <div className="left-show">
@@ -315,225 +315,225 @@ class ListingShow extends React.Component {
                   </div>
                 </div>
                 <div className="star-show-bottom">
-                    {listing.average_rating === null ? (
-                      <div className="zero-star-icons">
-                        <div>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div>
-                          <i class="far fa-star"></i>
-                        </div>
+                  {listing.average_rating === null ? (
+                    <div className="zero-star-icons">
+                      <div>
+                        <i class="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating <= 1 &&
-                    listing.average_rating !== null ? (
-                      <div className="one-star-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div>
+                        <i class="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating < 1.6 &&
-                    listing.average_rating > 1 ? (
-                      <div className="one-half-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star-half-alt"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div>
+                        <i class="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating >= 1.6 &&
-                    listing.average_rating <= 2 ? (
-                      <div className="two-star-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div>
+                        <i class="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating > 2 &&
-                    listing.average_rating < 2.6 ? (
-                      <div className="two-half-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star-half-alt"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div>
+                        <i class="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating >= 2.6 &&
-                    listing.average_rating <= 3 ? (
-                      <div className="third-star-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating <= 1 &&
+                  listing.average_rating !== null ? (
+                    <div className="one-star-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating > 3 &&
-                    listing.average_rating < 3.6 ? (
-                      <div className="third-half-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="fas fa-star-half-alt"></i>
-                        </div>
-                        <div className="fifth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div className="second-star">
+                        <i className="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating >= 3.6 &&
-                    listing.average_rating <= 4 ? (
-                      <div className="fourth-star-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fifth-star">
-                          <i className="far fa-star"></i>
-                        </div>
+                      <div className="third-star">
+                        <i className="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating > 4 &&
-                    listing.average_rating < 4.6 ? (
-                      <div className="fourth-half-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fifth-star">
-                          <i className="fas fa-star-half-alt"></i>
-                        </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                    {listing.average_rating >= 4.6 &&
-                    listing.average_rating <= 5 ? (
-                      <div className="fifth-star-icons">
-                        <div className="first-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="second-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="third-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fourth-star">
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <div className="fifth-star">
-                          <i className="fas fa-star"></i>
-                        </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
                       </div>
-                    ) : (
-                      ""
-                    )}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating < 1.6 &&
+                  listing.average_rating > 1 ? (
+                    <div className="one-half-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star-half-alt"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating >= 1.6 &&
+                  listing.average_rating <= 2 ? (
+                    <div className="two-star-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating > 2 &&
+                  listing.average_rating < 2.6 ? (
+                    <div className="two-half-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star-half-alt"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating >= 2.6 &&
+                  listing.average_rating <= 3 ? (
+                    <div className="third-star-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating > 3 &&
+                  listing.average_rating < 3.6 ? (
+                    <div className="third-half-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="fas fa-star-half-alt"></i>
+                      </div>
+                      <div className="fifth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating >= 3.6 &&
+                  listing.average_rating <= 4 ? (
+                    <div className="fourth-star-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fifth-star">
+                        <i className="far fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating > 4 &&
+                  listing.average_rating < 4.6 ? (
+                    <div className="fourth-half-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fifth-star">
+                        <i className="fas fa-star-half-alt"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {listing.average_rating >= 4.6 &&
+                  listing.average_rating <= 5 ? (
+                    <div className="fifth-star-icons">
+                      <div className="first-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="second-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="third-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fourth-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="fifth-star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="below-start-reviews">
                   {listing.review_ids.length} reviews

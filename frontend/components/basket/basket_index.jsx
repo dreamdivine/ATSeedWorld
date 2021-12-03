@@ -15,7 +15,7 @@ class BasketIndex extends React.Component{
            basketItems,
          } = this.props;
         return (
-          <div>
+          <div className="outer-basket-edit">
             <NavBar />
             <div className="outer-div-basket">
               <div className="shopping-cart-text">
@@ -28,7 +28,9 @@ class BasketIndex extends React.Component{
                       <div className="item-text">
                         <p>Item</p>
                       </div>
-                      <p>Price</p>
+                      <div className="show-price-div">
+                      <p className="show-price-basket">Price</p>
+                      </div>
                       <div className="qty-text">
                         <p>Qty</p>
                       </div>

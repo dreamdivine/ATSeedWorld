@@ -1,16 +1,16 @@
 .top-of-show {
-  height: 210vh;
+  height: 100%;
+  width: 1360px;
 }
 
 .listing-images-1 {
-  width: 110%;
-  height: 225%;
+  width: 100%;
+  height: 100%;
 }
 
 .listing-show-outer {
   display: flex;
-  width: 75%;
-  height: 55vh;
+  height: 100vh;
   position: relative;
   left: 13%;
   top: 5em;
@@ -19,14 +19,17 @@
 }
 
 .left-show {
-  width: 45%;
-  height: 45%;
+  width: 35%;
+  height: 50%;
+  border: 1px solid black;
 }
 
 .right-show {
-  // border: 1px solid black;
+  border: 1px solid black;
   width: 45%;
   height: 100%;
+  position: relative;
+  right: 15%;
 }
 
 .make-user-signin {
@@ -132,7 +135,7 @@
 .outer-div-show {
   display: flex;
   flex-direction: column;
-  height: 150vh;
+  border: 3px solid pink;
 }
 
 .customer-reviews-show {
@@ -311,4 +314,16 @@
 .or-create-sign {
   position: relative;
   left: 9px;
+}
+
+.nav-on-show-div{
+  position: relative;
+  right: 10%;
+}
+
+.title-basket-show{
+  position: relative;
+  
+
+
 }

@@ -15,7 +15,7 @@ const ListingIndexItem = ({ listing}) => {
             <img src={listing.photos[0]} className="listing-images-index" />
           </div>
           <div className="bottom-listing-index">
-            <div className="listing-title-index">{listing.title}</div>
+            <div className="listing-title-index"><p className="title-show-p">{listing.title}</p></div>
             <div className="listing-price-index">
               ${Number(listing.price).toFixed(2)}
             </div>
@@ -238,7 +238,7 @@ const ListingIndexItem = ({ listing}) => {
                 )}
               </div>
               <div className="review-length-index">
-                {listing.review_ids.length} reviews
+                <p className="review-length-p">{listing.review_ids.length} reviews</p>
               </div>
             </div>
             <div className="listing-description-div">

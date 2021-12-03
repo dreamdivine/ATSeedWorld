@@ -21,7 +21,7 @@
 .listing-index-item {
   border: 1px solid black;
   width: 20%;
-  height: 550%;
+  height: 540%;
   display: flex;
   margin: 2%;
   flex-direction: column;
@@ -38,10 +38,10 @@
 
 .listing-title-index {
   font-family: Nats, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: #010101;
   position: relative;
-  left: 5px;
+  // left: 5px;
 }
 
 .bottom-listing-index {
@@ -52,9 +52,10 @@
   display: flex;
   align-items: center;
   position: relative;
-  top: 2rem;
-  width: 60%;
+  width: 100%;
   height: 25px;
+  font-size: 14px;
+  top: 1.3vh;
 }
 
 .listing-description-div {
@@ -62,8 +63,7 @@
   color: black;
   position: relative;
   height: 4%;
-  border: 1px solid purple;
-  top: 40px;
+  top: 2vh;
 }
 
 .description-text-index {
@@ -81,8 +81,8 @@
 }
 
 .basket-placeholder{
-    width: 75%;
-    height: 10%;
+    width: 63%;
+    // height: 5%;
     position: relative;
     color: black;
     display: flex;
@@ -93,7 +93,7 @@
 
 .review-length-index{
     position: relative;
-    left: 20px;
+    left: 4%;
     border-left: 1px solid lightgray;
     width: 60%;
     height: 23px;
@@ -103,6 +103,10 @@
     color: black;
 }
 
+.review-length-p{
+  position: relative;
+  right: 10%;
+}
 
 .zero-star-icons, .fifth-star-icons, .one-star-icons, .fourth-half-icons, .two-star-icons, .third-star-icons, .fourth-star-icons, .fifth-star-icons, .one-half-icons, .two-half-icons, .third-half-icons{
   display: flex;
@@ -110,4 +114,8 @@
 
 .fourth-star-icons, .fifth-star-icons, .third-half-icons, .fourth-half-icons, .third-star-icons, .two-half-icons, .two-star-icons, .one-half-icons, .one-star-icons, .zero-star-icons{
   color: red
+}
+
+.title-show-p{
+
 }
