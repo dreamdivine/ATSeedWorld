@@ -15,6 +15,8 @@
 
 🥬 HTML/CSS
 
+🥬 AWS / AMAZON S4
+
 ## Features
 
 * ### User account create and login
