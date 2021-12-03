@@ -9,7 +9,7 @@ class ListingIndex extends React.Component {
   render() {
       const { listings } = this.props;
     return (
-      <div>
+      <div className="listing-index-outer">
         <ul className="listing-index">
           {listings.map((listing) => (
             <ListingIndexItem listing={listing} key={listing.id} />

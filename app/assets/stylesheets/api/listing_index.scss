@@ -1,6 +1,11 @@
+.listing-index-outer{
+  width: 100%;
+  height: 100%;
+}
+
 .listing-index {
   width: 86vw;
-  height: 600vh;
+  height: 5em;
   position: relative;
   left: 10%;
   top: 6em;
@@ -15,10 +20,10 @@
 
 .listing-index-item {
   border: 1px solid black;
-  width: 28%;
-  height: 66vh;
+  width: 20%;
+  height: 550%;
   display: flex;
-  margin: 1%;
+  margin: 2%;
   flex-direction: column;
 }
 
@@ -56,8 +61,9 @@
   font-size: 18px;
   color: black;
   position: relative;
-  top: 4rem;
-  height: 4.7vh;
+  height: 4%;
+  border: 1px solid purple;
+  top: 40px;
 }
 
 .description-text-index {
@@ -75,15 +81,14 @@
 }
 
 .basket-placeholder{
-    width: 100%;
-    height: 50px;
+    width: 75%;
+    height: 10%;
     position: relative;
-    top: 5rem;
     color: black;
-    background-color: #EEEEEE;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 8%;
 }
 
 .review-length-index{
@@ -96,4 +101,13 @@
     align-items: center;
     justify-content: center;
     color: black;
+}
+
+
+.zero-star-icons, .fifth-star-icons, .one-star-icons, .fourth-half-icons, .two-star-icons, .third-star-icons, .fourth-star-icons, .fifth-star-icons, .one-half-icons, .two-half-icons, .third-half-icons{
+  display: flex;
+}
+
+.fourth-star-icons, .fifth-star-icons, .third-half-icons, .fourth-half-icons, .third-star-icons, .two-half-icons, .two-star-icons, .one-half-icons, .one-star-icons, .zero-star-icons{
+  color: red
 }
