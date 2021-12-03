@@ -31,7 +31,6 @@
 
 ![Bucket](app/assets/images/bucket.gif)
 
-
 * ### Search for items via search bar
 
 ![Search](app/assets/images/search.gif)
