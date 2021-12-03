@@ -29,7 +29,7 @@
 ![Review](app/assets/images/review.gif)
 
 
-* ### Add items to the bucket
+* ### Add items to the basket
 
 ![Basket](app/assets/images/basket.gif)
 
