@@ -54,6 +54,25 @@ Ones the user starts typing on the search bar, the drop down menu will show the 
 
 ![Search](app/assets/images/search.gif)
 
+* ### Please check out the app for additional functionality.
+
+#Future Features
+* Mobile-friendly - make the website responsive for small screen sizes and for mobile
+* Possibly add the filter the function so it can filter the data based on price
+
+
+# Lesson Learned
+## Time management 
+* I learned to stick with schedule and follow through the time line. Although it took long time to plan everything out, it helped me keep myself in track and forced me to completely focus on one functionality at a time. It is extremely important to follow through your plans especially if you have limited time to work on the project. 
+
+## Search Bar
+* Sometimes although you are passing same component to different pages, it might lose some functionality so it is important to test out the functionality in each page. I had same search bar component in the show page and the home page but it was not clearing out the input field when the search bar was used in the show page. As a solution, I created a function to clear out the input which is implemented ones the user clicks on the items in the drop down menu. 
+
+ 
+
+
+
+
 
 
 
