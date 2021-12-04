@@ -480,7 +480,7 @@ r22b = Review.create(user_id: u8.id, nickname: "Anu", listing_id:  l22.id, body:
 
 
 l23 = Listing.new(
-  title: "FRENCH BREAKFAST RADISH",
+  title: "BREAKFAST RADISH",
   price: 2.75,
   category: "radish",
   kind: "vegetable",

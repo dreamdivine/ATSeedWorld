@@ -10,11 +10,11 @@ class ListingIndex extends React.Component {
       const { listings } = this.props;
     return (
       <div className="listing-index-outer">
-        <ul className="listing-index">
+        <div className="listing-index">
           {listings.map((listing) => (
             <ListingIndexItem listing={listing} key={listing.id} />
           ))}
-        </ul>
+        </div>
       </div>
     );
   }

@@ -17,7 +17,7 @@ const ListingIndexItem = ({ listing}) => {
           <div className="bottom-listing-index">
             <div className="listing-title-index"><p className="title-show-p">{listing.title}</p></div>
             <div className="listing-price-index">
-              ${Number(listing.price).toFixed(2)}
+             <p> ${Number(listing.price).toFixed(2)}</p>
             </div>
             <div className="rating-star-length">
               <div className="star-div">
