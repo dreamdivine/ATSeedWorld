@@ -22,6 +22,8 @@
 * ### The Home Page
 
 The home page shows all the listings for the seed that the user can purchase. There is add to cart button below each listing and the user wont be able to add items to cart unless they are logged in. Ones the user is logged in and clicks on add to cart button, it will take the user to basket page. If the user clicks on the image on the homepage, it will take the user to the show page of the listing. The home page also shows average review for each listing below the listing image. 
+
+![Home Page](app/assets/images/home.png)
  
 * ### User account create and login
 
