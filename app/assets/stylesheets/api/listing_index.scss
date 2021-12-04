@@ -1,11 +1,11 @@
 .listing-index-outer{
   width: 100%;
-  height: 100%;
+  height: 82px;
 }
 
 .listing-index {
   width: 86vw;
-  height: 5em;
+  height: 100%;
   position: relative;
   left: 10%;
   top: 6em;
@@ -21,7 +21,7 @@
 .listing-index-item {
   border: 1px solid black;
   width: 22%;
-  height: 540%;
+  height: 550%;
   display: flex;
   margin: 1.2%;
   flex-direction: column;
@@ -73,10 +73,11 @@
 .listing-price-index {
   color: red;
   font-family: Nats, sans-serif;
-  position: absolute;
+  position: relative;
+  top: 13px;
+  left: 5px;
   font-size: 16px;
   font-weight: bold;
-
 }
 
 .basket-placeholder{
