@@ -463,7 +463,7 @@ l21.save
 
 
 l22 = Listing.new(
-  title: "JAPANESE WHITE EGGPLANT",
+  title: "JAPANESE EGGPLANT",
   price: 3.00,
   category: "eggplant",
   kind: "vegetable",

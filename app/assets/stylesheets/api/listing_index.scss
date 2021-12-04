@@ -23,7 +23,7 @@
   width: 20%;
   height: 540%;
   display: flex;
-  margin: 2%;
+  margin: 1.5%;
   flex-direction: column;
 }
 
@@ -38,10 +38,10 @@
 
 .listing-title-index {
   font-family: Nats, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
   color: #010101;
-  position: relative;
-  // left: 5px;
+  position: absolute;
 }
 
 .bottom-listing-index {
