@@ -1,14 +1,18 @@
 .basket-button-div {
   background-color: black;
-  color: white;
   display: flex;
-  width: 118%;
-  height: 30px;
+  width: 7vw;
+  height: 1.5vw;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 14px;
   position: relative;
-  right: 13%;
+}
+
+.add-cart-show{
+  color: white;
+  font-size: 0.75vw;
+  position: relative;
+  right: 0.5vw;
 }
 
 button {
@@ -18,8 +22,8 @@ button {
 }
 
 .basketItemCreate input {
-  width: 55%;
-  height: 85%;
+  width: 1.2vw;
+  height: 1.3vw;
   font-size: 20px;
   position: relative;
   left: 12%;
@@ -27,9 +31,10 @@ button {
 
 .outer-bucket-create {
   display: flex;
-  width: 125%;
-  height: 10%;
+  width: 10vw;
+  height: 2vw;
   padding: 3%;
+  // border: 1px solid pink;
 //   background-color: lightgray;
 }
 
@@ -40,6 +45,6 @@ button {
 
 .button-basket {
   position: relative;
-  left: 10%;
+  left: 0.5vw;
 }
 

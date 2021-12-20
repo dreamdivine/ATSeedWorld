@@ -16,9 +16,9 @@ const ListingIndexItem = ({ listing}) => {
           </div>
           <div className="bottom-listing-index">
             <div className="listing-title-index"><p className="title-show-p">{listing.title}</p></div>
-            {/* <div className="listing-price-index">
+            <div className="listing-price-index">
              <p> ${Number(listing.price).toFixed(2)}</p>
-            </div> */}
+            </div>
             <div className="rating-star-length">
               <div className="star-div">
                 {listing.average_rating === null ? (
