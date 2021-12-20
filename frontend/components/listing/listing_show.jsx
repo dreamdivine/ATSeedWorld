@@ -29,7 +29,9 @@ class ListingShow extends React.Component {
      )}%`;
     return (
       <div className="top-of-show">
+        <div className="navbarInShow">
           <NavBar />
+        </div>
         <div className="outer-div-show">
           <div className="listing-show-outer">
             <div className="left-show">
