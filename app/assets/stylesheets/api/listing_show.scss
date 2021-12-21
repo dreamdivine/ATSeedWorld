@@ -4,11 +4,11 @@
   width: 100%;
 }
 
-.navbarInShow{
+.navbarInShow {
   width: 100%;
 }
 
-.outer-div-show{
+.outer-div-show {
   border: 3px solid pink;
   width: 100%;
   height: 60vw;
@@ -18,63 +18,63 @@
   position: relative;
 }
 
-.listing-show-outer{
+.listing-show-outer {
   border: 2px solid lightgreen;
   display: flex;
   width: 76vw;
-  height: 37vw;
+  height: 36vw;
   position: relative;
   left: 15vw;
   top: 8vw;
   justify-content: space-between;
 }
 
-.customer-reviews-show{
+.customer-reviews-show {
   border: 3px solid red;
   position: relative;
-  top: 2vw;
-  left: 12vw;
-  width: 80vw;
-  height: 10vw;
+  top: 5vw;
+  left: 15vw;
+  width: 76vw;
+  height: 14vw;
 }
 
-.left-show{
+.left-show {
   width: 48%;
   height: 27vw;
 }
 
-.right-show{
-  border: 3px solid yellow;
+.right-show {
   width: 48%;
   height: 27vw;
 }
 
-.listing-images-1{
+.listing-images-1 {
   width: 36.5vw;
   height: 27vw;
 }
 
-.basket-show{
+.basket-show {
   position: relative;
-  top: 10.7vw;
+  top: 7.93vw;
   height: 2.2vw;
   width: 36.5vw;
+  right: 1.2vw;
 }
 
-.listing-price-show{
+.listing-price-show {
   display: flex;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   height: 6vw;
   position: relative;
-  top: 10.6vw;
+  top: 5vw;
   width: 36.5vw;
   justify-content: space-between;
   align-items: center;
 }
 
-.availability-minimum-seed{
-  height: 2.1vw;;
+.availability-minimum-seed {
+  height: 2.1vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,12 +84,66 @@
   right: 0.25vw;
 }
 
-.in-stock{
+.in-stock {
   position: relative;
   left: 1vw;
 }
 
-.price-show{
+.price-show {
   font-size: 1vw;
   font-weight: bold;
+}
+
+.description-show {
+  height: 8vw;
+  position: relative;
+  line-height: 1.25vw;
+  top: 5vw;
+  font-size: 0.9vw;
+}
+
+.rating-star-link {
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  position: relative;
+  top: 3vw;
+  height: 1.25vw;
+  align-items: center;
+  font-size: 0.85vw;
+}
+
+.review-show {
+  width: 6vw;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.p-review-show {
+  position: relative;
+  left: 1vw;
+  top: 0.25vw;
+  height: 1.25vw;
+}
+
+.show-title {
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.reviews-length-bottom {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  font-size: 0.8vw;
+  height: 1.2vw;
+}
+
+.underline-show {
+  border: 1px solid black;
+  width: 4.3vw;
+  height: 0vw;
+}
+
+.length-review{
+  color: gray;
 }
