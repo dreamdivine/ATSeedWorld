@@ -2,15 +2,15 @@
   border-top: 0.25em solid black;
   height: 32.5em;
   position: relative;
-  left: 10%;
-  width: 85%;
+  left: 8vw;
+  width: 85vw;
   box-shadow: 0.5px 1px 0.5px 1px #888888;
 }
 
 .create-account-left,
 .create-account-right {
-  width: 45%;
-  height: 12em;
+  width: 35vw;
+  height: 13vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -18,15 +18,15 @@
 
 .title-customer-account {
   position: relative;
-  left: 10%;
-  height: 3em;
+  left: 8vw;
+  height: 3vw;
   display: flex;
 }
 
 .text-create {
-  font-size: 1.2em;
+  font-size: 1.3vw;
   position: relative;
-  top: 25%;
+  top: 1.25vw;
   font-weight: bold;
 }
 
@@ -39,11 +39,9 @@
 .last-name-box,
 .email-box,
 .password-box {
-  width: 95%;
-  height: 190%;
-  border: 0.05em, solid #d3d3d3;
-  position: relative;
-  bottom: 40%;
+  width: 30vw;
+  height: 2.7vw;
+  border: 0.05vw, solid #d3d3d3;
 }
 
 .last-name-text,
@@ -51,32 +49,33 @@
 .email-text,
 .password-text {
   position: relative;
-  top: 0.25em;
+  top: 0.3vw;
+  font-size: 1.2vw;
 }
 
 .below-navbar-signup {
   position: relative;
-  top: 2em;
-  right: 2em;
+  top: 2vw;
+  right: 2vw;
 }
 
 .create-account-right {
   position: relative;
-  left: 10%;
+  left: 11vw;
 }
 
 .create-account-left {
   position: relative;
-  left: 2.5%;
+  left: 2.3vw;
 }
 
 .create-btn {
   position: relative;
-  left: 4%;
-  top: 7em;
-  width: 13em;
-  height: 3em;
-  font-size: 0.9em;
+  left: 4vw;
+  top: 3vw;
+  width: 13vw;
+  height: 3vw;
+  font-size: 1vw;
   font-weight: bold;
   background-color: black;
   color: white;
@@ -86,7 +85,7 @@
   color: red;
   font-size: 18px;
   position: relative;
-  left: 4%;
-  bottom: 6%;
+  left: 20vw;
+  bottom: 1vw;
 
 }
