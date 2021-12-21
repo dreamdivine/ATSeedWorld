@@ -285,10 +285,11 @@ class ListingShow extends React.Component {
                 </div>
               </div>
               <div className="basket-show">
-                <CreateBasketItemContainer listingId={listing.id} />
+                <CreateBasketItemContainer listingId={listing.id} className="basket-show-inner"/>
               </div>
             </div>
           </div>
+
           <div className="customer-reviews-show">
             <div className="reviews-length-bottom">
               REVIEWS
@@ -559,6 +560,7 @@ class ListingShow extends React.Component {
             <div className="line-customer"></div>
           </div>
         </div>
+
         <div className="review-create-view">
           <div className="show-reviews">
             <ReviewIndexContainer listing={listing} />
