@@ -311,12 +311,12 @@ class ListingShow extends React.Component {
                 <div className="average-rating-bottom">
                   <div className="average-show-bottom">
                     {listing.review_ids.length === 0.0
-                      ? 0
+                      ? "0"
                       : Number(listing.average_rating).toFixed(1)}
                   </div>
                   <div className="star-percentage">
                     {listing.review_ids.length === 0
-                      ? ""
+                      ? "No one has reviewed this product yet"
                       : starPercentage + "of customers recommend this product"}
                   </div>
                 </div>
