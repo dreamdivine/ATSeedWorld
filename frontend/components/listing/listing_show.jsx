@@ -285,7 +285,10 @@ class ListingShow extends React.Component {
                 </div>
               </div>
               <div className="basket-show">
-                <CreateBasketItemContainer listingId={listing.id} className="basket-show-inner"/>
+                <CreateBasketItemContainer
+                  listingId={listing.id}
+                  className="basket-show-inner"
+                />
               </div>
             </div>
           </div>
@@ -545,7 +548,9 @@ class ListingShow extends React.Component {
               <div className="left-divider-right"></div>
               <div className="link-to-review-create">
                 <Link to="writeReview">
-                  <div className="write-review-bottom">WRITE A REVIEW</div>
+                  <div className="write-review-bottom">
+                    <p>WRITE A REVIEW</p>
+                  </div>
                 </Link>
                 <div className="share-thoughts">
                   <p className="share-thoughts-p">
