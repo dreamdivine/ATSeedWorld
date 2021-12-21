@@ -65,9 +65,9 @@ input[type="radio"]{
 
 .no-review{
     position: relative;
-    left: 30vw;
+    left: 24vw;
     top: 4vw;
-    width: 20vw;
+    width: 27vw;
 }
 
 .overall-rating{
@@ -82,14 +82,14 @@ input[type="radio"]{
     top: 4vw;
     width: 50vw;
     left:  10vw;
-    height: 5vw;
+    height: 21vw;
     background-color: #F5F5F5;
     padding: 3%;
     cursor: text;
 }
 
 .login-show, .create-account-show{
-    color: black;
+    color: darkgray;
     cursor: default;
 }
 
@@ -165,11 +165,14 @@ input[type=string]{
 .sign-warning{
     border: 1px solid black;
     display: flex;
-    width: 35vw;
-    height: 2vw;
+    width: 42vw;
+    height: 2.3vw;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    left: 9vw;
-    top: 2vw;
+    left: 4vw;
+    top: 2.4vw;
+    font-size: 1.2vw;
+    color: white;
+    background-color: black;
 }

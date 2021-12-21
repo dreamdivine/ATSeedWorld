@@ -13,7 +13,7 @@ class ReviewIndex extends React.Component{
           <div>
             {listing.review_ids.length === 0 ? (
               <div className="no-review">
-                <p>No Reviews yet. Be the first person to write review</p>
+                <p>No Reviews yet. Be the first person to write review.</p>
               </div>
             ) : (
               <ul>

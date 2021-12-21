@@ -1,10 +1,10 @@
 .sign-in-message {
   border: 1px solid black;
-  width: 30%;
-  height: 200px;
+  width: 30vw;
+  height: 13.5vw;
   position: relative;
-  left: 35%;
-  top: 250px;
+  left: 36vw;
+  top: 15vw;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -15,34 +15,34 @@
 .create-message, .login-message{
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: 40px;
+    width: 30vw;
+    height: 2.9vw;
     align-items: center;
     background-color: lightgray;
-    font-size: 18px;
+    font-size: 1.3vw;
 }
 
 .view-basket{
     border: 1px solid black;
-    width: 100%;
-    height: 40px;
-    font-size: 18px;
+    width: 30.7vw;
+    height: 3vw;
     background-color: lightgray;
 }
 
 .view-basket-text{
     position: relative;
-    left: 18px;
+    left: 1.5vw;
     top: 10px;
     color: black;
-    font-size: 18px;
+    font-size: 1.5vw;
     
 }
 
 .or-text{
     position: relative;
-    top: 5px;
-    left: 45%;
+    top: 0.3vw;
+    left: 14vw;
+    font-size: 1.4vw;
 }
 
 .login-button-message{
@@ -50,8 +50,9 @@
     text-decoration: none;
     color: white;
     background-color: black;
-    width: 25%;
-    height: 30px;
+    width: 7.8vw;
+    height: 2vw;
+    font-size: 1.4vw;
 }
 
 .login-text, .create-text{
@@ -60,14 +61,15 @@
     top: 6px;
 }
 
-.create-button-message{
+.create-button-message {
     border: 1px solid black;
     text-decoration: none;
     color: white;
     background-color: black;
-    width: 25%;
-    height: 30px;
+    width: 8vw;
+    height: 2vw;
     position: relative;
-    left: 11px;
+    left: 0.7vw;
+    font-size: 1.4vw;
 
 }
