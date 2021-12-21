@@ -48,6 +48,7 @@
 .listing-images-1 {
   width: 36.5vw;
   height: 27vw;
+  cursor: text;
 }
 
 .basket-show {
@@ -56,6 +57,7 @@
   height: 2.2vw;
   width: 36.5vw;
   right: 1.2vw;
+  cursor: default;
 }
 
 .listing-price-show {
@@ -108,6 +110,7 @@
   height: 1.25vw;
   align-items: center;
   font-size: 0.85vw;
+  cursor: text;
 }
 
 .review-show {
@@ -223,6 +226,7 @@
   left: 0.9vw;
   font-size: 0.93vw;
   color: white;
+  cursor: default;
 }
 
 .share-thoughts {
@@ -258,4 +262,12 @@
   width: 77vw;
   position: relative;
   left: 15vw;
+}
+
+.add-review{
+  cursor: default;
+}
+
+.show-reviews{
+  cursor: text;
 }
