@@ -75,7 +75,7 @@ class ReviewForm extends React.Component {
             </Link>
           </div>
         ) : (
-          <div>
+          <div className='review-create-form'>
             <form onSubmit={this.handleSubmit}>
               <div>
                 <div className="reviewing-title">

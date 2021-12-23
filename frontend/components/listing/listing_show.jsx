@@ -571,7 +571,7 @@ class ListingShow extends React.Component {
           <div className="show-reviews">
             <ReviewIndexContainer listing={listing} />
           </div>
-          <div id="writeReview" className="writeReview-class">
+          <div>
             <ReviewCreateContainer listingId={listing.id} />
           </div>
         </div>
