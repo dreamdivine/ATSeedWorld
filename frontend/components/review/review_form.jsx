@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -13,13 +13,17 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state).then(
-    this.setState({
-      body: "",
-      rating: 0,
-      nickname: ""
-    })).then(this.props.clearReviewErrors())
-}
+    this.props
+      .action(this.state)
+      .then(
+        this.setState({
+          body: "",
+          rating: 0,
+          nickname: "",
+        })
+      )
+      .then(this.props.clearReviewErrors());
+  }
 
   update(property) {
     return (e) => this.setState({ [property]: e.currentTarget.value });
@@ -63,7 +67,7 @@ class ReviewForm extends React.Component {
     return (
       <div>
         {this.props.currentUser === null ? (
-          <div className="sign-warning">
+          <div className="">
             <i className="fas fa-exclamation-triangle"></i>
             <p>{" Only registered users can write reviews."}</p>
             <Link to="/account/login" className="login-show">
@@ -75,7 +79,7 @@ class ReviewForm extends React.Component {
             </Link>
           </div>
         ) : (
-          <div className='review-create-form'>
+          <div className="review-create-form">
             <form onSubmit={this.handleSubmit}>
               <div>
                 <div className="reviewing-title">
@@ -181,5 +185,4 @@ class ReviewForm extends React.Component {
   }
 }
 
-export default withRouter(ReviewForm); 
-
+export default withRouter(ReviewForm);
