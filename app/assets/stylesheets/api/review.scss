@@ -76,18 +76,6 @@ input[type="radio"]{
     top: 20px;
 }
 
-// .writeReview-class{
-//     position: relative;
-//     flex-direction: column;
-//     top: 4vw;
-//     width: 50vw;
-//     left:  10vw;
-//     height: 23vw;
-//     background-color: #F5F5F5;
-//     padding: 3%;
-//     cursor: text;
-// }
-
 .review-create-form{
     background-color: #F5F5F5;
     position: relative;
@@ -121,6 +109,7 @@ input[type="radio"]{
     flex-direction: column;
     position: relative;
     top: 60px;
+    cursor: text;
 }
 
 .review-create-review{
@@ -128,7 +117,7 @@ input[type="radio"]{
     top: 90px;
 }
 
-input[type=string]{
+input[type=text]{
     width: 99.8%;
     height: 30px;
     border: 1px solid lightgray

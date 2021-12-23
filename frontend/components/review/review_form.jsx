@@ -150,7 +150,7 @@ class ReviewForm extends React.Component {
                   <div>Nickname</div>
                   <label className="below-nickname">
                     <input
-                      type="string"
+                      type="text"
                       value={this.state.nickname}
                       onChange={this.update("nickname")}
                     />
