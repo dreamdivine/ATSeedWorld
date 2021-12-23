@@ -56,7 +56,6 @@ class CreateBasketItemForm extends React.Component {
           <div>
             <button type="submit" className="button-basket">
               <div className="basket-button-div">
-                <i className="fas fa-shopping-bag" id="bag-show"></i>
                 <p className="add-text" className="add-cart-show">ADD TO CART</p>
               </div>
             </button>
