@@ -34,17 +34,20 @@
 .submit-update {
   position: relative;
   background-color: black;
-  width: 5.3vw;
+  width: 5.4vw;
   height: 1.7vw;
   right: 2.5vw;
   top: 0.1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-update {
   color: white;
   position: relative;
   font-size: 0.8vw;
-  left: 0.2vw;
+  // left: 0.2vw;
   top: 0.1vw;
 }
 
