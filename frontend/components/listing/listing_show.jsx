@@ -23,11 +23,23 @@ class ListingShow extends React.Component {
 
   render() {
     if (!this.props.listing) return null;
-    const { listing, currentUser, listingId } = this.props;
+    const { listing, currentUser, listingId, reviews } = this.props;
+    let total_rating = 0;
+    for (let i = 0; i < reviews.length; i++) {
+      let review = reviews[i];
+      total_rating += review.rating;
+    }
+    let average_rating = 0;
+    if (reviews.length === 0) {
+      average_rating = 0;
+    } else {
+      average_rating = Number(total_rating / reviews.length).toFixed(1);
+    }
 
      const starPercentage = `${Math.round(
-       (((listing.average_rating / 5) * 100) / 10) * 10
+       (((average_rating / 5) * 100) / 10) * 10
      )}%`;
+
     return (
       <div className="top-of-show">
         <div className="navbarInShow">
@@ -42,7 +54,7 @@ class ListingShow extends React.Component {
               <div className="show-title">{listing.title}</div>
               <div className="rating-star-link">
                 <div className="star-div">
-                  {listing.average_rating === null ? (
+                  {average_rating === 0 ? (
                     <div className="zero-star-icons">
                       <div>
                         <i class="far fa-star"></i>
@@ -63,8 +75,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating <= 1 &&
-                  listing.average_rating !== null ? (
+                  {average_rating <= 1 &&
+                  average_rating !== 0 ? (
                     <div className="one-star-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -85,8 +97,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating < 1.6 &&
-                  listing.average_rating > 1 ? (
+                  {average_rating < 1.6 &&
+                  average_rating > 1 ? (
                     <div className="one-half-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -107,8 +119,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating >= 1.6 &&
-                  listing.average_rating <= 2 ? (
+                  {average_rating >= 1.6 &&
+                  average_rating <= 2 ? (
                     <div className="two-star-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -129,8 +141,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating > 2 &&
-                  listing.average_rating < 2.6 ? (
+                  {average_rating > 2 &&
+                  average_rating < 2.6 ? (
                     <div className="two-half-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -151,8 +163,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating >= 2.6 &&
-                  listing.average_rating <= 3 ? (
+                  {average_rating >= 2.6 &&
+                  average_rating <= 3 ? (
                     <div className="third-star-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -173,8 +185,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating > 3 &&
-                  listing.average_rating < 3.6 ? (
+                  {average_rating > 3 &&
+                  average_rating < 3.6 ? (
                     <div className="third-half-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -195,8 +207,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating >= 3.6 &&
-                  listing.average_rating <= 4 ? (
+                  {average_rating >= 3.6 &&
+                  average_rating <= 4 ? (
                     <div className="fourth-star-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -217,8 +229,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating > 4 &&
-                  listing.average_rating < 4.6 ? (
+                  {average_rating > 4 &&
+                  average_rating < 4.6 ? (
                     <div className="fourth-half-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
@@ -239,8 +251,8 @@ class ListingShow extends React.Component {
                   ) : (
                     ""
                   )}
-                  {listing.average_rating >= 4.6 &&
-                  listing.average_rating <= 5 ? (
+                  {average_rating >= 4.6 &&
+                  average_rating <= 5 ? (
                     <div className="fifth-star-icons">
                       <div className="first-star">
                         <i className="fas fa-star"></i>
