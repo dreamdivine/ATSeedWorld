@@ -5,7 +5,7 @@ class ReviewIndexItem extends React.Component{
         super(props)
     }
     render(){
-        const {review, listing, deleteReview, userId} = this.props
+        const {review, listing, deleteReview, userId, fetchReviews} = this.props
         return (
           <div>
             <div>
@@ -74,7 +74,9 @@ class ReviewIndexItem extends React.Component{
                   <div>
                     {userId === review.user_id ? (
                       <div>
-                        <button onClick={() => deleteReview(review.id)}>
+                        <button onClick={() => deleteReview(review.id).then(() => {
+                          fetchReviews(review.listing_id)
+                        })}>
                           Delete Review
                         </button>
                       </div>
