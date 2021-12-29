@@ -37,12 +37,18 @@
 
 .first-name-box,
 .last-name-box,
-.email-box,
-.password-box {
+.email-box{
   width: 30vw;
   height: 2.7vw;
-  border: 0.05vw, solid #d3d3d3;
+  border: 1px solid #d3d3d3;
 }
+
+.password-box {
+  width: 30vw;
+  height: 2vw;
+  border: 1px solid #d3d3d3;
+}
+
 
 .last-name-text,
 .first-name-text,
@@ -88,4 +94,8 @@
   left: 20vw;
   bottom: 1vw;
 
+}
+
+.email-signup{
+  width: 30vw;
 }

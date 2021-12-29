@@ -89,6 +89,7 @@ input[type="radio"]{
 .login-show, .create-account-show{
     color: darkgray;
     cursor: default;
+    font-size: 1vw;
 }
 
 .star-create{
@@ -173,4 +174,34 @@ input[type=text]{
     font-size: 1.2vw;
     color: white;
     background-color: black;
+}
+
+.not-logged-review{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1vw;
+    left: 30vw;
+}
+
+.icon-notloggedNp{
+    width: 22vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1vw;
+    position: relative;
+    right: 1.5vw;
+
+}
+
+.login-sign-review{
+    width: 18vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 1vw;
+}
+
+.or-create-sign{
+    font-size: 1vw;
 }

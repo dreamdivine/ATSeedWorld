@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
                 <div className="create-account-right">
                   <div>SIGN-IN INFORMATION</div>
                   <div className="email-text">Email</div>
-                  <div>
+                  <div className="email-signup">
                     <input
                       type="text"
                       value={this.state.email}

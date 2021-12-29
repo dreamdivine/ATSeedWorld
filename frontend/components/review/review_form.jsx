@@ -67,16 +67,20 @@ class ReviewForm extends React.Component {
     return (
       <div>
         {this.props.currentUser === null ? (
-          <div className="">
-            <i className="fas fa-exclamation-triangle"></i>
-            <p>{" Only registered users can write reviews."}</p>
-            <Link to="/account/login" className="login-show">
-              Sign in
-            </Link>
-            <p className="or-create-sign">or</p>
-            <Link to="/account/create" className="create-account-show">
-              Create an account
-            </Link>
+          <div className="not-logged-review">
+            <div className="icon-notloggedNp">
+              <i className="fas fa-exclamation-triangle"></i>
+              <p>{" Only registered users can write reviews."}</p>
+            </div>
+            <div className="login-sign-review">
+              <Link to="/account/login" className="login-show">
+                Sign in
+              </Link>
+              <p className="or-create-sign">or</p>
+              <Link to="/account/create" className="create-account-show">
+                Create an account
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="review-create-form">
