@@ -56,21 +56,25 @@
 }
 
 .password-box-login {
-  border: 2vw, solid #d3d3d3;
+  border: 1px solid #d3d3d3;
   position: relative;
   bottom: 40%;
   width: 20vw;
+  height: 1.8vw;
+}
+
+.email-box-login{
+  border: 1px solid #d3d3d3;
+  position: relative;
   height: 2.4vw;
 }
 
-// .email-box-login{
-//   border: 2vw, solid #d3d3d3;
-//   position: relative;
-//   bottom: 40%;
-//   width: 20vw;
-//   height: 2.4vw;
+.email-login-part{
+    width: 20vw;
+    position: relative;
+    // bottom: 40%;
 
-// }
+}
 
 
 .account-sentence{
@@ -80,8 +84,9 @@
 
 .password-text-login{
     position: relative;
-    top: 5%;
+    // top: 5%;
     font-size: 1vw;
+    top: 0.8vw;
 }
 
 .password-box-login{

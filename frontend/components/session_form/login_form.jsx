@@ -67,7 +67,7 @@ class LoginForm extends React.Component {
                       </p>
                     </div>
                     <div className="email-text-login">Email</div>
-                    <div>
+                    <div className="email-login-part">
                       <input
                         type="text"
                         value={this.state.email}
