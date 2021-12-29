@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ReviewIndexItem extends React.Component{
     constructor(props){
@@ -74,9 +75,7 @@ class ReviewIndexItem extends React.Component{
                   <div>
                     {userId === review.user_id ? (
                       <div>
-                        <button onClick={() => deleteReview(review.id).then(() => {
-                          fetchReviews(review.listing_id)
-                        })}>
+                        <button onClick={() => deleteReview(review.id).then(this.props.history.push("/"))}>
                           Delete Review
                         </button>
                       </div>
@@ -94,4 +93,4 @@ class ReviewIndexItem extends React.Component{
 
 }
 
-export default ReviewIndexItem;
+export default withRouter(ReviewIndexItem);
