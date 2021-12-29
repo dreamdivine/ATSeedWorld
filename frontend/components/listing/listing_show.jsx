@@ -578,7 +578,6 @@ class ListingShow extends React.Component {
             <div className="line-customer"></div>
           </div>
         </div>
-
         <div className="review-create-view">
           <div className="show-reviews">
             <ReviewIndexContainer listing={listing} />
