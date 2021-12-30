@@ -156,13 +156,12 @@ class ReviewForm extends React.Component {
                 </div>
                 <div className="nickname-review">
                   <div>Nickname</div>
-                  <label className="below-nickname">
-                    <input
-                      type="text"
-                      value={this.state.nickname}
-                      onChange={this.update("nickname")}
-                    />
-                  </label>
+                  <input
+                    type="text"
+                    value={this.state.nickname}
+                    onChange={this.update("nickname")}
+                    className="below-nickname"
+                  />
                 </div>
               </div>
               <div className="review-create-review">

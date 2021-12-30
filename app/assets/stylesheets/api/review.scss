@@ -15,7 +15,6 @@ input[type="radio"]{
     height: 200px;
     border-bottom: 1px solid gray;
     padding: 4%;
-
 }
 
 .review-nickname-p{
@@ -66,6 +65,7 @@ input[type="radio"]{
 .no-review{
     position: relative;
     left: 23vw;
+    width: 40vw;
 }
 
 .overall-rating{
@@ -193,7 +193,7 @@ input[type=text]{
     justify-content: space-evenly;
     font-size: 1vw;
     position: relative;
-    right: 1.5vw;
+    right: 8vw;
 
 }
 
@@ -203,6 +203,7 @@ input[type=text]{
     justify-content: space-around;
     position: relative;
     top: 1vw;
+    right: 8vw;
 }
 
 .or-create-sign{
