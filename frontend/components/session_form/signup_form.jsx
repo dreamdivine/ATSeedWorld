@@ -28,7 +28,6 @@ class SessionForm extends React.Component {
     this.props.processForm(user).then(() => this.props.history.push("/"))
   }
 
-
   renderErrors() {
     return (
       <ul>
@@ -80,7 +79,8 @@ class SessionForm extends React.Component {
                   <div className="email-text">Email</div>
                   <div className="email-signup">
                     <input
-                      type="text"
+                      type="email"
+                      pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                       value={this.state.email}
                       onChange={this.update("email")}
                       className="email-box"
