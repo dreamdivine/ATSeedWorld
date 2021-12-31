@@ -69,7 +69,8 @@ class LoginForm extends React.Component {
                     <div className="email-text-login">Email</div>
                     <div className="email-login-part">
                       <input
-                        type="text"
+                        type="email"
+                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                         value={this.state.email}
                         onChange={this.update("email")}
                         className="email-box-login"
