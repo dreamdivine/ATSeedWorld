@@ -19,7 +19,9 @@ const NavBar = () => {
                 >
                   <i class="fab fa-linkedin" id="linkedIn-icon"></i>
                 </a>
-                <i class="fab fa-angellist" id="angellist-icon"></i>
+                <a href="https://angel.co/u/anusha-tuladhar" target="_blank">
+                  <i class="fab fa-angellist" id="angellist-icon"></i>
+                </a>
               </div>
               <Link to="/" className="link">
                 <div>

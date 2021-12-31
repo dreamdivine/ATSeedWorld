@@ -22,13 +22,15 @@
 
 
 .leaf-icon-background {
-  width: 3.5em;
-  height: 4.2em;
+  width: 3vw;
+  height: 3.2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid pink;
   flex-wrap: wrap;
+  position: relative;
+  top: 0.5vw;
+  // left: 2vw;
 }
 
 .link {
