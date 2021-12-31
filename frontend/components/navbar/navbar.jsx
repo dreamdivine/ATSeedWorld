@@ -8,22 +8,31 @@ const NavBar = () => {
       <div className="main-nav-div">
         <div>
           <div>
-            <Link to="/" className="link">
-              <div className="icon-app-name">
-                <div className="leaf-icon-background">
-                  <i className="fab fa-pagelines" id="leaf-icon"></i>
-                </div>
+            <div className="icon-app-name">
+              <div className="leaf-icon-background">
+                <a href="https://github.com/dreamdivine" target="_blank">
+                  <i class="fab fa-github-square" id="github-icon"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anusha-tuladhar/"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin" id="linkedIn-icon"></i>
+                </a>
+                <i class="fab fa-angellist" id="angellist-icon"></i>
+              </div>
+              <Link to="/" className="link">
                 <div>
                   <h1 className="app-name">AT SEED WORLD</h1>
                   <p className="heirloom">HEIRLOOM SEEDS</p>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
           <div>
-           <div>
-             <SearchContainer />
-           </div>
+            <div>
+              <SearchContainer />
+            </div>
           </div>
         </div>
         <div>

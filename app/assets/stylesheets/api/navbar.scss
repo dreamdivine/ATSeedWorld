@@ -20,19 +20,15 @@
   right: 1em;
 }
 
-#leaf-icon {
-  font-size: 4em;
-  color: white;
-  position: relative;
-  left: 0.6em;
-}
 
 .leaf-icon-background {
-  width: 5em;
+  width: 3.5em;
   height: 4.2em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border: 1px solid pink;
+  flex-wrap: wrap;
 }
 
 .link {
@@ -51,6 +47,16 @@
   position: relative;
   left: 3em;
   top: 0.3em;
+}
+
+#github-icon, #linkedIn-icon, #angellist-icon{
+  color: white;
+  font-size: 1.4vw;
+}
+
+#angellist-icon{
+  position: relative;
+  left: 0.8vw;
 }
 
 .search-placeholder {
