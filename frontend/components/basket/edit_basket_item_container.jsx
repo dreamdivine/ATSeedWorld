@@ -65,6 +65,7 @@ class EditBasketItemForm extends React.Component{
                           type="number"
                           value={this.state.quantity}
                           onChange={this.update("quantity")}
+                          min="1"
                         />
                       </label>
                     </div>

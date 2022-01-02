@@ -41,7 +41,6 @@ class CreateBasketItemForm extends React.Component {
 
   render() {
     return (
-      <div>
         <form onSubmit={this.handleSubmit}>
           <div className="outer-bucket-create">
             <div className="basketItemCreate">
@@ -49,7 +48,6 @@ class CreateBasketItemForm extends React.Component {
                 <input
                   type="number"
                   min="1"
-                  max="100"
                   value={this.state.quantity}
                   onChange={(e) => this.handleChange(e, "quantity")}
                 />
@@ -66,8 +64,6 @@ class CreateBasketItemForm extends React.Component {
             </div>
           </div>
         </form>
-          <div>{this.renderErrors()}</div>
-      </div>
     );
   }
 }

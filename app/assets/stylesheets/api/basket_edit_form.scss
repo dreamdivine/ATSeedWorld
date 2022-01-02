@@ -48,6 +48,7 @@
   position: relative;
   font-size: 0.8vw;
   top: 0.1vw;
+  cursor: pointer;
 }
 
 .basket-index-item {
@@ -70,5 +71,6 @@
 
 .btn-delete-basket{
     position: relative;
-    left: 10%;;
+    left: 10%;
+    cursor: pointer;
 }

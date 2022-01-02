@@ -53,8 +53,8 @@ class Api::BasketItemsController < ApplicationController
     end
 
     def destroy
-        @basket_item = BasketItem.find_by(id: params[:id])
-        if @basket_item.delete
+        @basket_item = BasketItem.find(params[:id])
+        if @basket_item.destroy
             render :show
         else
             render json: @basket_item.errors.full_messages, status: 403
