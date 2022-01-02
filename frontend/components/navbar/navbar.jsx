@@ -11,7 +11,7 @@ const NavBar = () => {
             <div className="icon-app-name">
               <div className="leaf-icon-background">
                 <a href="https://github.com/dreamdivine" target="_blank">
-                  <i class="fab fa-github-square" id="github-icon"></i>
+                  <i className="fab fa-github-square" id="github-icon"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/anusha-tuladhar/"
@@ -20,7 +20,7 @@ const NavBar = () => {
                   <i class="fab fa-linkedin" id="linkedIn-icon"></i>
                 </a>
                 <a href="https://angel.co/u/anusha-tuladhar" target="_blank">
-                  <i class="fab fa-angellist" id="angellist-icon"></i>
+                  <i className="fab fa-angellist" id="angellist-icon"></i>
                 </a>
               </div>
               <Link to="/" className="link">

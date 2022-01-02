@@ -37,10 +37,18 @@ class EditBasketItemForm extends React.Component{
         return (
           <div className="outer-edit-basket">
             <div className="title-basket-show">
-              <Link to={`/listings/${this.state.listing_id}`} className="link-edit">{basketItemTitle}</Link>
+              <Link
+                to={`/listings/${this.state.listing_id}`}
+                className="link-edit"
+              >
+                {basketItemTitle}
+              </Link>
             </div>
             <div className="price-edit">
-             <div className="inner-price"> ${Number(this.props.basketItemPrice).toFixed(2)}</div>
+              <div className="inner-price">
+                {" "}
+                ${Number(this.props.basketItemPrice).toFixed(2)}
+              </div>
             </div>
             <div>
               <form onSubmit={this.handleSubmit}>
@@ -48,11 +56,22 @@ class EditBasketItemForm extends React.Component{
                   <div className="quantity-price-amount">
                     <div className="quantity-edit">
                       <label className="label-quantity">
-                        <input
+                        <select
                           type="number"
                           value={this.state.quantity}
                           onChange={this.update("quantity")}
-                        />
+                        >
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </label>
                     </div>
                     <div className="subtotal-delete">
@@ -62,14 +81,19 @@ class EditBasketItemForm extends React.Component{
                           2
                         )}
                       </div>
-                      <button onClick={() => deleteBasketItem(this.state.id)} className="btn-delete-basket">
+                      <button
+                        onClick={() => deleteBasketItem(this.state.id)}
+                        className="btn-delete-basket"
+                      >
                         X
                       </button>
                     </div>
                   </div>
-                    <div className="submit-update">
-                      <button type="submit" className="button-update">Update cart</button>
-                    </div>
+                  <div className="submit-update">
+                    <button type="submit" className="button-update">
+                      Update cart
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

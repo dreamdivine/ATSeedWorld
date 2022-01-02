@@ -7,7 +7,11 @@ class Api::BasketItemsController < ApplicationController
 
     def show
         @basket_item = BasketItem.find(params[:id])
-        render :show
+        if @basket_item
+            render :show
+        else
+            render json: ["No listing with that id found"]
+        end
     end
 
     # def create
@@ -39,21 +43,21 @@ class Api::BasketItemsController < ApplicationController
             end
     end
 
-    def destroy
-        @basket_item = BasketItem.find(params[:id])
-        if @basket_item.destroy
+    def update
+        @basket_item = BasketItem.find_by(id: params[:id])
+        if @basket_item && @basket_item.update(basket_item_params)
             render :show
         else
-            render json: @basket_item.errors.full_messages, status: 403
+           render json: @basket_item.errors.full_messages, status: 404
         end
     end
 
-    def update
-        @basket_item = BasketItem.find(params[:id])
-        if @basket_item.update(basket_item_params)
+    def destroy
+        @basket_item = BasketItem.find_by(id: params[:id])
+        if @basket_item.delete
             render :show
         else
-            render json: @basket_item.errors.full_messages, status: 422
+            render json: @basket_item.errors.full_messages, status: 403
         end
     end
 
