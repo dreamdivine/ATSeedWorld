@@ -53,7 +53,7 @@ class Api::BasketItemsController < ApplicationController
     end
 
     def destroy
-        @basket_item = BasketItem.find(params[:id])
+        @basket_item = BasketItem.find_by(id: params[:id])
         if @basket_item.destroy
             render :show
         else

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  fetchBasketItem,
+  fetchBasketItems,
   updateBasketItem,
   deleteBasketItem,
 } from "../../actions/basket_item_action";
@@ -15,7 +15,7 @@ class EditBasketItemForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount(){
-      this.props.fetchBasketItem()
+      this.props.fetchBasketItems()
     }
 
     update(field){
@@ -25,11 +25,6 @@ class EditBasketItemForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         this.props.updateBasketItem(this.state)
-    }
-
-    deleteItem(e){
-      e.preventDefault();
-      this.props.deleteBasketItem(this.state.id);
     }
 
     render(){
@@ -116,7 +111,7 @@ const mDTP = (dispatch, ownProps) => {
     return{
         updateBasketItem: basketItem => dispatch(updateBasketItem(basketItem)),
         deleteBasketItem: basketItemId => dispatch(deleteBasketItem(basketItemId)),
-        fetchBasketItem: () => dispatch(fetchBasketItem(ownProps.basketItem.id))
+        fetchBasketItems: () => dispatch(fetchBasketItems())
     }
 }
 
