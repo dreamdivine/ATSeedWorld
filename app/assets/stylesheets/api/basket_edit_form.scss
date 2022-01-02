@@ -5,7 +5,7 @@
   border-bottom: 1px solid lightgray ;
   position: relative;
   right: 6.5vw;
-  height: 7vh;
+  height: 7vw;
 }
 
 .quality-price-amount {
@@ -64,13 +64,17 @@
 
 }
 
-.quantity-edit input {
-  width: 2vw;
-  position: relative;
-}
-
 .btn-delete-basket{
     position: relative;
     left: 10%;
     cursor: pointer;
+}
+
+.quantity-input-type{
+
+  width: 2.7vw;
+  height: 1.5vw;
+  border: 1px solid black;
+  font-size: 1em;
+
 }

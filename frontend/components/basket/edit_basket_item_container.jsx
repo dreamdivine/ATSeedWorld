@@ -55,14 +55,13 @@ class EditBasketItemForm extends React.Component{
                 <div>
                   <div className="quantity-price-amount">
                     <div className="quantity-edit">
-                      <label className="label-quantity">
                         <input
                           type="number"
                           value={this.state.quantity}
                           onChange={this.update("quantity")}
                           min="1"
+                          className="quantity-input-type"
                         />
-                      </label>
                     </div>
                     <div className="subtotal-delete">
                       <div className="subtotal-quanity-price">
