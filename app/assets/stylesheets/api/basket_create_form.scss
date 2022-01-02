@@ -20,12 +20,16 @@ button {
   background: none;
 }
 
-.basketItemCreate input {
-  width: 1.4vw;
+.basketItemCreate{
+  width: 3vw;
+  height: 1.5vw;
+}
+
+.input-add-item{
+  width: 2.8vw;
   height: 1.3vw;
-  position: relative;
-  left: 12%;
-  font-size: 1em;
+  font-size: 1vw;
+
 }
 
 .outer-bucket-create {

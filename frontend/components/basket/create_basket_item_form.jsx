@@ -41,29 +41,28 @@ class CreateBasketItemForm extends React.Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit}>
-          <div className="outer-bucket-create">
-            <div className="basketItemCreate">
-              <label>
-                <input
-                  type="number"
-                  min="1"
-                  value={this.state.quantity}
-                  onChange={(e) => this.handleChange(e, "quantity")}
-                />
-              </label>
-            </div>
-            <div>
-              <button type="submit" className="button-basket">
-                <div className="basket-button-div">
-                  <p className="add-text" className="add-cart-show">
-                    ADD TO CART
-                  </p>
-                </div>
-              </button>
-            </div>
+      <form onSubmit={this.handleSubmit}>
+        <div className="outer-bucket-create">
+          <div className="basketItemCreate">
+            <input
+              type="number"
+              min="1"
+              value={this.state.quantity}
+              onChange={(e) => this.handleChange(e, "quantity")}
+              className="input-add-item"
+            />
           </div>
-        </form>
+          <div>
+            <button type="submit" className="button-basket">
+              <div className="basket-button-div">
+                <p className="add-text" className="add-cart-show">
+                  ADD TO CART
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </form>
     );
   }
 }
