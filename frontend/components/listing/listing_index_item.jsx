@@ -24,19 +24,19 @@ const ListingIndexItem = ({ listing}) => {
                 {listing.average_rating === null ? (
                   <div className="zero-star-icons">
                     <div>
-                      <i class="far fa-star"></i>
+                      <i className="far fa-star"></i>
                     </div>
                     <div>
-                      <i class="far fa-star"></i>
+                      <i className="far fa-star"></i>
                     </div>
                     <div>
-                      <i class="far fa-star"></i>
+                      <i className="far fa-star"></i>
                     </div>
                     <div>
-                      <i class="far fa-star"></i>
+                      <i className="far fa-star"></i>
                     </div>
                     <div>
-                      <i class="far fa-star"></i>
+                      <i className="far fa-star"></i>
                     </div>
                   </div>
                 ) : (

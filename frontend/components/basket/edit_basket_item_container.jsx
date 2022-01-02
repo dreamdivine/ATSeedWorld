@@ -27,6 +27,11 @@ class EditBasketItemForm extends React.Component{
         this.props.updateBasketItem(this.state)
     }
 
+    deleteItem(e){
+      e.preventDefault();
+      this.props.deleteBasketItem(this.state.id);
+    }
+
     render(){
         const {
           currentUserId,

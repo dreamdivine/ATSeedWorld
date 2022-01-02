@@ -39,7 +39,7 @@ class Api::BasketItemsController < ApplicationController
             if @basket_item.save!
                 render :show
             else
-                render :json ['Invalid Product'], status: 422
+                render json: @basket_item.errors.full_messages, status: 422
             end
     end
 

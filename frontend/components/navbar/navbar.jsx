@@ -17,7 +17,7 @@ const NavBar = () => {
                   href="https://www.linkedin.com/in/anusha-tuladhar/"
                   target="_blank"
                 >
-                  <i class="fab fa-linkedin" id="linkedIn-icon"></i>
+                  <i className="fab fa-linkedin" id="linkedIn-icon"></i>
                 </a>
                 <a href="https://angel.co/u/anusha-tuladhar" target="_blank">
                   <i className="fab fa-angellist" id="angellist-icon"></i>
