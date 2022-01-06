@@ -29,13 +29,15 @@ class RightNavBar extends React.Component {
         <Link to="/signin/message">
           <i className="fas fa-shopping-bag" id="shopping-bag"></i>
         </Link>
-        <div>
-          {currentUserId === null ? (
-            <div className="bag-quanity">0 Items</div>
-          ) : (
-            <div className="bag-quanity">{totalItems} Items</div>
-          )}
-        </div>
+        <Link to="/signin/message">
+          <div>
+            {currentUserId === null ? (
+              <div className="bag-quanity">0 Items</div>
+            ) : (
+              <div className="bag-quanity">{totalItems} Items</div>
+            )}
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -47,18 +49,20 @@ class RightNavBar extends React.Component {
       <div onClick={logout} className="sign-out">
         SIGN OUT
       </div>
-      <div className="items-num-bag">
-        <Link to="/cart">
-          <i className="fas fa-shopping-bag" id="shopping-bag"></i>
-        </Link>
-        <div>
-          {basketItems.length === 0 ? (
-            <div className="bag-quanity">0 Items</div>
-          ) : (
-            <div className="bag-quanity">{totalItems} Items</div>
-          )}
+      <Link to="/cart">
+        <div className="items-num-bag">
+          <div>
+            <i className="fas fa-shopping-bag" id="shopping-bag"></i>
+          </div>
+          <div>
+            {basketItems.length === 0 ? (
+              <div className="bag-quanity">0 Items</div>
+            ) : (
+              <div className="bag-quanity">{totalItems} Items</div>
+            )}
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
   return currentUser ? isLoggedIn(currentUser, logout) : isNotLoggedIn();
