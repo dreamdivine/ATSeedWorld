@@ -580,9 +580,13 @@ class ListingShow extends React.Component {
             <ReviewIndexContainer listing={listing} />
           </div>
           <div id="writeReview">
-            {!reviewWritten ? 
-            <ReviewCreateContainer listingId={listing.id} /> : <div>Thank you for the review</div>
-            }
+            {!reviewWritten ? (
+              <ReviewCreateContainer listingId={listing.id} />
+            ) : (
+              <div className="thank-you-review">
+                <p>Thank you for the review. We appreciate the feedback.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
