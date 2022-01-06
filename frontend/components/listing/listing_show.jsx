@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
 import ReviewCreateContainer from "../review/review_create_container";
-import ReviewForm from "../review/review_form";
 import {Link} from "react-scroll";
 import ReviewIndexContainer from "../review/review_index_container";
 import CreateBasketItemContainer from "../basket/create_basket_item_container";
@@ -24,21 +23,31 @@ class ListingShow extends React.Component {
   render() {
     if (!this.props.listing) return null;
     const { listing, currentUser, listingId, reviews } = this.props;
+      let reviewLength = 0;
+      let listingReview = [];
+      for (let i = 0; i < reviews.length; i++) {
+        if (this.props.listing.id === reviews[i].listing_id) {
+          reviewLength += 1;
+          listingReview.push(reviews[i])
+        }
+      }
     let total_rating = 0;
-    for (let i = 0; i < reviews.length; i++) {
-      let review = reviews[i];
+    for (let j = 0; j < listingReview.length; j++) {
+      let review = listingReview[j];
       total_rating += review.rating;
     }
     let average_rating = 0;
-    if (reviews.length === 0) {
+    if (reviewLength === 0) {
       average_rating = 0;
     } else {
-      average_rating = Number(total_rating / reviews.length).toFixed(1);
+      average_rating = Number(total_rating / reviewLength).toFixed(1);
     }
 
      const starPercentage = `${Math.round(
        (((average_rating / 5) * 100) / 10) * 10
      )}%`;
+
+   
 
     return (
       <div className="top-of-show">
@@ -266,9 +275,7 @@ class ListingShow extends React.Component {
                   )}
                 </div>
                 <div className="review-show">
-                  <p className="p-review-show">
-                    {listing.review_ids.length} reviews
-                  </p>
+                  <p className="p-review-show">{reviewLength} reviews</p>
                 </div>
                 <div className="add-review">
                   <Link to="writeReview" className="linkReview">
@@ -537,7 +544,7 @@ class ListingShow extends React.Component {
                   )}
                 </div>
                 <div className="below-start-reviews">
-                  {listing.review_ids.length} reviews
+                  {reviewLength} reviews
                 </div>
               </div>
               <div className="left-divider-right"></div>
