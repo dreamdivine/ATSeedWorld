@@ -4,17 +4,13 @@ import {
   fetchListings,
   fetchListing,
 } from "../../actions/listing_actions";
-import {
-  fetchReviews
-} from "../../actions/review_actions"
 
 const mSTP = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
     listing: state.entities.listings[ownProps.match.params.listingId],
     listingId: ownProps.match.params.listingId,
-    reviews: Object.values(state.entities.reviews),
-    currentUserId: state.session.id
+    reviews: Object.values(state.entities.reviews)
   };
 };
 
@@ -22,7 +18,6 @@ const mDTP = (dispatch) => {
   return {
     fetchListings: () => dispatch(fetchListings()),
     fetchListing: (listingId) => dispatch(fetchListing(listingId)),
-    fetchReviews: () => dispatch(fetchReviews())
   };
 };
 
