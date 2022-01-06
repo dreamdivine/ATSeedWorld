@@ -20,6 +20,8 @@ class ListingShow extends React.Component {
     }
   }
 
+
+
   render() {
     if (!this.props.listing) return null;
     const { listing, currentUser, listingId, reviews } = this.props;
@@ -47,7 +49,13 @@ class ListingShow extends React.Component {
        (((average_rating / 5) * 100) / 10) * 10
      )}%`;
 
-   
+     let reviewWritten = false;
+     for (let y = 0; y < listingReview.length; y++) {
+       if (listingReview[y].user_id === this.props.currentUserId) {
+         reviewWritten = true;
+       }
+     }
+
 
     return (
       <div className="top-of-show">
@@ -572,7 +580,9 @@ class ListingShow extends React.Component {
             <ReviewIndexContainer listing={listing} />
           </div>
           <div id="writeReview">
-            <ReviewCreateContainer listingId={listing.id} />
+            {!reviewWritten ? 
+            <ReviewCreateContainer listingId={listing.id} /> : <div>Thank you for the review</div>
+            }
           </div>
         </div>
       </div>
