@@ -57,19 +57,19 @@ class ListingShow extends React.Component {
                   {average_rating === 0 ? (
                     <div className="zero-star-icons">
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                     </div>
                   ) : (
@@ -337,19 +337,19 @@ class ListingShow extends React.Component {
                   {average_rating === 0 ? (
                     <div className="zero-star-icons">
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                       <div>
-                        <i class="far fa-star"></i>
+                        <i className="far fa-star"></i>
                       </div>
                     </div>
                   ) : (
