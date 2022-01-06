@@ -75,7 +75,10 @@ class ReviewIndexItem extends React.Component{
                   <div>
                     {userId === review.user_id ? (
                       <div>
-                        <button onClick={() => deleteReview(review.id)}>
+                        <button
+                          onClick={() => deleteReview(review.id)}
+                          className="delete-review"
+                        >
                           Delete Review
                         </button>
                       </div>

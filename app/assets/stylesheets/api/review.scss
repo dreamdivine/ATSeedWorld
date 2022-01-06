@@ -146,6 +146,7 @@ input[type=text]{
     font-size: 15px;
     position: relative;
     top: 14vw;
+    cursor: pointer;
 }
 
 .submit-review-outer{
@@ -208,4 +209,8 @@ input[type=text]{
 
 .or-create-sign{
     font-size: 1vw;
+}
+
+.delete-review{
+    cursor: pointer;
 }
