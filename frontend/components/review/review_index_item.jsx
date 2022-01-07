@@ -1,18 +1,40 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import EditReviewContainer from './edit_review_container';
 
-class ReviewIndexItem extends React.Component{
-    constructor(props){
-        super(props)
+class ReviewIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { edit: false };
+    this.handleEdit = this.handleEdit.bind(this);
+  }
+
+  handleEdit() {
+    this.setState({ edit: false });
+  }
+
+  render() {
+    const { review, listing, deleteReview, userId, currentUser } = this.props;
+    let buttons;
+    if(currentUser && (userId === this.props.review.user_id)){
+      buttons=(
+        <div>
+          <button id="button" onClick={() => this.setState({edit: true})}>
+            Edit
+          </button>
+        </div>
+      )
+    }else{
+      buttons=<div></div>
     }
-    render(){
-        const {review, listing, deleteReview, userId, fetchReviews} = this.props
-        return (
-          <div>
+    return (
+      <div>
+        <div>
+          {listing.id !== review.listing_id ? (
+            " "
+          ) : (
             <div>
-              {listing.id !== review.listing_id ? (
-                " "
-              ) : (
+              {!this.state.edit ? (
                 <div className="review-items">
                   <div className="left-review-item">
                     <div className="review-item-nickname">
@@ -88,12 +110,15 @@ class ReviewIndexItem extends React.Component{
                   </div>
                   <div className="line-below-review"></div>
                 </div>
+              ) : (
+                <div><EditReviewContainer review={review} handleEdit={this.handleEdit}/></div>
               )}
             </div>
-          </div>
-        );
-    }
-
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default withRouter(ReviewIndexItem);

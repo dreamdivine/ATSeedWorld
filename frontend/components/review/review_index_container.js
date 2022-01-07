@@ -4,11 +4,12 @@ import { deleteReview, fetchReviews } from "../../actions/review_actions";
 
 
 const mSTP = (state, ownProps) => {
-    return{
-        reviews: Object.values(state.entities.reviews),
-        userId: state.session.id,
-        listing: ownProps.listing
-    }
+    return {
+      reviews: Object.values(state.entities.reviews),
+      userId: state.session.id,
+      listing: ownProps.listing,
+      currentUser: state.entities.users[state.session.id],
+    };
 }
 const mDTP = (dispatch) => {
     return{
