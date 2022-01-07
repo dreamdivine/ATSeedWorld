@@ -5,7 +5,7 @@ import ReviewForm from "./review_form";
 
 class EditReviewForm extends React.Component {
     render(){
-        const { currentUser, review, action, formType, clearReviewErrors, handleEdit } =
+        const { currentUser, review, action, formType, clearReviewErrors, handleEdit, listing, errors } =
           this.props;
            return (
              <div>
@@ -15,7 +15,9 @@ class EditReviewForm extends React.Component {
                  action={action}
                  formType={formType}
                  clearReviewErrors={clearReviewErrors} 
+                 listing={listing}
                  handleEdit={handleEdit}
+                 errors={errors}
                 />
              </div>
            );
@@ -25,10 +27,12 @@ class EditReviewForm extends React.Component {
 
 const mSTP = (state, ownProps) => {
     return {
-        review: state.entities.reviews[ownProps.review.id],
-        currentUser: state.entities.users[state.session.id],
-        formType: 'Edit'
-    }
+      review: state.entities.reviews[ownProps.review.id],
+      currentUser: state.entities.users[state.session.id],
+      listing: state.entities.listings[ownProps.listingId],
+      formType: "Edit",
+      errors: state.errors.review,
+    };
 }
 
 const mDTP = dispatch => {

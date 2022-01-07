@@ -108,10 +108,11 @@ class ReviewIndexItem extends React.Component {
                       ""
                     )}
                   </div>
+                  {buttons}
                   <div className="line-below-review"></div>
                 </div>
               ) : (
-                <div><EditReviewContainer review={review} handleEdit={this.handleEdit}/></div>
+                <div><EditReviewContainer review={review} handleEdit={this.handleEdit} listingId={listing.id}/></div>
               )}
             </div>
           )}
