@@ -41,7 +41,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
     return {
-      action: () => dispatch(updateReview(ownProps.review)),
+      action: (review) => dispatch(updateReview(review)),
       clearReviewErrors: () => dispatch(clearReviewErrors()),
       fetchReview: () => dispatch(fetchReview(ownProps.review.id))
     };
