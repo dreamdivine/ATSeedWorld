@@ -4,11 +4,12 @@ import { updateReview, clearReviewErrors} from "../../actions/review_actions";
 import EditReviewForm from "./edit_review_form";
 
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
     return {
       errors: state.errors.review,
       reviews: Object.values(state.entities.reviews),
-      currentUserId: state.session.id
+      currentUserId: state.session.id,
+      listing: state.entities.listings[ownProps.listingId],
     };
 }
 
