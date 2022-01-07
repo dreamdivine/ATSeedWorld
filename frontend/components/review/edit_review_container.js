@@ -1,11 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
-import { updateReview, clearReviewErrors, fetchReviews } from "../../actions/review_actions";
+import { updateReview, clearReviewErrors, fetchReview} from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 
 class EditReviewForm extends React.Component {
     componentDidMount(){
-        this.props.fetchReviews()
+        this.props.fetchReview()
     }
 
     render(){
@@ -41,9 +41,9 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
     return {
-      action: (review) => dispatch(updateReview(review)),
+      action: () => dispatch(updateReview(ownProps.review)),
       clearReviewErrors: () => dispatch(clearReviewErrors()),
-      fetchReviews: () => dispatch(fetchReviews())
+      fetchReview: () => dispatch(fetchReview(ownProps.review.id))
     };
 }
 
