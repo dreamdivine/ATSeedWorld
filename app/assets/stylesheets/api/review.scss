@@ -118,17 +118,22 @@ input[type="radio"]{
     top: 90px;
 }
 
-input[type=text]{
-    width: 99.8%;
-    height: 30px;
-    border: 1px solid lightgray
-
-}
+// input[type=text]{
+//     width: 99.8%;
+//     height: 30px;
+//     border: 1px solid lightgray;
+//     position: relative;
+//     top: 10px;
+//     cursor: text;
+// }
 
 .below-nickname{
     position: relative;
     top: 10px;
     cursor: text;
+    border: 1px solid lightgray;
+    width: 99.8%;
+    height: 30px;
 }
 
 .textarea-review{
