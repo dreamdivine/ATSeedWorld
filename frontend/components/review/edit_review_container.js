@@ -34,7 +34,7 @@ const mSTP = (state, ownProps) => {
       review: state.entities.reviews[ownProps.review.id],
       currentUser: state.entities.users[state.session.id],
       listing: state.entities.listings[ownProps.listingId],
-      formType: "Edit",
+      formType: "Edit Review",
       errors: state.errors.review,
     };
 }

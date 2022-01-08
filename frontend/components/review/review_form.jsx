@@ -23,6 +23,7 @@ class ReviewForm extends React.Component {
         })
       )
       .then(this.props.clearReviewErrors());
+      if (this.props.formType === "Edit Review") this.props.handleEdit();
   }
 
   update(property) {
@@ -156,29 +157,27 @@ class ReviewForm extends React.Component {
                 </div>
                 <div className="nickname-review">
                   <div>Nickname</div>
-                  <input
-                    type="text"
-                    value={this.state.nickname}
-                    onChange={this.update("nickname")}
-                    className="below-nickname"
-                  />
+                    <input
+                      type="text"
+                      value={this.state.nickname}
+                      onChange={this.update("nickname")}
+                      className="below-nickname"
+                    />
                 </div>
               </div>
               <div className="review-create-review">
                 <div>Review</div>
-                <label>
-                  <textarea
-                    value={this.state.body}
-                    onChange={this.update("body")}
-                    className="textarea-review"
-                  />
-                  <div className="review-errors">{this.renderErrors()}</div>
-                  <div className="submit-review-outer">
-                    <button type="submit" className="submit-review">
-                      SUBMIT REVIEW
-                    </button>
-                  </div>
-                </label>
+                <textarea
+                  value={this.state.body}
+                  onChange={this.update("body")}
+                  className="textarea-review"
+                />
+                <div className="review-errors">{this.renderErrors()}</div>
+                <div className="submit-review-outer">
+                  <button type="submit" className="submit-review">
+                    {this.props.formType}
+                  </button>
+                </div>
               </div>
             </form>
           </div>
