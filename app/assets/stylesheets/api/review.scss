@@ -150,13 +150,14 @@ input[type="radio"]{
     background-color: black;
     font-size: 15px;
     position: relative;
-    top: 14vw;
+    // top: 14vw;
     cursor: pointer;
 }
 
 .submit-review-outer{
     position: relative;
-    bottom: 12vw;
+    top: 5vw
+
 }
 
 .review-errors{
